@@ -15,7 +15,17 @@ venv/
 # Node.js
 node_modules/
 
+# Xcode
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.build/
+*.dSYM
+*.ipa
+
 # Idea_calendar runtime data and generated frontend build
 /Idea_calendar/backend/ideas.db
 /Idea_calendar/backend/uploads/
 /Idea_calendar/frontend/static/main.js
+
+
