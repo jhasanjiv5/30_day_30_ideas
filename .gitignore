@@ -28,4 +28,5 @@ xcuserdata/
 /Idea_calendar/backend/uploads/
 /Idea_calendar/frontend/static/main.js
 
-
+# PlantLens local secrets
+/PlantLens/PlantLens/Config/Secrets.plist
