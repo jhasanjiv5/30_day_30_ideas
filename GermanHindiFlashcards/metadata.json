@@ -1,0 +1,6 @@
+{
+  "name": "Goethe Anki - German-Hindi Flashcards",
+  "description": "Minimalist Apple-designed German-Hindi spaced repetition flashcards adhering to official Goethe-Institut CEFR standards (A1 to C2) powered by Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

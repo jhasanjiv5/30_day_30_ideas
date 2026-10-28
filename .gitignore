@@ -30,3 +30,10 @@ xcuserdata/
 
 # PlantLens local secrets
 /PlantLens/PlantLens/Config/Secrets.plist
+
+# GermanHindiFlashcards local environment and generated builds
+/GermanHindiFlashcards/.env*
+!/GermanHindiFlashcards/.env.example
+/GermanHindiFlashcards/build/
+/GermanHindiFlashcards/dist/
+/GermanHindiFlashcards/coverage/
