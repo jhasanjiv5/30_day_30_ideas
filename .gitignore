@@ -23,6 +23,10 @@ xcuserdata/
 *.dSYM
 *.ipa
 
+# ArtLens local build products
+/ArtLens/build/
+/ArtLens/*.xcarchive/
+
 # Idea_calendar runtime data and generated frontend build
 /Idea_calendar/backend/ideas.db
 /Idea_calendar/backend/uploads/
