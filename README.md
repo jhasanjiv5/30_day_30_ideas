@@ -6,10 +6,10 @@ The goal of this repository is to turn **30 ideas into 30 projects in 30 days**:
 
 | Day | Date | Project | Repository |
 | ---: | --- | --- | --- |
-| 1 | 2026-10-26 | 30 Days · 30 Apps | [Idea_calendar](./Idea_calendar/) (local project; repository link not published) |
-| 2 | 2026-10-27 | PlantLens | [PlantLens](./PlantLens/) (local project; repository link not published) |
-| 3 | 2026-10-28 | German–Hindi Flashcards | [GermanHindiFlashcards](./GermanHindiFlashcards/) (local project; repository link not published) |
-| 4 | 2026-10-29 | ArtLens | [ArtLens](./ArtLens/) (local project; repository link not published) |
+| 1 | 2026-10-26 | 30 Days · 30 Apps | [Idea_calendar](./Idea_calendar/README.md) (local project; repository link not published) |
+| 2 | 2026-10-27 | PlantLens | [PlantLens](./PlantLens/PlantLens/README.md) (local project; repository link not published) |
+| 3 | 2026-10-28 | German–Hindi Flashcards | [GermanHindiFlashcards](./GermanHindiFlashcards/README.md) (local project; repository link not published) |
+| 4 | 2026-10-29 | ArtLens | [ArtLens](./ArtLens/ArtLens/README.md) (local project; repository link not published) |
 | 5 | 2026-10-30 | — | — |
 | 6 | 2026-10-31 | — | — |
 | 7 | 2026-11-01 | — | — |
