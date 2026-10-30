@@ -1,0 +1,6 @@
+{
+  "name": "AmbientRAG Architect & Autonomous Interface",
+  "description": "Architecture blueprint and interactive workbench for loosely-coupled ambient RAG chatbots powered by ChromaDB and reasoning models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

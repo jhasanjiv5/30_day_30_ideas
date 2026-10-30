@@ -41,3 +41,14 @@ xcuserdata/
 /GermanHindiFlashcards/build/
 /GermanHindiFlashcards/dist/
 /GermanHindiFlashcards/coverage/
+
+# AmbientRAGInterface local environment and generated builds
+node_modules/
+build/
+dist/
+coverage/
+server.js
+.DS_Store
+*.log
+.env*
+!.env.example
