@@ -1,0 +1,28 @@
+# Swift and Xcode build products
+.build/
+.swiftpm/
+DerivedData/
+*.dSYM/
+*.xcarchive/
+*.ipa
+*.xcuserstate
+xcuserdata/
+
+# IDE and OS metadata
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+
+# Logs and temporary files
+*.log
+.history/
