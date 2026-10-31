@@ -11,7 +11,7 @@ The goal of this repository is to turn **30 ideas into 30 projects in 30 days**:
 | 3 | 2026-10-28 | German–Hindi Flashcards | [GermanHindiFlashcards](./GermanHindiFlashcards/README.md) (local project; repository link not published) |
 | 4 | 2026-10-29 | ArtLens | [ArtLens](./ArtLens/ArtLens/README.md) (local project; repository link not published) |
 | 5 | 2026-10-30 | [AmbientRAG Architect & Autonomous Interface](./AmbientRAGInterface/README.md) | [AmbientRAGInterface](./AmbientRAGInterface/README.md) (local project; repository link not published) |
-| 6 | 2026-10-31 | — | — |
+| 6 | 2026-10-31 | [MacOSMediaCenter](./MacOSMediaCenter/README.md) | [MacOSMediaCenter](./MacOSMediaCenter/README.md) (local project; repository link not published) |
 | 7 | 2026-11-01 | — | — |
 | 8 | 2026-11-02 | — | — |
 | 9 | 2026-11-03 | — | — |
