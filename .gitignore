@@ -23,6 +23,12 @@ xcuserdata/
 *.dSYM
 *.ipa
 
+# Generated build outputs
+build/
+dist/
+coverage/
+out/
+
 # ArtLens local build products
 /ArtLens/build/
 /ArtLens/*.xcarchive/
@@ -44,9 +50,6 @@ xcuserdata/
 
 # AmbientRAGInterface local environment and generated builds
 node_modules/
-build/
-dist/
-coverage/
 server.js
 .DS_Store
 *.log

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Expands memory ceiling from ~2.8GB to >4.5GB on 8GB A17 Pro/A18 iPhones -->
+    <key>com.apple.developer.kernel.increased-memory-limit</key>
+    <true/>
+    <!-- Enables 64-bit full virtual memory addressing space for quantized weights -->
+    <key>com.apple.developer.extended-virtual-addressing</key>
+    <true/>
+</dict>
+</plist>
