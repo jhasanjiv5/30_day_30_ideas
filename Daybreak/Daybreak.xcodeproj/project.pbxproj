@@ -1,0 +1,194 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		240001 /* DaybreakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaybreakApp.swift; sourceTree = "<group>"; };
+		240002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		240003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		240004 /* Daybreak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Daybreak.entitlements; sourceTree = "<group>"; };
+		240005 /* MorningBriefingAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningBriefingAppIntent.swift; sourceTree = "<group>"; };
+		240006 /* BriefingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefingModels.swift; sourceTree = "<group>"; };
+		240007 /* WidgetDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataStore.swift; sourceTree = "<group>"; };
+		240008 /* BackgroundProcessingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundProcessingManager.swift; sourceTree = "<group>"; };
+		240009 /* EventKitRemindersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitRemindersProvider.swift; sourceTree = "<group>"; };
+		240013 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		240014 /* OnDeviceLLMEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDeviceLLMEngine.swift; sourceTree = "<group>"; };
+		240015 /* SecurityScopedDocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityScopedDocumentManager.swift; sourceTree = "<group>"; };
+		240016 /* MotiveCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotiveCardView.swift; sourceTree = "<group>"; };
+		240017 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		240018 /* MorningDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningDashboardView.swift; sourceTree = "<group>"; };
+		240019 /* Daybreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daybreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		240021 /* DaybreakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240001 /* DaybreakApp.swift */; };
+		240022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240002 /* ContentView.swift */; };
+		240023 /* MorningBriefingAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240005 /* MorningBriefingAppIntent.swift */; };
+		240024 /* BriefingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240006 /* BriefingModels.swift */; };
+		240025 /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240007 /* WidgetDataStore.swift */; };
+		240026 /* BackgroundProcessingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240008 /* BackgroundProcessingManager.swift */; };
+		240027 /* EventKitRemindersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240009 /* EventKitRemindersProvider.swift */; };
+		240028 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240013 /* LocalNotificationManager.swift */; };
+		240029 /* OnDeviceLLMEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240014 /* OnDeviceLLMEngine.swift */; };
+		240031 /* SecurityScopedDocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240015 /* SecurityScopedDocumentManager.swift */; };
+		240032 /* MotiveCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240016 /* MotiveCardView.swift */; };
+		240033 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240017 /* TaskRowView.swift */; };
+		240034 /* MorningDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240018 /* MorningDashboardView.swift */; };
+		240035 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		240036 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		240010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240021 /* DaybreakApp.swift in Sources */,
+				240022 /* ContentView.swift in Sources */,
+				240023 /* MorningBriefingAppIntent.swift in Sources */,
+				240024 /* BriefingModels.swift in Sources */,
+				240025 /* WidgetDataStore.swift in Sources */,
+				240026 /* BackgroundProcessingManager.swift in Sources */,
+				240027 /* EventKitRemindersProvider.swift in Sources */,
+				240028 /* LocalNotificationManager.swift in Sources */,
+				240029 /* OnDeviceLLMEngine.swift in Sources */,
+				240031 /* SecurityScopedDocumentManager.swift in Sources */,
+				240032 /* MotiveCardView.swift in Sources */,
+				240033 /* TaskRowView.swift in Sources */,
+				240034 /* MorningDashboardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		240020 /* Daybreak */ = {
+			isa = PBXGroup;
+			children = (
+				240001 /* DaybreakApp.swift */,
+				240002 /* ContentView.swift */,
+				240003 /* Info.plist */,
+				240004 /* Daybreak.entitlements */,
+				240037 /* Intents */,
+				240038 /* Models */,
+				240039 /* Services */,
+				240041 /* Views */,
+			);
+			path = Daybreak;
+			sourceTree = "<group>";
+		};
+		240037 /* Intents */ = {isa = PBXGroup; children = (240005 /* MorningBriefingAppIntent.swift */,); path = Intents; sourceTree = "<group>"; };
+		240038 /* Models */ = {isa = PBXGroup; children = (240006 /* BriefingModels.swift */, 240007 /* WidgetDataStore.swift */,); path = Models; sourceTree = "<group>"; };
+		240039 /* Services */ = {isa = PBXGroup; children = (240008 /* BackgroundProcessingManager.swift */, 240009 /* EventKitRemindersProvider.swift */, 240013 /* LocalNotificationManager.swift */, 240014 /* OnDeviceLLMEngine.swift */, 240015 /* SecurityScopedDocumentManager.swift */,); path = Services; sourceTree = "<group>"; };
+		240041 /* Views */ = {isa = PBXGroup; children = (240016 /* MotiveCardView.swift */, 240017 /* TaskRowView.swift */, 240018 /* MorningDashboardView.swift */,); path = Views; sourceTree = "<group>"; };
+		240042 /* Products */ = {isa = PBXGroup; children = (240019 /* Daybreak.app */,); name = Products; sourceTree = "<group>"; };
+		240030 /* Main Group */ = {
+			isa = PBXGroup;
+			children = (
+				240020 /* Daybreak */,
+				240042 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		240040 /* Daybreak Target */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 240050 /* Build configuration list */;
+			buildPhases = (
+				240035 /* Frameworks */,
+				240010 /* Sources */,
+				240036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Daybreak;
+			productName = Daybreak;
+			productType = "com.apple.product-type.application";
+			productReference = 240019 /* Daybreak.app */;
+		};
+		240050 /* Build configuration list */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240051 /* Debug */,
+				240052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		240051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Daybreak/Daybreak.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Daybreak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daybreak.briefing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = "5.0";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+			};
+			name = Debug;
+		};
+		240052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Daybreak/Daybreak.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Daybreak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daybreak.briefing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = "5.0";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+			};
+			name = Release;
+		};
+		240060 /* Project Object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = 240070 /* Project config list */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 240030 /* Main Group */;
+			productRefGroup = 240030 /* Main Group */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				240040 /* Daybreak Target */,
+			);
+		};
+		240070 /* Project config list */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240071 /* Debug */,
+				240072 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		240071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+			};
+			name = Debug;
+		};
+		240072 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+			};
+			name = Release;
+		};
+	};
+	rootObject = 240060 /* Project Object */;
+}

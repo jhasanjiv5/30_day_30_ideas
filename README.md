@@ -14,7 +14,7 @@ The goal of this repository is to turn **30 ideas into 30 projects in 30 days**:
 | 6 | 2026-10-31 | MacOSMediaCenter| [MacOSMediaCenter](./MacOSMediaCenter/README.md) (local project; repository link not published) |
 | 7 | 2026-11-01 | CookLens | [CookLens](./CookLens/README.md) (local project; repository link not published) |
 | 8 | 2026-11-02 | LuminaLightCamera | [LuminaLightCamera](./LuminaLightCamera/README.md) (local project; repository link not published) |
-| 9 | 2026-11-03 | — | — |
+| 9 | 2026-11-03 | Daybreak | [Daybreak](./Daybreaks/README.md) (local project; repository link not published) |
 | 10 | 2026-11-04 | — | — |
 | 11 | 2026-11-05 | — | — |
 | 12 | 2026-11-06 | — | — |
