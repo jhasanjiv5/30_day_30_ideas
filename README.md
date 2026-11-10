@@ -21,7 +21,7 @@ The goal of this repository is to turn **30 ideas into 30 projects in 30 days**:
 | 13 | 2026-11-07 | FastShopperGame | [FastShopperGame](./FastShopperGame/README.md) (local project; repository link not published) |
 | 14 | 2026-11-08 | LightMeinKraft | [LightMeinKraft](./LightMeinKraft/README.md) (local project; repository link not published) |
 | 15 | 2026-11-09 | ErgoPods | [ErgoPods](./ErgoPods/README.md) (local project; repository link not published) |
-| 16 | 2026-11-10 | — | — |
+| 16 | 2026-11-10 | SnippetAI | [SnippetAI](./SnippetAI/README.md) (local project; repository link not published) |
 | 17 | 2026-11-11 | — | — |
 | 18 | 2026-11-12 | — | — |
 | 19 | 2026-11-13 | — | — |
