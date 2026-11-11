@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A0100012CE0000100000001 /* SanctuaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0200012CE0000100000001 /* SanctuaryApp.swift */; };
+		1A0100022CE0000100000001 /* JournalSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0200022CE0000100000001 /* JournalSession.swift */; };
+		1A0100032CE0000100000001 /* TherapistPersona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0200032CE0000100000001 /* TherapistPersona.swift */; };
+		1A0100042CE0000100000001 /* OnDeviceLLMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0200042CE0000100000001 /* OnDeviceLLMService.swift */; };
+		1A0100052CE0000100000001 /* JournalExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0200052CE0000100000001 /* JournalExportManager.swift */; };
+		1A0100062CE0000100000001 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0200062CE0000100000001 /* NotificationManager.swift */; };
+		1A0100072CE0000100000001 /* TherapySessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0200072CE0000100000001 /* TherapySessionViewModel.swift */; };
+		1A0100082CE0000100000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0200082CE0000100000001 /* ContentView.swift */; };
+		1A0100092CE0000100000001 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0200092CE0000100000001 /* CheckInView.swift */; };
+		1A01000A2CE0000100000001 /* ChatSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02000A2CE0000100000001 /* ChatSessionView.swift */; };
+		1A01000B2CE0000100000001 /* SessionSummarySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02000B2CE0000100000001 /* SessionSummarySheet.swift */; };
+		1A01000C2CE0000100000001 /* JournalHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02000C2CE0000100000001 /* JournalHistoryView.swift */; };
+		1A01000D2CE0000100000001 /* HealthKitAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02000D2CE0000100000001 /* HealthKitAnalyticsView.swift */; };
+		1A01000E2CE0000100000001 /* RoutineSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02000E2CE0000100000001 /* RoutineSettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A0000012CE0000100000001 /* Sanctuary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sanctuary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0200012CE0000100000001 /* SanctuaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanctuaryApp.swift; sourceTree = "<group>"; };
+		1A0200022CE0000100000001 /* JournalSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalSession.swift; sourceTree = "<group>"; };
+		1A0200032CE0000100000001 /* TherapistPersona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapistPersona.swift; sourceTree = "<group>"; };
+		1A0200042CE0000100000001 /* OnDeviceLLMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDeviceLLMService.swift; sourceTree = "<group>"; };
+		1A0200052CE0000100000001 /* JournalExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalExportManager.swift; sourceTree = "<group>"; };
+		1A0200062CE0000100000001 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		1A0200072CE0000100000001 /* TherapySessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapySessionViewModel.swift; sourceTree = "<group>"; };
+		1A0200082CE0000100000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A0200092CE0000100000001 /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
+		1A02000A2CE0000100000001 /* ChatSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionView.swift; sourceTree = "<group>"; };
+		1A02000B2CE0000100000001 /* SessionSummarySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSummarySheet.swift; sourceTree = "<group>"; };
+		1A02000C2CE0000100000001 /* JournalHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryView.swift; sourceTree = "<group>"; };
+		1A02000D2CE0000100000001 /* HealthKitAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAnalyticsView.swift; sourceTree = "<group>"; };
+		1A02000E2CE0000100000001 /* RoutineSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSettingsView.swift; sourceTree = "<group>"; };
+		1A02000F2CE0000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A0000022CE0000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A0000032CE0000100000001 = {
+			isa = PBXGroup;
+			children = (
+				1A0000042CE0000100000001 /* Sanctuary */,
+				1A0000052CE0000100000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A0000042CE0000100000001 /* Sanctuary */ = {
+			isa = PBXGroup;
+			children = (
+				1A0200012CE0000100000001 /* SanctuaryApp.swift */,
+				1A02000F2CE0000100000001 /* Info.plist */,
+				1A0000062CE0000100000001 /* Models */,
+				1A0000072CE0000100000001 /* Services */,
+				1A0000082CE0000100000001 /* ViewModels */,
+				1A0000092CE0000100000001 /* Views */,
+			);
+			path = Sanctuary;
+			sourceTree = "<group>";
+		};
+		1A0000052CE0000100000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A0000012CE0000100000001 /* Sanctuary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A0000062CE0000100000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A0200022CE0000100000001 /* JournalSession.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A0000072CE0000100000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1A0200032CE0000100000001 /* TherapistPersona.swift */,
+				1A0200042CE0000100000001 /* OnDeviceLLMService.swift */,
+				1A0200052CE0000100000001 /* JournalExportManager.swift */,
+				1A0200062CE0000100000001 /* NotificationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1A0000082CE0000100000001 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1A0200072CE0000100000001 /* TherapySessionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1A0000092CE0000100000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A0200082CE0000100000001 /* ContentView.swift */,
+				1A0200092CE0000100000001 /* CheckInView.swift */,
+				1A02000A2CE0000100000001 /* ChatSessionView.swift */,
+				1A02000B2CE0000100000001 /* SessionSummarySheet.swift */,
+				1A02000C2CE0000100000001 /* JournalHistoryView.swift */,
+				1A02000D2CE0000100000001 /* HealthKitAnalyticsView.swift */,
+				1A02000E2CE0000100000001 /* RoutineSettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A00000A2CE0000100000001 /* Sanctuary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A00000B2CE0000100000001 /* Build configuration list for PBXNativeTarget "Sanctuary" */;
+			buildPhases = (
+				1A00000C2CE0000100000001 /* Sources */,
+				1A0000022CE0000100000001 /* Frameworks */,
+				1A00000D2CE0000100000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sanctuary;
+			productName = Sanctuary;
+			productReference = 1A0000012CE0000100000001 /* Sanctuary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A00000E2CE0000100000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					1A00000A2CE0000100000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 1A00000F2CE0000100000001 /* Build configuration list for PBXProject "Sanctuary" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A0000032CE0000100000001;
+			productRefGroup = 1A0000052CE0000100000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A00000A2CE0000100000001 /* Sanctuary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A00000D2CE0000100000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A00000C2CE0000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0100012CE0000100000001 /* SanctuaryApp.swift in Sources */,
+				1A0100022CE0000100000001 /* JournalSession.swift in Sources */,
+				1A0100032CE0000100000001 /* TherapistPersona.swift in Sources */,
+				1A0100042CE0000100000001 /* OnDeviceLLMService.swift in Sources */,
+				1A0100052CE0000100000001 /* JournalExportManager.swift in Sources */,
+				1A0100062CE0000100000001 /* NotificationManager.swift in Sources */,
+				1A0100072CE0000100000001 /* TherapySessionViewModel.swift in Sources */,
+				1A0100082CE0000100000001 /* ContentView.swift in Sources */,
+				1A0100092CE0000100000001 /* CheckInView.swift in Sources */,
+				1A01000A2CE0000100000001 /* ChatSessionView.swift in Sources */,
+				1A01000B2CE0000100000001 /* SessionSummarySheet.swift in Sources */,
+				1A01000C2CE0000100000001 /* JournalHistoryView.swift in Sources */,
+				1A01000D2CE0000100000001 /* HealthKitAnalyticsView.swift in Sources */,
+				1A01000E2CE0000100000001 /* RoutineSettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1A0000102CE0000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1A0000112CE0000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A0000122CE0000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sanctuary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sanctuary;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sanctuary.eveningtherapist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A0000132CE0000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sanctuary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sanctuary;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sanctuary.eveningtherapist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A00000F2CE0000100000001 /* Build configuration list for PBXProject "Sanctuary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0000102CE0000100000001 /* Debug */,
+				1A0000112CE0000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A00000B2CE0000100000001 /* Build configuration list for PBXNativeTarget "Sanctuary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0000122CE0000100000001 /* Debug */,
+				1A0000132CE0000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 1A00000E2CE0000100000001 /* Project object */;
+}

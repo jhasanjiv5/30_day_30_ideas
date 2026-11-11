@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleDisplayName</key>
+    <string>Sanctuary</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.sanctuary.eveningtherapist</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>Sanctuary</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSHealthShareUsageDescription</key>
+    <string>Sanctuary analyzes your State of Mind trends to provide contextual evening reflections.</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>Sanctuary securely logs your evening emotional valence and State of Mind directly into Apple Health.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>Sanctuary supports speaking your reflections aloud during your evening wind-down.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Sanctuary uses the microphone to transcribe voice reflections on-device.</string>
+    <key>UILaunchScreen</key>
+    <dict/>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+</dict>
+</plist>
