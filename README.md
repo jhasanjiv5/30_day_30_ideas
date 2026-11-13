@@ -24,7 +24,7 @@ The goal of this repository is to turn **30 ideas into 30 projects in 30 days**:
 | 16 | 2026-11-10 | SnippetAI | [SnippetAI](./SnippetAI/README.md) (local project; repository link not published) |
 | 17 | 2026-11-11 | Sanctuary | [Sanctuary](./Sanctuary/README.md) (local project; repository link not published) |
 | 18 | 2026-11-12 | KineScanVisionOS | [KineScanVisionOS](./KineScanVisionOS/README.md) (local project; repository link not published) |
-| 19 | 2026-11-13 | — | — |
+| 19 | 2026-11-13 | FieldTwin | [FieldTwin](./FieldTwin/README.md) (local project; repository link not published) |
 | 20 | 2026-11-14 | — | — |
 | 21 | 2026-11-15 | — | — |
 | 22 | 2026-11-16 | — | — |
