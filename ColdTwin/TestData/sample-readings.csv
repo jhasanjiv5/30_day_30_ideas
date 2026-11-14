@@ -1,0 +1,7 @@
+timestamp,asset_id,temperature,unit,event
+2026-11-14T08:00:00Z,cooler-07,3.4,C,
+2026-11-14T09:00:00Z,cooler-07,6.8,C,"Door opened, restocking"
+2026-11-14T09:15:00Z,cooler-07,44.6,F,Door closed
+2026-11-14T09:00:00Z,cooler-07,6.8,C,Duplicate sample
+not-a-timestamp,cooler-07,4.0,C,Invalid timestamp sample
+2026-11-14T09:30:00Z,unknown-unit-99,4.0,C,Unknown asset sample

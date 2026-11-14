@@ -7,6 +7,7 @@ The goal of this repository is to turn **30 ideas into 30 projects in 30 days**:
 | Day | Date | Project | Repository | Business viability (1 = least, 10 = most) |
 | ---: | --- | --- | --- | :---: |
 | 19 | 2026-11-13 | FieldTwin | [FieldTwin](./FieldTwin/README.md) (local project; repository link not published) | ▰▰▰▰▰▰▰▰▰▰ 10/10 |
+| 20 | 2026-11-14 | ColdTwin | [ColdTwin](./ColdTwin/README.md) (local project; repository link not published) | ▰▰▰▰▰▰▰▰░░ 8/10 |
 | 5 | 2026-10-30 | AmbientRAG Architect & Autonomous Interface | [AmbientRAGInterface](./AmbientRAGInterface/README.md) (local project; repository link not published) | ▰▰▰▰▰▰▰▰▰░ 9/10 |
 | 16 | 2026-11-10 | SnippetAI | [SnippetAI](./SnippetAI/README.md) (local project; repository link not published) | ▰▰▰▰▰▰▰▰▰░ 9/10 |
 | 2 | 2026-10-27 | PlantLens | [PlantLens](./PlantLens/PlantLens/README.md) (local project; repository link not published) | ▰▰▰▰▰▰▰▰▰░ 8/10 |
@@ -25,7 +26,6 @@ The goal of this repository is to turn **30 ideas into 30 projects in 30 days**:
 | 8 | 2026-11-02 | LuminaLightCamera | [LuminaLightCamera](./LuminaLightCamera/README.md) (local project; repository link not published) | ▰▰░░░░░░░░ 2/10 |
 | 13 | 2026-11-07 | FastShopperGame | [FastShopperGame](./FastShopperGame/README.md) (local project; repository link not published) | ▰░░░░░░░░░ 1/10 |
 | 14 | 2026-11-08 | LightMeinKraft | [LightMeinKraft](./LightMeinKraft/README.md) (local project; repository link not published) | ▰░░░░░░░░░ 1/10 |
-| 20 | 2026-11-14 | — | — | — |
 | 21 | 2026-11-15 | — | — | — |
 | 22 | 2026-11-16 | — | — | — |
 | 23 | 2026-11-17 | — | — | — |
