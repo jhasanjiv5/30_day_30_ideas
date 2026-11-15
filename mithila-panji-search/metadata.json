@@ -1,0 +1,8 @@
+{
+  "name": "Mithila Panji Search",
+  "description": "AI-assisted Mithila Panji genealogy search and documented lineage explorer built on the open Mithila-Panji corpus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

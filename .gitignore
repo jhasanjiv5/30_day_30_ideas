@@ -6,6 +6,15 @@
 *.swp
 *.swo
 
+# Local environment and secrets
+.env*
+!.env*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.mobileprovision
+
 # Python
 __pycache__/
 *.py[cod]
@@ -14,6 +23,9 @@ venv/
 
 # Node.js
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
 
 # Xcode
 DerivedData/
@@ -49,9 +61,5 @@ out/
 /GermanHindiFlashcards/coverage/
 
 # AmbientRAGInterface local environment and generated builds
-node_modules/
 server.js
-.DS_Store
 *.log
-.env*
-!.env.example
