@@ -28,7 +28,7 @@ The goal of this repository is to turn **30 ideas into 30 projects in 30 days**:
 | 14 | 2026-11-08 | LightMeinKraft | [LightMeinKraft](./LightMeinKraft/README.md) (local project; repository link not published) | ▰░░░░░░░░░ 1/10 |
 | 21 | 2026-11-15 | Mithila-Panji-Search | [Mithila-Panji-Search](./Mithila-Panji-Search/README.md) (local project; repository link not published) | ▰░░░░░░░░░ 1/10 |
 | 22 | 2026-11-16 | PersonalVoiceStudio | [PersonalVoiceStudio](./PersonalVoiceStudio/README.md) (local project; repository link not published) | ▰░░░░░░░░░ 1/10 |
-| 23 | 2026-11-17 | — | — | — |
+| 23 | 2026-11-17 |PersonalVideoStudio | [PersonalVideoStudio](./PersonalVideoStudio/README.md) (local project; repository link not published) | ▰░░░░░░░░░ 1/10 |
 | 24 | 2026-11-18 | — | — | — |
 | 25 | 2026-11-19 | — | — | — |
 | 26 | 2026-11-20 | — | — | — |
