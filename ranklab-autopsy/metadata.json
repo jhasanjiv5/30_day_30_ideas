@@ -1,0 +1,6 @@
+{
+  "name": "RankLab Autopsy",
+  "description": "End-to-end recommender systems autopsy, HNSW recall-latency frontier, IPW position-bias diagnostics, and CUPED simulated A/B test workbench.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

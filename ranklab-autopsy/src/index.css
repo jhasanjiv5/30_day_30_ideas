@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #F8F9FA;
+    color: #0F172A;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom slim range input for precision controls */
+input[type="range"].precision-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #CBD5E1;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"].precision-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #1D4ED8;
+  border: 1.5px solid #FFFFFF;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.25);
+  cursor: pointer;
+}
+
+input[type="range"].precision-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #1D4ED8;
+  border: 1.5px solid #FFFFFF;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.25);
+  cursor: pointer;
+}
