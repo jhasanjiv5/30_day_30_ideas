@@ -1,0 +1,586 @@
+[
+  {
+    "id": "big-buck-bunny",
+    "title": "Big Buck Bunny",
+    "synopsis": "A gentle giant rabbit's peaceful morning among meadow butterflies is disrupted by three mischievous rodents, sparking an inventive slapstick reckoning.",
+    "year": 2008,
+    "genres": ["Animation", "Comedy", "Family"],
+    "moodTags": ["playful", "bright", "whimsical", "slapstick"],
+    "runtimeMinutes": 10,
+    "ageRating": "G",
+    "streamURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "subtitleResource": "BigBuckBunny",
+    "posterKey": "big-buck-bunny",
+    "providers": [
+      {
+        "appID": "youtube",
+        "deepLinkURL": "youtube://www.youtube.com/watch?v=YE7VzlLtp-4",
+        "universalLinkURL": "https://www.youtube.com/watch?v=YE7VzlLtp-4"
+      },
+      {
+        "appID": "plex",
+        "deepLinkURL": "plex://play/?metadataKey=/library/metadata/big-buck-bunny",
+        "universalLinkURL": "https://watch.plex.tv/movie/big-buck-bunny"
+      }
+    ],
+    "license": {
+      "holder": "Blender Foundation / Peach Open Movie Project",
+      "licenseName": "Creative Commons Attribution 3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "© 2008 Blender Foundation | peach.blender.org — Licensed under CC-BY 3.0"
+    }
+  },
+  {
+    "id": "sintel",
+    "title": "Sintel",
+    "synopsis": "A solitary young warrior journeys across frozen peaks and bustling bazaars searching for Scales, the baby dragon she rescued and lost.",
+    "year": 2010,
+    "genres": ["Animation", "Fantasy", "Adventure"],
+    "moodTags": ["epic", "emotional", "heroic", "bittersweet"],
+    "runtimeMinutes": 15,
+    "ageRating": "PG",
+    "streamURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "subtitleResource": "Sintel",
+    "posterKey": "sintel",
+    "providers": [
+      {
+        "appID": "youtube",
+        "deepLinkURL": "youtube://www.youtube.com/watch?v=eRsGyueVLvQ",
+        "universalLinkURL": "https://www.youtube.com/watch?v=eRsGyueVLvQ"
+      },
+      {
+        "appID": "vimeo",
+        "deepLinkURL": "vimeo://app.vimeo.com/videos/15435470",
+        "universalLinkURL": "https://vimeo.com/15435470"
+      }
+    ],
+    "license": {
+      "holder": "Blender Foundation / Durian Open Movie Project",
+      "licenseName": "Creative Commons Attribution 3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "© 2010 Blender Foundation | durian.blender.org — Licensed under CC-BY 3.0"
+    }
+  },
+  {
+    "id": "tears-of-steel",
+    "title": "Tears of Steel",
+    "synopsis": "In a futuristic Amsterdam, a group of warriors and scientists gather at the Oude Kerk to stage a crucial neural-memory experiment with a cyborg survivor.",
+    "year": 2012,
+    "genres": ["Sci-Fi", "Action", "Drama"],
+    "moodTags": ["tense", "cyberpunk", "melancholic", "kinetic"],
+    "runtimeMinutes": 12,
+    "ageRating": "PG-13",
+    "streamURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "subtitleResource": "TearsOfSteel",
+    "posterKey": "tears-of-steel",
+    "providers": [
+      {
+        "appID": "youtube",
+        "deepLinkURL": "youtube://www.youtube.com/watch?v=R6MlUcmOul8",
+        "universalLinkURL": "https://www.youtube.com/watch?v=R6MlUcmOul8"
+      },
+      {
+        "appID": "infuse",
+        "deepLinkURL": "infuse://x-callback-url/play?url=https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+        "universalLinkURL": null
+      }
+    ],
+    "license": {
+      "holder": "Blender Foundation / Mango Open Movie Project",
+      "licenseName": "Creative Commons Attribution 3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "© 2012 Blender Foundation | mango.blender.org — Licensed under CC-BY 3.0"
+    }
+  },
+  {
+    "id": "elephants-dream",
+    "title": "Elephants Dream",
+    "synopsis": "Inside a sprawling mechanical labyrinth, an older guide named Proog tries to convince cynical young Emo of the Machine's hidden architecture.",
+    "year": 2006,
+    "genres": ["Animation", "Sci-Fi", "Drama"],
+    "moodTags": ["surreal", "cerebral", "claustrophobic", "mysterious"],
+    "runtimeMinutes": 11,
+    "ageRating": "PG",
+    "streamURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "subtitleResource": "ElephantsDream",
+    "posterKey": "elephants-dream",
+    "providers": [
+      {
+        "appID": "jellyfin",
+        "deepLinkURL": "jellyfin://play?itemId=elephants-dream",
+        "universalLinkURL": null
+      },
+      {
+        "appID": "youtube",
+        "deepLinkURL": "youtube://www.youtube.com/watch?v=TLkA0RELQ1g",
+        "universalLinkURL": "https://www.youtube.com/watch?v=TLkA0RELQ1g"
+      }
+    ],
+    "license": {
+      "holder": "Blender Foundation / Orange Open Movie Project",
+      "licenseName": "Creative Commons Attribution 2.5",
+      "licenseURL": "https://creativecommons.org/licenses/by/2.5/",
+      "attribution": "© 2006 Blender Foundation & Netherlands Media Art Institute | orange.blender.org — Licensed under CC-BY 2.5"
+    }
+  },
+  {
+    "id": "clockwork-harbor",
+    "title": "Clockwork Harbor",
+    "synopsis": "Two tide-keepers race to repair a failing coastal lighthouse before the autumn storm hits a sleepy fishing town.",
+    "year": 2024,
+    "genres": ["Adventure", "Family", "Drama"],
+    "moodTags": ["heartwarming", "hopeful", "cozy"],
+    "runtimeMinutes": 34,
+    "ageRating": "G",
+    "posterKey": "clockwork-harbor",
+    "providers": [
+      {
+        "appID": "disney-plus",
+        "deepLinkURL": "disneyplus://disneyplus.com/search?q=Clockwork%20Harbor",
+        "universalLinkURL": "https://www.disneyplus.com/search"
+      },
+      {
+        "appID": "apple-tv",
+        "deepLinkURL": "videos://search?term=Clockwork%20Harbor",
+        "universalLinkURL": "https://tv.apple.com"
+      }
+    ]
+  },
+  {
+    "id": "velvet-meridian",
+    "title": "The Velvet Meridian",
+    "synopsis": "An undercover courier intercepts an encrypted reel aboard a midnight transcontinental express.",
+    "year": 2025,
+    "genres": ["Action", "Thriller", "Mystery"],
+    "moodTags": ["tense", "kinetic", "noir"],
+    "runtimeMinutes": 114,
+    "ageRating": "R",
+    "posterKey": "velvet-meridian",
+    "providers": [
+      {
+        "appID": "netflix",
+        "deepLinkURL": "nflx://www.netflix.com/search?q=The%20Velvet%20Meridian",
+        "universalLinkURL": "https://www.netflix.com/search?q=The%20Velvet%20Meridian"
+      },
+      {
+        "appID": "prime-video",
+        "deepLinkURL": "aiv://aiv/search?phrase=The%20Velvet%20Meridian",
+        "universalLinkURL": "https://www.amazon.com/s?k=The+Velvet+Meridian&i=instant-video"
+      }
+    ]
+  },
+  {
+    "id": "glass-orchard",
+    "title": "Glass Orchard",
+    "synopsis": "Three estranged siblings reunite to restore their grandmother's cedar greenhouse over one rainy weekend.",
+    "year": 2023,
+    "genres": ["Drama", "Romance"],
+    "moodTags": ["emotional", "quiet", "reflective", "melancholic"],
+    "runtimeMinutes": 106,
+    "ageRating": "PG-13",
+    "posterKey": "glass-orchard",
+    "providers": [
+      {
+        "appID": "apple-tv",
+        "deepLinkURL": "videos://search?term=Glass%20Orchard",
+        "universalLinkURL": "https://tv.apple.com"
+      },
+      {
+        "appID": "hulu",
+        "deepLinkURL": "hulu://search?q=Glass%20Orchard",
+        "universalLinkURL": "https://www.hulu.com"
+      }
+    ]
+  },
+  {
+    "id": "comet-club",
+    "title": "Comet Club",
+    "synopsis": "Four middle-school amateur astronomers discover an uncatalogued asteroid from their backyard shed.",
+    "year": 2024,
+    "genres": ["Sci-Fi", "Comedy", "Family", "Adventure"],
+    "moodTags": ["playful", "curious", "hopeful", "bright"],
+    "runtimeMinutes": 38,
+    "ageRating": "PG",
+    "posterKey": "comet-club",
+    "providers": [
+      {
+        "appID": "disney-plus",
+        "deepLinkURL": "disneyplus://disneyplus.com/search?q=Comet%20Club",
+        "universalLinkURL": "https://www.disneyplus.com/search"
+      },
+      {
+        "appID": "netflix",
+        "deepLinkURL": "nflx://www.netflix.com/search?q=Comet%20Club",
+        "universalLinkURL": "https://www.netflix.com/search?q=Comet%20Club"
+      }
+    ]
+  },
+  {
+    "id": "iron-canyon",
+    "title": "Iron Canyon",
+    "synopsis": "A retired stunt pilot leads a risky high-altitude canyon extraction to rescue a stranded survey team.",
+    "year": 2022,
+    "genres": ["Action", "Adventure"],
+    "moodTags": ["kinetic", "heroic", "tense"],
+    "runtimeMinutes": 98,
+    "ageRating": "PG-13",
+    "posterKey": "iron-canyon",
+    "providers": [
+      {
+        "appID": "prime-video",
+        "deepLinkURL": "aiv://aiv/search?phrase=Iron%20Canyon",
+        "universalLinkURL": "https://www.amazon.com/s?k=Iron+Canyon&i=instant-video"
+      },
+      {
+        "appID": "max",
+        "deepLinkURL": "max://search?q=Iron%20Canyon",
+        "universalLinkURL": "https://play.max.com"
+      }
+    ]
+  },
+  {
+    "id": "paper-lantern-express",
+    "title": "Paper Lantern Express",
+    "synopsis": "A tiny origami fox travels through a nocturnal night-market to return a lost ticket before dawn.",
+    "year": 2025,
+    "genres": ["Animation", "Family", "Fantasy"],
+    "moodTags": ["whimsical", "cozy", "bright"],
+    "runtimeMinutes": 24,
+    "ageRating": "G",
+    "posterKey": "paper-lantern-express",
+    "providers": [
+      {
+        "appID": "netflix",
+        "deepLinkURL": "nflx://www.netflix.com/search?q=Paper%20Lantern%20Express",
+        "universalLinkURL": "https://www.netflix.com/search?q=Paper%20Lantern%20Express"
+      },
+      {
+        "appID": "disney-plus",
+        "deepLinkURL": "disneyplus://disneyplus.com/search?q=Paper%20Lantern%20Express",
+        "universalLinkURL": "https://www.disneyplus.com/search"
+      }
+    ]
+  },
+  {
+    "id": "quiet-observatory",
+    "title": "The Quiet Observatory",
+    "synopsis": "A hydrologist stationed at a remote Arctic weather dome decodes decades-old magnetic tape logs.",
+    "year": 2024,
+    "genres": ["Drama", "Sci-Fi", "Mystery"],
+    "moodTags": ["cerebral", "quiet", "melancholic"],
+    "runtimeMinutes": 122,
+    "ageRating": "PG-13",
+    "posterKey": "quiet-observatory",
+    "providers": [
+      {
+        "appID": "apple-tv",
+        "deepLinkURL": "videos://search?term=The%20Quiet%20Observatory",
+        "universalLinkURL": "https://tv.apple.com"
+      },
+      {
+        "appID": "max",
+        "deepLinkURL": "max://search?q=The%20Quiet%20Observatory",
+        "universalLinkURL": "https://play.max.com"
+      }
+    ]
+  },
+  {
+    "id": "neon-courier",
+    "title": "Neon Courier",
+    "synopsis": "A bike messenger in Neo-Osaka outruns autonomous interceptors after accidentally picking up a prototype battery.",
+    "year": 2025,
+    "genres": ["Action", "Sci-Fi", "Thriller"],
+    "moodTags": ["kinetic", "cyberpunk", "tense"],
+    "runtimeMinutes": 35,
+    "ageRating": "PG-13",
+    "posterKey": "neon-courier",
+    "providers": [
+      {
+        "appID": "netflix",
+        "deepLinkURL": "nflx://www.netflix.com/search?q=Neon%20Courier",
+        "universalLinkURL": "https://www.netflix.com/search?q=Neon%20Courier"
+      },
+      {
+        "appID": "youtube",
+        "deepLinkURL": "youtube://www.youtube.com/results?search_query=Neon+Courier",
+        "universalLinkURL": "https://www.youtube.com/results?search_query=Neon+Courier"
+      }
+    ]
+  },
+  {
+    "id": "amber-street",
+    "title": "Sunday on Amber Street",
+    "synopsis": "A neighborhood bakery holds a friendly bake-off that spirals into a block-wide parade.",
+    "year": 2021,
+    "genres": ["Comedy", "Family"],
+    "moodTags": ["playful", "heartwarming", "bright"],
+    "runtimeMinutes": 28,
+    "ageRating": "G",
+    "posterKey": "amber-street",
+    "providers": [
+      {
+        "appID": "hulu",
+        "deepLinkURL": "hulu://search?q=Sunday%20on%20Amber%20Street",
+        "universalLinkURL": "https://www.hulu.com"
+      },
+      {
+        "appID": "plex",
+        "deepLinkURL": "plex://search?query=Sunday%20on%20Amber%20Street",
+        "universalLinkURL": "https://watch.plex.tv"
+      }
+    ]
+  },
+  {
+    "id": "blackout-protocol",
+    "title": "Blackout Protocol",
+    "synopsis": "A cybersecurity responder has ninety minutes inside a locked substation to stop a cascading grid failure.",
+    "year": 2024,
+    "genres": ["Thriller", "Action"],
+    "moodTags": ["tense", "noir", "claustrophobic"],
+    "runtimeMinutes": 108,
+    "ageRating": "R",
+    "posterKey": "blackout-protocol",
+    "providers": [
+      {
+        "appID": "max",
+        "deepLinkURL": "max://search?q=Blackout%20Protocol",
+        "universalLinkURL": "https://play.max.com"
+      },
+      {
+        "appID": "prime-video",
+        "deepLinkURL": "aiv://aiv/search?phrase=Blackout%20Protocol",
+        "universalLinkURL": "https://www.amazon.com/s?k=Blackout+Protocol&i=instant-video"
+      }
+    ]
+  },
+  {
+    "id": "starlight-skate",
+    "title": "Starlight Skate",
+    "synopsis": "A teen roller-derby squad enters an open-air coastal tournament while balancing summer jobs and friendships.",
+    "year": 2023,
+    "genres": ["Comedy", "Drama", "Adventure"],
+    "moodTags": ["energetic", "hopeful", "playful"],
+    "runtimeMinutes": 36,
+    "ageRating": "PG",
+    "posterKey": "starlight-skate",
+    "providers": [
+      {
+        "appID": "hulu",
+        "deepLinkURL": "hulu://search?q=Starlight%20Skate",
+        "universalLinkURL": "https://www.hulu.com"
+      },
+      {
+        "appID": "netflix",
+        "deepLinkURL": "nflx://www.netflix.com/search?q=Starlight%20Skate",
+        "universalLinkURL": "https://www.netflix.com/search?q=Starlight%20Skate"
+      }
+    ]
+  },
+  {
+    "id": "northbound-letters",
+    "title": "Northbound Letters",
+    "synopsis": "A small-town archivist traces an unsigned 1960s film reel across three coastal libraries.",
+    "year": 2022,
+    "genres": ["Drama", "Mystery"],
+    "moodTags": ["reflective", "emotional", "quiet"],
+    "runtimeMinutes": 94,
+    "ageRating": "PG",
+    "posterKey": "northbound-letters",
+    "providers": [
+      {
+        "appID": "apple-tv",
+        "deepLinkURL": "videos://search?term=Northbound%20Letters",
+        "universalLinkURL": "https://tv.apple.com"
+      },
+      {
+        "appID": "plex",
+        "deepLinkURL": "plex://search?query=Northbound%20Letters",
+        "universalLinkURL": "https://watch.plex.tv"
+      }
+    ]
+  },
+  {
+    "id": "titan-breaker",
+    "title": "Titan Breaker",
+    "synopsis": "Deep-sea salvage divers uncover an unexploded orbital core resting at the edge of an active trench.",
+    "year": 2025,
+    "genres": ["Action", "Sci-Fi"],
+    "moodTags": ["epic", "kinetic", "tense"],
+    "runtimeMinutes": 128,
+    "ageRating": "R",
+    "posterKey": "titan-breaker",
+    "providers": [
+      {
+        "appID": "max",
+        "deepLinkURL": "max://search?q=Titan%20Breaker",
+        "universalLinkURL": "https://play.max.com"
+      },
+      {
+        "appID": "netflix",
+        "deepLinkURL": "nflx://www.netflix.com/search?q=Titan%20Breaker",
+        "universalLinkURL": "https://www.netflix.com/search?q=Titan%20Breaker"
+      }
+    ]
+  },
+  {
+    "id": "acorn-brigade",
+    "title": "The Acorn Brigade",
+    "synopsis": "Woodland squirrels build a glider out of autumn leaves to rescue a misplaced winter acorn stash.",
+    "year": 2024,
+    "genres": ["Animation", "Family", "Adventure"],
+    "moodTags": ["whimsical", "bright", "cozy"],
+    "runtimeMinutes": 22,
+    "ageRating": "G",
+    "posterKey": "acorn-brigade",
+    "providers": [
+      {
+        "appID": "disney-plus",
+        "deepLinkURL": "disneyplus://disneyplus.com/search?q=The%20Acorn%20Brigade",
+        "universalLinkURL": "https://www.disneyplus.com/search"
+      },
+      {
+        "appID": "youtube",
+        "deepLinkURL": "youtube://www.youtube.com/results?search_query=The+Acorn+Brigade",
+        "universalLinkURL": "https://www.youtube.com/results?search_query=The+Acorn+Brigade"
+      }
+    ]
+  },
+  {
+    "id": "harbor-of-echoes",
+    "title": "Harbor of Echoes",
+    "synopsis": "Two marine acousticians capture an anomalous low-frequency pulse beneath a misty fjord.",
+    "year": 2023,
+    "genres": ["Drama", "Thriller", "Mystery"],
+    "moodTags": ["mysterious", "cerebral", "melancholic"],
+    "runtimeMinutes": 102,
+    "ageRating": "PG-13",
+    "posterKey": "harbor-of-echoes",
+    "providers": [
+      {
+        "appID": "prime-video",
+        "deepLinkURL": "aiv://aiv/search?phrase=Harbor%20of%20Echoes",
+        "universalLinkURL": "https://www.amazon.com/s?k=Harbor+of+Echoes&i=instant-video"
+      },
+      {
+        "appID": "apple-tv",
+        "deepLinkURL": "videos://search?term=Harbor%20of%20Echoes",
+        "universalLinkURL": "https://tv.apple.com"
+      }
+    ]
+  },
+  {
+    "id": "pixel-rangers",
+    "title": "Pixel Rangers",
+    "synopsis": "Two arcade rivals are pulled into repairing a glitching 16-bit tabletop simulator before the tournament.",
+    "year": 2025,
+    "genres": ["Animation", "Action", "Comedy", "Sci-Fi"],
+    "moodTags": ["playful", "energetic", "kinetic"],
+    "runtimeMinutes": 32,
+    "ageRating": "PG",
+    "posterKey": "pixel-rangers",
+    "providers": [
+      {
+        "appID": "netflix",
+        "deepLinkURL": "nflx://www.netflix.com/search?q=Pixel%20Rangers",
+        "universalLinkURL": "https://www.netflix.com/search?q=Pixel%20Rangers"
+      },
+      {
+        "appID": "youtube",
+        "deepLinkURL": "youtube://www.youtube.com/results?search_query=Pixel+Rangers",
+        "universalLinkURL": "https://www.youtube.com/results?search_query=Pixel+Rangers"
+      }
+    ]
+  },
+  {
+    "id": "crimson-horizon",
+    "title": "Crimson Horizon",
+    "synopsis": "A Mars cargo shuttle loses attitude control during dust-storm reentry, forcing a manual docking.",
+    "year": 2024,
+    "genres": ["Sci-Fi", "Action", "Drama"],
+    "moodTags": ["tense", "epic", "heroic"],
+    "runtimeMinutes": 119,
+    "ageRating": "PG-13",
+    "posterKey": "crimson-horizon",
+    "providers": [
+      {
+        "appID": "apple-tv",
+        "deepLinkURL": "videos://search?term=Crimson%20Horizon",
+        "universalLinkURL": "https://tv.apple.com"
+      },
+      {
+        "appID": "prime-video",
+        "deepLinkURL": "aiv://aiv/search?phrase=Crimson%20Horizon",
+        "universalLinkURL": "https://www.amazon.com/s?k=Crimson+Horizon&i=instant-video"
+      }
+    ]
+  },
+  {
+    "id": "moss-and-marble",
+    "title": "Moss and Marble",
+    "synopsis": "An architectural photographer documents the final season of an alpine funicular railway.",
+    "year": 2022,
+    "genres": ["Drama"],
+    "moodTags": ["quiet", "reflective", "bittersweet"],
+    "runtimeMinutes": 88,
+    "ageRating": "PG",
+    "posterKey": "moss-and-marble",
+    "providers": [
+      {
+        "appID": "mubi",
+        "deepLinkURL": "mubi://search?query=Moss%20and%20Marble",
+        "universalLinkURL": "https://mubi.com"
+      },
+      {
+        "appID": "plex",
+        "deepLinkURL": "plex://search?query=Moss%20and%20Marble",
+        "universalLinkURL": "https://watch.plex.tv"
+      }
+    ]
+  },
+  {
+    "id": "midnight-sparring",
+    "title": "Midnight Sparring",
+    "synopsis": "A washed-up choreographer trains an underground stunt crew for one last live-action sequence.",
+    "year": 2025,
+    "genres": ["Action", "Drama", "Thriller"],
+    "moodTags": ["kinetic", "emotional", "tense"],
+    "runtimeMinutes": 112,
+    "ageRating": "R",
+    "posterKey": "midnight-sparring",
+    "providers": [
+      {
+        "appID": "hulu",
+        "deepLinkURL": "hulu://search?q=Midnight%20Sparring",
+        "universalLinkURL": "https://www.hulu.com"
+      },
+      {
+        "appID": "netflix",
+        "deepLinkURL": "nflx://www.netflix.com/search?q=Midnight%20Sparring",
+        "universalLinkURL": "https://www.netflix.com/search?q=Midnight%20Sparring"
+      }
+    ]
+  },
+  {
+    "id": "cloud-cartographer",
+    "title": "The Cloud Cartographer",
+    "synopsis": "A young balloonist maps floating weather islands with her grandfather's brass compass.",
+    "year": 2024,
+    "genres": ["Animation", "Adventure", "Fantasy", "Family"],
+    "moodTags": ["whimsical", "hopeful", "epic"],
+    "runtimeMinutes": 39,
+    "ageRating": "G",
+    "posterKey": "cloud-cartographer",
+    "providers": [
+      {
+        "appID": "disney-plus",
+        "deepLinkURL": "disneyplus://disneyplus.com/search?q=The%20Cloud%20Cartographer",
+        "universalLinkURL": "https://www.disneyplus.com/search"
+      },
+      {
+        "appID": "infuse",
+        "deepLinkURL": "infuse://x-callback-url/search?q=Cloud%20Cartographer",
+        "universalLinkURL": null
+      }
+    ]
+  }
+]

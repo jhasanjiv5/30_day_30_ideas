@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000010000000000000001 /* EnsembleCore in Frameworks */ = {isa = PBXBuildFile; productRef = A90000010000000000000001 /* EnsembleCore */; };
+		A10000020000000000000001 /* EnsembleCore in Frameworks */ = {isa = PBXBuildFile; productRef = A90000020000000000000001 /* EnsembleCore */; };
+		A10000030000000000000001 /* EnsembleTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000001 /* EnsembleTVApp.swift */; };
+		A10000040000000000000001 /* TVBonjourServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000020000000000000001 /* TVBonjourServer.swift */; };
+		A10000050000000000000001 /* TVSceneIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000030000000000000001 /* TVSceneIndex.swift */; };
+		A10000060000000000000001 /* TVAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000040000000000000001 /* TVAppModel.swift */; };
+		A10000070000000000000001 /* TVHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000050000000000000001 /* TVHomeView.swift */; };
+		A10000080000000000000001 /* TVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000060000000000000001 /* TVPlayerView.swift */; };
+		A10000090000000000000001 /* TVAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000070000000000000001 /* TVAboutView.swift */; };
+		A10000100000000000000001 /* EnsemblePhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000110000000000000001 /* EnsemblePhoneApp.swift */; };
+		A10000110000000000000001 /* PhoneBonjourClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000120000000000000001 /* PhoneBonjourClient.swift */; };
+		A10000120000000000000001 /* PhoneRecapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000130000000000000001 /* PhoneRecapService.swift */; };
+		A10000130000000000000001 /* SpeechDictationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000140000000000000001 /* SpeechDictationService.swift */; };
+		A10000140000000000000001 /* PhoneAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000150000000000000001 /* PhoneAppModel.swift */; };
+		A10000150000000000000001 /* PersonaPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000160000000000000001 /* PersonaPickerView.swift */; };
+		A10000160000000000000001 /* RoomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000170000000000000001 /* RoomControlView.swift */; };
+		A10000170000000000000001 /* TVInstalledAppsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000090000000000000001 /* TVInstalledAppsService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* EnsembleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnsembleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000002 /* EnsemblePhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnsemblePhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000010000000000000001 /* EnsembleTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnsembleTVApp.swift; sourceTree = "<group>"; };
+		A20000020000000000000001 /* TVBonjourServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVBonjourServer.swift; sourceTree = "<group>"; };
+		A20000030000000000000001 /* TVSceneIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVSceneIndex.swift; sourceTree = "<group>"; };
+		A20000040000000000000001 /* TVAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppModel.swift; sourceTree = "<group>"; };
+		A20000050000000000000001 /* TVHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVHomeView.swift; sourceTree = "<group>"; };
+		A20000060000000000000001 /* TVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVPlayerView.swift; sourceTree = "<group>"; };
+		A20000070000000000000001 /* TVAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAboutView.swift; sourceTree = "<group>"; };
+		A20000080000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000090000000000000001 /* TVInstalledAppsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVInstalledAppsService.swift; sourceTree = "<group>"; };
+		A20000110000000000000001 /* EnsemblePhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnsemblePhoneApp.swift; sourceTree = "<group>"; };
+		A20000120000000000000001 /* PhoneBonjourClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBonjourClient.swift; sourceTree = "<group>"; };
+		A20000130000000000000001 /* PhoneRecapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRecapService.swift; sourceTree = "<group>"; };
+		A20000140000000000000001 /* SpeechDictationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDictationService.swift; sourceTree = "<group>"; };
+		A20000150000000000000001 /* PhoneAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAppModel.swift; sourceTree = "<group>"; };
+		A20000160000000000000001 /* PersonaPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaPickerView.swift; sourceTree = "<group>"; };
+		A20000170000000000000001 /* RoomControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomControlView.swift; sourceTree = "<group>"; };
+		A20000180000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000200000000000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000010000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000001 /* EnsembleCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30000020000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000020000000000000001 /* EnsembleCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000010000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A40000020000000000000001 /* EnsembleTV */,
+				A40000030000000000000001 /* EnsemblePhone */,
+				A20000200000000000000001 /* README.md */,
+				A40000040000000000000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000020000000000000001 /* EnsembleTV */ = {
+			isa = PBXGroup;
+			children = (
+				A20000080000000000000001 /* Info.plist */,
+				A20000010000000000000001 /* EnsembleTVApp.swift */,
+				A40000100000000000000001 /* Services */,
+				A40000110000000000000001 /* ViewModels */,
+				A40000120000000000000001 /* Views */,
+			);
+			path = EnsembleTV;
+			sourceTree = "<group>";
+		};
+		A40000030000000000000001 /* EnsemblePhone */ = {
+			isa = PBXGroup;
+			children = (
+				A20000180000000000000001 /* Info.plist */,
+				A20000110000000000000001 /* EnsemblePhoneApp.swift */,
+				A40000200000000000000001 /* Services */,
+				A40000210000000000000001 /* ViewModels */,
+				A40000220000000000000001 /* Views */,
+			);
+			path = EnsemblePhone;
+			sourceTree = "<group>";
+		};
+		A40000040000000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* EnsembleTV.app */,
+				A20000000000000000000002 /* EnsemblePhone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A40000100000000000000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A20000020000000000000001 /* TVBonjourServer.swift */,
+				A20000030000000000000001 /* TVSceneIndex.swift */,
+				A20000090000000000000001 /* TVInstalledAppsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A40000110000000000000001 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A20000040000000000000001 /* TVAppModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A40000120000000000000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A20000050000000000000001 /* TVHomeView.swift */,
+				A20000060000000000000001 /* TVPlayerView.swift */,
+				A20000070000000000000001 /* TVAboutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A40000200000000000000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A20000120000000000000001 /* PhoneBonjourClient.swift */,
+				A20000130000000000000001 /* PhoneRecapService.swift */,
+				A20000140000000000000001 /* SpeechDictationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A40000210000000000000001 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A20000150000000000000001 /* PhoneAppModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A40000220000000000000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A20000160000000000000001 /* PersonaPickerView.swift */,
+				A20000170000000000000001 /* RoomControlView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000010000000000000001 /* EnsembleTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000010000000000000001 /* Build configuration list for PBXNativeTarget "EnsembleTV" */;
+			buildPhases = (
+				A60000010000000000000001 /* Sources */,
+				A30000010000000000000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EnsembleTV;
+			packageProductDependencies = (
+				A90000010000000000000001 /* EnsembleCore */,
+			);
+			productName = EnsembleTV;
+			productReference = A20000000000000000000001 /* EnsembleTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A50000020000000000000001 /* EnsemblePhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000020000000000000001 /* Build configuration list for PBXNativeTarget "EnsemblePhone" */;
+			buildPhases = (
+				A60000020000000000000001 /* Sources */,
+				A30000020000000000000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EnsemblePhone;
+			packageProductDependencies = (
+				A90000020000000000000001 /* EnsembleCore */,
+			);
+			productName = EnsemblePhone;
+			productReference = A20000000000000000000002 /* EnsemblePhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70000010000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+			};
+			buildConfigurationList = A80000000000000000000001 /* Build configuration list for PBXProject "Ensemble" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A40000010000000000000001;
+			packageReferences = (
+				A91000010000000000000001 /* XCLocalSwiftPackageReference "EnsembleCore" */,
+			);
+			productRefGroup = A40000040000000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50000010000000000000001 /* EnsembleTV */,
+				A50000020000000000000001 /* EnsemblePhone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000010000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000030000000000000001 /* EnsembleTVApp.swift in Sources */,
+				A10000040000000000000001 /* TVBonjourServer.swift in Sources */,
+				A10000050000000000000001 /* TVSceneIndex.swift in Sources */,
+				A10000060000000000000001 /* TVAppModel.swift in Sources */,
+				A10000070000000000000001 /* TVHomeView.swift in Sources */,
+				A10000080000000000000001 /* TVPlayerView.swift in Sources */,
+				A10000090000000000000001 /* TVAboutView.swift in Sources */,
+				A10000170000000000000001 /* TVInstalledAppsService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60000020000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000100000000000000001 /* EnsemblePhoneApp.swift in Sources */,
+				A10000110000000000000001 /* PhoneBonjourClient.swift in Sources */,
+				A10000120000000000000001 /* PhoneRecapService.swift in Sources */,
+				A10000130000000000000001 /* SpeechDictationService.swift in Sources */,
+				A10000140000000000000001 /* PhoneAppModel.swift in Sources */,
+				A10000150000000000000001 /* PersonaPickerView.swift in Sources */,
+				A10000160000000000000001 /* RoomControlView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AB0000010000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		AB0000020000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		AB0000030000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EnsembleTV/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ensemble.tv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		AB0000040000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EnsembleTV/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ensemble.tv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		AB0000050000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = V8Y5MP8VTK;
+				INFOPLIST_FILE = EnsemblePhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ensemble.phone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB0000060000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = V8Y5MP8VTK;
+				INFOPLIST_FILE = EnsemblePhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ensemble.phone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A80000000000000000000001 /* Build configuration list for PBXProject "Ensemble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000010000000000000001 /* Debug */,
+				AB0000020000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000010000000000000001 /* Build configuration list for PBXNativeTarget "EnsembleTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000030000000000000001 /* Debug */,
+				AB0000040000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000020000000000000001 /* Build configuration list for PBXNativeTarget "EnsemblePhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000050000000000000001 /* Debug */,
+				AB0000060000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A91000010000000000000001 /* XCLocalSwiftPackageReference "EnsembleCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = EnsembleCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A90000010000000000000001 /* EnsembleCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A91000010000000000000001 /* XCLocalSwiftPackageReference "EnsembleCore" */;
+			productName = EnsembleCore;
+		};
+		A90000020000000000000001 /* EnsembleCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A91000010000000000000001 /* XCLocalSwiftPackageReference "EnsembleCore" */;
+			productName = EnsembleCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A70000010000000000000001 /* Project object */;
+}

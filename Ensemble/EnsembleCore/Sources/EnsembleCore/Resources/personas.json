@@ -1,0 +1,130 @@
+[
+  {
+    "id": "maya-action",
+    "displayName": "Maya",
+    "roleLabel": "Adult · Action & Sci-Fi",
+    "avatarSymbol": "bolt.circle.fill",
+    "accentHex": "#2563EB",
+    "isChild": false,
+    "isTeen": false,
+    "watchHistory": [
+      {
+        "title": "Orbital Intercept",
+        "genres": ["Action", "Sci-Fi", "Thriller"],
+        "moodTags": ["kinetic", "tense", "cyberpunk"],
+        "completionRatio": 1.0,
+        "liked": true
+      },
+      {
+        "title": "Canyon Extraction",
+        "genres": ["Action", "Adventure"],
+        "moodTags": ["heroic", "kinetic", "epic"],
+        "completionRatio": 0.96,
+        "liked": true
+      },
+      {
+        "title": "Substation Nine",
+        "genres": ["Thriller", "Action"],
+        "moodTags": ["tense", "noir"],
+        "completionRatio": 0.92,
+        "liked": true
+      }
+    ]
+  },
+  {
+    "id": "david-drama",
+    "displayName": "David",
+    "roleLabel": "Adult · Drama & Mystery",
+    "avatarSymbol": "theatermasks.circle.fill",
+    "accentHex": "#0F766E",
+    "isChild": false,
+    "isTeen": false,
+    "watchHistory": [
+      {
+        "title": "Autumn Archive",
+        "genres": ["Drama", "Mystery"],
+        "moodTags": ["reflective", "emotional", "quiet"],
+        "completionRatio": 1.0,
+        "liked": true
+      },
+      {
+        "title": "Winter Fjord",
+        "genres": ["Drama", "Sci-Fi"],
+        "moodTags": ["cerebral", "melancholic", "bittersweet"],
+        "completionRatio": 0.95,
+        "liked": true
+      },
+      {
+        "title": "Cedar Letters",
+        "genres": ["Drama", "Romance"],
+        "moodTags": ["emotional", "quiet"],
+        "completionRatio": 0.9,
+        "liked": true
+      }
+    ]
+  },
+  {
+    "id": "leo-teen",
+    "displayName": "Leo",
+    "roleLabel": "Teen · Fantasy & Sci-Fi",
+    "avatarSymbol": "flame.circle.fill",
+    "accentHex": "#D97706",
+    "isChild": false,
+    "isTeen": true,
+    "watchHistory": [
+      {
+        "title": "Skyridge Chronicles",
+        "genres": ["Animation", "Fantasy", "Adventure"],
+        "moodTags": ["epic", "heroic", "energetic"],
+        "completionRatio": 1.0,
+        "liked": true
+      },
+      {
+        "title": "Arcade Zero",
+        "genres": ["Sci-Fi", "Action", "Comedy"],
+        "moodTags": ["playful", "kinetic", "energetic"],
+        "completionRatio": 0.94,
+        "liked": true
+      },
+      {
+        "title": "Coastal Derby",
+        "genres": ["Adventure", "Comedy"],
+        "moodTags": ["hopeful", "playful"],
+        "completionRatio": 0.88,
+        "liked": true
+      }
+    ]
+  },
+  {
+    "id": "mia-child",
+    "displayName": "Mia",
+    "roleLabel": "Child · Family & Animation",
+    "avatarSymbol": "sparkles.rectangle.stack.fill",
+    "accentHex": "#16A34A",
+    "isChild": true,
+    "isTeen": false,
+    "watchHistory": [
+      {
+        "title": "Meadow Tales",
+        "genres": ["Animation", "Family", "Comedy"],
+        "moodTags": ["playful", "bright", "whimsical"],
+        "completionRatio": 1.0,
+        "liked": true
+      },
+      {
+        "title": "Lantern Fox",
+        "genres": ["Animation", "Family", "Fantasy"],
+        "moodTags": ["whimsical", "cozy", "bright"],
+        "completionRatio": 1.0,
+        "liked": true
+      },
+      {
+        "title": "Squirrel Glider",
+        "genres": ["Animation", "Adventure", "Family"],
+        "moodTags": ["slapstick", "bright", "heartwarming"],
+        "completionRatio": 0.95,
+        "liked": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>EnsembleTV</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>videos</string>
+		<string>nflx</string>
+		<string>disneyplus</string>
+		<string>aiv</string>
+		<string>max</string>
+		<string>hulu</string>
+		<string>youtube</string>
+		<string>plex</string>
+		<string>infuse</string>
+		<string>jellyfin</string>
+		<string>vimeo</string>
+		<string>mubi</string>
+	</array>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_ensemble._tcp</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Ensemble uses the local network so iPhones in the living room can share normalized taste preferences, request spoiler-free recaps, and jump to scenes on Apple TV.</string>
+</dict>
+</plist>
