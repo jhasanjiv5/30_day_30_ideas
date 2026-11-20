@@ -1,0 +1,1281 @@
+{
+  "pocs": [
+    {
+      "id": "poc-supplier-invoice-portal-xh34",
+      "name": "Supplier Invoice Portal",
+      "business_summary": "Validates vendor PDF invoice intake in Belgium.",
+      "owner_name": "Priya Nair (Lead Cloud Engineer)",
+      "workspace_id": "ws-acme-retail",
+      "data_policy": "eu_only",
+      "allowed_providers": [
+        "none",
+        "vertex_gemini",
+        "vertex_claude",
+        "azure_openai",
+        "openai_compatible"
+      ],
+      "selected_llm_provider": "none",
+      "environment": {
+        "provider_name": "MockProvider",
+        "project_id": "poc-supplier-invoice-portal-xh34-proj",
+        "primary_region": "europe-west1",
+        "region_display": "Belgium (EU)",
+        "service_url": "https://poc-supplier-invoice-portal-xh34.example.run.app",
+        "lifecycle_state": "provisioning",
+        "days_until_teardown": 7,
+        "teardown_date_iso": "2026-11-27",
+        "budget_cap_usd": 450,
+        "current_spend_usd": 47,
+        "terraform_template_ref": "Uploaded terraform.tfstate (2 resources)",
+        "resources": [
+          {
+            "id": "invoice-api-1",
+            "business_label": "Application Service (invoice_api)",
+            "plain_description": "Imported from Terraform resource google_cloud_run_v2_service.invoice_api in Belgium (EU).",
+            "gcp_service": "google_cloud_run_v2_service",
+            "region": "europe-west1",
+            "tier": "Managed",
+            "depends_on": [
+              "invoice-db-2"
+            ],
+            "monthly_base_cost_usd": 85,
+            "linked_check_types": [
+              "latency_p95",
+              "uptime",
+              "iam_exposure"
+            ]
+          },
+          {
+            "id": "invoice-db-2",
+            "business_label": "Customer Database (Belgium (EU))",
+            "plain_description": "Imported from Terraform resource google_sql_database_instance.invoice_db in Belgium (EU).",
+            "gcp_service": "google_sql_database_instance",
+            "region": "europe-west1",
+            "tier": "db-custom-2-7680",
+            "depends_on": [],
+            "monthly_base_cost_usd": 148,
+            "linked_check_types": [
+              "data_region",
+              "monthly_cost"
+            ]
+          }
+        ],
+        "telemetry": {
+          "latency_p95_ms": 165,
+          "uptime_pct": 99.95,
+          "public_iam_bindings": [
+            "service=\"poc-supplier-invoice-portal-xh34-app\" member=\"allUsers\" role=\"roles/run.invoker\""
+          ],
+          "observed_regions": [
+            "europe-west1"
+          ],
+          "monthly_projected_cost_usd": 233,
+          "baseline_daily_users": 600,
+          "max_instances": 12,
+          "concurrency_per_instance": 40,
+          "db_max_connections": 60,
+          "has_multi_region_failover": false
+        }
+      },
+      "requirements": [
+        {
+          "id": "REQ-NEW-1",
+          "title": "Requirement 1",
+          "category": "Performance",
+          "check_type": "latency_p95",
+          "threshold": "<= 250 ms",
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "none"
+        }
+      ],
+      "checks": [
+        {
+          "id": "chk-REQ-NEW-1",
+          "requirement_id": "REQ-NEW-1",
+          "check_type": "latency_p95",
+          "status": "pass",
+          "measured_or_projected": "measured",
+          "actual_display": "165 ms",
+          "threshold_display": "<= 250 ms",
+          "plain_explanation": "95% of customer requests complete in 165 ms, well inside the 250 ms target.",
+          "evidence": {
+            "source_api": "Cloud Monitoring (run.googleapis.com/request_latencies)",
+            "metric_name": "request_latencies_p95_ms",
+            "resource_id": "invoice-api-1",
+            "resource_label": "Application Service (invoice_api)",
+            "observed_summary": "p95=165ms over 24h rolling window",
+            "raw_excerpt": "metric=\"run.googleapis.com/request_latencies\" percentile=95 value=165ms region=\"europe-west1\"",
+            "observed_at": "2026-11-20T18:17:37.216Z"
+          }
+        }
+      ],
+      "pending_drafts": [],
+      "audit_log": [],
+      "sign_offs": [],
+      "comments": []
+    },
+    {
+      "id": "poc-retail-checkout",
+      "name": "Retail Checkout Redesign",
+      "business_summary": "Single-page European checkout pilot running in Belgium to validate sub-250ms cart confirmation and EU data residency before Q4 rollout.",
+      "owner_name": "Priya Nair",
+      "workspace_id": "ws-acme-retail",
+      "data_policy": "eu_only",
+      "allowed_providers": [
+        "none",
+        "vertex_gemini",
+        "vertex_claude",
+        "azure_openai",
+        "openai_compatible"
+      ],
+      "selected_llm_provider": "none",
+      "environment": {
+        "provider_name": "MockProvider",
+        "project_id": "poc-retail-checkout-eu-04",
+        "primary_region": "europe-west1",
+        "region_display": "Belgium (EU)",
+        "service_url": "https://checkout-preview-eu.example.run.app",
+        "lifecycle_state": "live",
+        "days_until_teardown": 5,
+        "teardown_date_iso": "2026-11-25",
+        "budget_cap_usd": 450,
+        "current_spend_usd": 184,
+        "terraform_template_ref": "infra/main.tf (Cloud Run + Cloud SQL EU)",
+        "resources": [
+          {
+            "id": "edge-https-lb",
+            "business_label": "Edge HTTPS Router",
+            "plain_description": "Receives customer checkout requests over encrypted HTTPS and routes traffic to Belgium.",
+            "gcp_service": "Cloud Run Domain Mapping / HTTPS LB",
+            "region": "europe-west1",
+            "tier": "Managed TLS 1.3",
+            "depends_on": [
+              "orders-service"
+            ],
+            "monthly_base_cost_usd": 18,
+            "linked_check_types": [
+              "uptime",
+              "iam_exposure"
+            ]
+          },
+          {
+            "id": "orders-service",
+            "business_label": "Orders Service",
+            "plain_description": "Validates shopping carts, calculates taxes, and confirms customer orders.",
+            "gcp_service": "Cloud Run v2 Service",
+            "region": "europe-west1",
+            "tier": "1 vCPU · 2 GiB · max 12 instances",
+            "depends_on": [
+              "customer-db",
+              "payment-proxy"
+            ],
+            "monthly_base_cost_usd": 94,
+            "linked_check_types": [
+              "latency_p95",
+              "monthly_cost"
+            ]
+          },
+          {
+            "id": "customer-db",
+            "business_label": "Customer Database (Belgium)",
+            "plain_description": "Stores customer addresses and order history strictly inside our Belgium facility.",
+            "gcp_service": "Cloud SQL for PostgreSQL 16",
+            "region": "europe-west1",
+            "tier": "db-custom-2-7680 · Regional SSD",
+            "depends_on": [],
+            "monthly_base_cost_usd": 148,
+            "linked_check_types": [
+              "data_region",
+              "monthly_cost"
+            ]
+          },
+          {
+            "id": "payment-proxy",
+            "business_label": "Payment Gateway Proxy",
+            "plain_description": "Tokenizes card payments with our external processor using private service credentials.",
+            "gcp_service": "Cloud Run Internal Service",
+            "region": "europe-west1",
+            "tier": "Private VPC Ingress Only",
+            "depends_on": [],
+            "monthly_base_cost_usd": 32,
+            "linked_check_types": [
+              "iam_exposure"
+            ]
+          },
+          {
+            "id": "audit-archive",
+            "business_label": "Daily Compliance Archive",
+            "plain_description": "Stores immutable 30-day order receipts and budget alerts inside EU storage.",
+            "gcp_service": "Cloud Storage Bucket",
+            "region": "europe-west1",
+            "tier": "Standard EU · Uniform Bucket Access",
+            "depends_on": [],
+            "monthly_base_cost_usd": 20,
+            "linked_check_types": [
+              "data_region"
+            ]
+          }
+        ],
+        "telemetry": {
+          "latency_p95_ms": 142,
+          "uptime_pct": 99.96,
+          "public_iam_bindings": [
+            "service=\"orders-service\" member=\"allUsers\" role=\"roles/run.invoker\""
+          ],
+          "observed_regions": [
+            "europe-west1"
+          ],
+          "monthly_projected_cost_usd": 312,
+          "baseline_daily_users": 1200,
+          "max_instances": 12,
+          "concurrency_per_instance": 40,
+          "db_max_connections": 60,
+          "has_multi_region_failover": false
+        }
+      },
+      "requirements": [
+        {
+          "id": "REQ-01",
+          "title": "Checkout pages respond under 250 ms for 95% of shoppers",
+          "category": "Performance",
+          "check_type": "latency_p95",
+          "threshold": "<= 250 ms",
+          "target_numeric": 250,
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "vertex_gemini"
+        },
+        {
+          "id": "REQ-02",
+          "title": "Storefront remains reachable at least 99.90% of the time",
+          "category": "Reliability",
+          "check_type": "uptime",
+          "threshold": ">= 99.90%",
+          "target_numeric": 99.9,
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "vertex_gemini"
+        },
+        {
+          "id": "REQ-03",
+          "title": "All customer records stay inside European Union data centers",
+          "category": "Compliance",
+          "check_type": "data_region",
+          "threshold": "EU regions only (europe-*)",
+          "target_region": "europe-",
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "vertex_gemini"
+        },
+        {
+          "id": "REQ-04",
+          "title": "Internal payment proxy and database block public internet access",
+          "category": "Security",
+          "check_type": "iam_exposure",
+          "threshold": "Public web edge only; internal services private",
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "vertex_gemini"
+        },
+        {
+          "id": "REQ-05",
+          "title": "Monthly POC infrastructure run rate stays under $450/month",
+          "category": "Cost",
+          "check_type": "monthly_cost",
+          "threshold": "<= $450/mo",
+          "target_numeric": 450,
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "vertex_gemini"
+        },
+        {
+          "id": "REQ-06",
+          "title": "Multi-region active-active disaster recovery across Frankfurt & Belgium",
+          "category": "Reliability",
+          "check_type": "uptime",
+          "threshold": "RPO < 5s cross-region",
+          "target_numeric": 99.99,
+          "in_scope": false,
+          "approved_by_engineer": true,
+          "source_provider": "none"
+        },
+        {
+          "id": "REQ-07",
+          "title": "Real-time SAP ERP inventory warehouse ledger reconciliation",
+          "category": "Performance",
+          "check_type": "latency_p95",
+          "threshold": "Sync < 1s",
+          "target_numeric": 1000,
+          "in_scope": false,
+          "approved_by_engineer": true,
+          "source_provider": "none"
+        }
+      ],
+      "checks": [
+        {
+          "id": "chk-REQ-01",
+          "requirement_id": "REQ-01",
+          "check_type": "latency_p95",
+          "status": "pass",
+          "measured_or_projected": "measured",
+          "actual_display": "142 ms",
+          "threshold_display": "<= 250 ms",
+          "plain_explanation": "95% of customer requests complete in 142 ms, well inside the 250 ms target.",
+          "evidence": {
+            "source_api": "Cloud Monitoring (run.googleapis.com/request_latencies)",
+            "metric_name": "request_latencies_p95_ms",
+            "resource_id": "orders-service",
+            "resource_label": "Orders Service",
+            "observed_summary": "p95=142ms over 24h rolling window",
+            "raw_excerpt": "metric=\"run.googleapis.com/request_latencies\" percentile=95 value=142ms region=\"europe-west1\"",
+            "observed_at": "2026-11-20T18:04:29.791Z"
+          }
+        },
+        {
+          "id": "chk-REQ-02",
+          "requirement_id": "REQ-02",
+          "check_type": "uptime",
+          "status": "pass",
+          "measured_or_projected": "measured",
+          "actual_display": "99.96%",
+          "threshold_display": ">= 99.90%",
+          "plain_explanation": "Service availability measured 99.96% across continuous synthetic probes.",
+          "evidence": {
+            "source_api": "Cloud Monitoring (monitoring.googleapis.com/uptime_check)",
+            "metric_name": "uptime_check/check_passed_ratio",
+            "resource_id": "edge-https-lb",
+            "resource_label": "Edge HTTPS Router",
+            "observed_summary": "99.96% checks succeeded (1m interval)",
+            "raw_excerpt": "uptime_probe url=\"https://checkout-preview-eu.example.run.app/healthz\" pass_ratio=0.9996 window=\"7d\"",
+            "observed_at": "2026-11-20T18:04:29.791Z"
+          }
+        },
+        {
+          "id": "chk-REQ-03",
+          "requirement_id": "REQ-03",
+          "check_type": "data_region",
+          "status": "pass",
+          "measured_or_projected": "measured",
+          "actual_display": "europe-west1",
+          "threshold_display": "EU regions only (europe-*)",
+          "plain_explanation": "All data-storing services reside inside approved EU boundaries (Belgium (EU)).",
+          "evidence": {
+            "source_api": "Cloud Asset Inventory (cloudasset.googleapis.com/v1/assets)",
+            "metric_name": "asset_location_compliance",
+            "resource_id": "customer-db",
+            "resource_label": "Customer Database (Belgium)",
+            "policy_line": "locations=europe-west1 policy=europe-*",
+            "observed_summary": "1 asset locations audited",
+            "raw_excerpt": "asset_type=\"sqladmin.googleapis.com/Instance\" location=\"europe-west1\" kms_region=\"europe-west1\"",
+            "observed_at": "2026-11-20T18:04:29.791Z"
+          }
+        },
+        {
+          "id": "chk-REQ-04",
+          "requirement_id": "REQ-04",
+          "check_type": "iam_exposure",
+          "status": "warn",
+          "measured_or_projected": "measured",
+          "actual_display": "1 public binding(s)",
+          "threshold_display": "Public web edge only; internal services private",
+          "plain_explanation": "Public web entry point is reachable on HTTPS, while internal services and databases stay private.",
+          "evidence": {
+            "source_api": "Cloud Resource Manager IAM Policy (getIamPolicy)",
+            "metric_name": "iam_public_bindings_audit",
+            "resource_id": "edge-https-lb",
+            "resource_label": "Edge HTTPS Router",
+            "policy_line": "service=\"orders-service\" member=\"allUsers\" role=\"roles/run.invoker\"",
+            "observed_summary": "Found: service=\"orders-service\" member=\"allUsers\" role=\"roles/run.invoker\"",
+            "raw_excerpt": "service=\"orders-service\" member=\"allUsers\" role=\"roles/run.invoker\"",
+            "observed_at": "2026-11-20T18:04:29.791Z"
+          }
+        },
+        {
+          "id": "chk-REQ-05",
+          "requirement_id": "REQ-05",
+          "check_type": "monthly_cost",
+          "status": "pass",
+          "measured_or_projected": "projected",
+          "actual_display": "$312/mo",
+          "threshold_display": "<= $450/mo",
+          "plain_explanation": "Estimated monthly run rate ($312/mo) sits comfortably below the $450/mo budget cap.",
+          "evidence": {
+            "source_api": "Cloud Billing Catalog API (cloudbilling.googleapis.com/v1/services)",
+            "metric_name": "projected_monthly_run_rate_usd",
+            "resource_id": "orders-service",
+            "resource_label": "Orders Service",
+            "observed_summary": "SKU estimate: $312/mo vs $450/mo cap",
+            "raw_excerpt": "billing_skus=\"Cloud Run vCPU/GiB + Cloud SQL db-custom-2-7680 + Egress\" projected_usd=312 cap_usd=450",
+            "observed_at": "2026-11-20T18:04:29.791Z"
+          }
+        }
+      ],
+      "pending_drafts": [
+        {
+          "id": "draft-06581fa9",
+          "poc_id": "poc-retail-checkout",
+          "source_text": "- API latency must stay under 190 ms",
+          "items": [
+            {
+              "id": "VTX-1",
+              "title": "Requirement 1",
+              "category": "Performance",
+              "check_type": "latency_p95",
+              "threshold": "<= 250 ms",
+              "in_scope": true,
+              "rationale": "Drafted by gemini-4-hydrogen (europe-west1): mapped to latency_p95 with threshold <= 250 ms."
+            }
+          ],
+          "audit": {
+            "id": "aud-3a5c3eac",
+            "poc_id": "poc-retail-checkout",
+            "requested_provider": "vertex_gemini",
+            "answered_by_provider": "vertex_gemini",
+            "model": "gemini-4-hydrogen",
+            "prompt_version": "mapping-v1.2",
+            "latency_ms": 8,
+            "input_tokens": 110,
+            "output_tokens": 58,
+            "estimated_cost_usd": 0.000051,
+            "used_fallback": false,
+            "approved": false,
+            "created_at": "2026-11-20T18:17:37.202Z"
+          },
+          "status": "pending_approval"
+        }
+      ],
+      "audit_log": [
+        {
+          "id": "aud-3a5c3eac",
+          "poc_id": "poc-retail-checkout",
+          "requested_provider": "vertex_gemini",
+          "answered_by_provider": "vertex_gemini",
+          "model": "gemini-4-hydrogen",
+          "prompt_version": "mapping-v1.2",
+          "latency_ms": 8,
+          "input_tokens": 110,
+          "output_tokens": 58,
+          "estimated_cost_usd": 0.000051,
+          "used_fallback": false,
+          "approved": false,
+          "created_at": "2026-11-20T18:17:37.202Z"
+        },
+        {
+          "id": "aud-seed-1",
+          "poc_id": "poc-retail-checkout",
+          "requested_provider": "vertex_gemini",
+          "answered_by_provider": "vertex_gemini",
+          "model": "gemini-4-hydrogen",
+          "prompt_version": "mapping-v1.2",
+          "latency_ms": 612,
+          "input_tokens": 420,
+          "output_tokens": 285,
+          "estimated_cost_usd": 0.00023,
+          "used_fallback": false,
+          "approved": true,
+          "created_at": "2026-11-20T12:04:29.805Z"
+        }
+      ],
+      "sign_offs": [
+        {
+          "id": "so-1",
+          "poc_id": "poc-retail-checkout",
+          "requirement_id": "REQ-01",
+          "decision": "approved",
+          "reviewer_name": "Claire Bennett",
+          "reviewer_email": "claire.bennett@acme-retail.example",
+          "reviewer_role": "stakeholder",
+          "note": "142 ms p95 meets our holiday checkout target.",
+          "updated_at": "2026-11-20T15:04:29.805Z"
+        },
+        {
+          "id": "so-2",
+          "poc_id": "poc-retail-checkout",
+          "requirement_id": "REQ-03",
+          "decision": "approved",
+          "reviewer_name": "Henrik Lindqvist",
+          "reviewer_email": "henrik.dpo@acme-retail.example",
+          "reviewer_role": "stakeholder",
+          "note": "Verified Belgium-only database residency for DPO sign-off.",
+          "updated_at": "2026-11-20T16:04:29.805Z"
+        }
+      ],
+      "comments": [
+        {
+          "id": "cmt-1",
+          "poc_id": "poc-retail-checkout",
+          "requirement_id": "REQ-04",
+          "author_name": "Claire Bennett",
+          "author_role": "stakeholder",
+          "body": "Confirmed with InfoSec that public HTTPS edge is expected, while Payment Proxy stays private.",
+          "created_at": "2026-11-20T14:04:29.805Z"
+        },
+        {
+          "id": "cmt-1795198657293",
+          "poc_id": "poc-retail-checkout",
+          "requirement_id": "req-latency",
+          "author_name": "User Alpha",
+          "author_role": "stakeholder",
+          "body": "Alpha private history check comment",
+          "created_at": "2026-11-20T18:17:37.293Z"
+        }
+      ]
+    },
+    {
+      "id": "poc-claims-triage",
+      "name": "Claims Triage Portal",
+      "business_summary": "EU claims adjuster intake workbench approaching scheduled 7-day teardown. Latency and budget cap require review before steering sign-off.",
+      "owner_name": "Priya Nair",
+      "workspace_id": "ws-acme-retail",
+      "data_policy": "eu_only",
+      "allowed_providers": [
+        "none",
+        "vertex_gemini",
+        "vertex_claude",
+        "azure_openai",
+        "openai_compatible"
+      ],
+      "selected_llm_provider": "azure_openai",
+      "environment": {
+        "provider_name": "MockProvider",
+        "project_id": "poc-claims-triage-eu-02",
+        "primary_region": "europe-west4",
+        "region_display": "Netherlands (EU)",
+        "service_url": "https://claims-triage-nl.example.run.app",
+        "lifecycle_state": "expiring",
+        "days_until_teardown": 2,
+        "teardown_date_iso": "2026-11-22",
+        "budget_cap_usd": 600,
+        "current_spend_usd": 540,
+        "terraform_template_ref": "infra/main.tf (Cloud Run + Cloud SQL HA)",
+        "resources": [
+          {
+            "id": "claims-portal",
+            "business_label": "Claims Intake Portal",
+            "plain_description": "Allows adjusters to upload incident photos and claim summaries.",
+            "gcp_service": "Cloud Run Service",
+            "region": "europe-west4",
+            "tier": "2 vCPU · 4 GiB · max 20 instances",
+            "depends_on": [
+              "claims-db"
+            ],
+            "monthly_base_cost_usd": 210,
+            "linked_check_types": [
+              "latency_p95",
+              "uptime",
+              "monthly_cost"
+            ]
+          },
+          {
+            "id": "claims-db",
+            "business_label": "Claims Ledger Database (Netherlands)",
+            "plain_description": "Stores encrypted claim records with automated regional standby.",
+            "gcp_service": "Cloud SQL HA PostgreSQL",
+            "region": "europe-west4",
+            "tier": "HA Regional + Standby",
+            "depends_on": [],
+            "monthly_base_cost_usd": 365,
+            "linked_check_types": [
+              "data_region",
+              "monthly_cost"
+            ]
+          }
+        ],
+        "telemetry": {
+          "latency_p95_ms": 340,
+          "uptime_pct": 99.94,
+          "public_iam_bindings": [
+            "service=\"claims-portal\" member=\"allAuthenticatedUsers\" role=\"roles/run.invoker\""
+          ],
+          "observed_regions": [
+            "europe-west4"
+          ],
+          "monthly_projected_cost_usd": 575,
+          "baseline_daily_users": 800,
+          "max_instances": 20,
+          "concurrency_per_instance": 30,
+          "db_max_connections": 100,
+          "has_multi_region_failover": true
+        }
+      },
+      "requirements": [
+        {
+          "id": "CLM-01",
+          "title": "Adjuster portal loads claim summary under 300 ms",
+          "category": "Performance",
+          "check_type": "latency_p95",
+          "threshold": "<= 300 ms",
+          "target_numeric": 300,
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "azure_openai"
+        },
+        {
+          "id": "CLM-02",
+          "title": "Claims portal maintains 99.90% availability during business hours",
+          "category": "Reliability",
+          "check_type": "uptime",
+          "threshold": ">= 99.90%",
+          "target_numeric": 99.9,
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "azure_openai"
+        },
+        {
+          "id": "CLM-03",
+          "title": "All policyholder documents stay inside EU borders",
+          "category": "Compliance",
+          "check_type": "data_region",
+          "threshold": "EU regions only (europe-*)",
+          "target_region": "europe-",
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "azure_openai"
+        },
+        {
+          "id": "CLM-04",
+          "title": "Monthly POC spend stays below $550/month cap",
+          "category": "Cost",
+          "check_type": "monthly_cost",
+          "threshold": "<= $550/mo",
+          "target_numeric": 550,
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "azure_openai"
+        },
+        {
+          "id": "CLM-05",
+          "title": "No unauthenticated public access to claims endpoints",
+          "category": "Security",
+          "check_type": "iam_exposure",
+          "threshold": "Restricted corporate users only",
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "azure_openai"
+        }
+      ],
+      "checks": [
+        {
+          "id": "chk-CLM-01",
+          "requirement_id": "CLM-01",
+          "check_type": "latency_p95",
+          "status": "warn",
+          "measured_or_projected": "measured",
+          "actual_display": "340 ms",
+          "threshold_display": "<= 300 ms",
+          "plain_explanation": "Response time (340 ms) is approaching the 300 ms ceiling under peak load.",
+          "evidence": {
+            "source_api": "Cloud Monitoring (run.googleapis.com/request_latencies)",
+            "metric_name": "request_latencies_p95_ms",
+            "resource_id": "claims-portal",
+            "resource_label": "Claims Intake Portal",
+            "observed_summary": "p95=340ms over 24h rolling window",
+            "raw_excerpt": "metric=\"run.googleapis.com/request_latencies\" percentile=95 value=340ms region=\"europe-west4\"",
+            "observed_at": "2026-11-20T18:17:37.294Z"
+          }
+        },
+        {
+          "id": "chk-CLM-02",
+          "requirement_id": "CLM-02",
+          "check_type": "uptime",
+          "status": "pass",
+          "measured_or_projected": "measured",
+          "actual_display": "99.94%",
+          "threshold_display": ">= 99.90%",
+          "plain_explanation": "Service availability measured 99.94% across continuous synthetic probes.",
+          "evidence": {
+            "source_api": "Cloud Monitoring (monitoring.googleapis.com/uptime_check)",
+            "metric_name": "uptime_check/check_passed_ratio",
+            "resource_id": "claims-portal",
+            "resource_label": "Claims Intake Portal",
+            "observed_summary": "99.94% checks succeeded (1m interval)",
+            "raw_excerpt": "uptime_probe url=\"https://claims-triage-nl.example.run.app/healthz\" pass_ratio=0.9994 window=\"7d\"",
+            "observed_at": "2026-11-20T18:17:37.294Z"
+          }
+        },
+        {
+          "id": "chk-CLM-03",
+          "requirement_id": "CLM-03",
+          "check_type": "data_region",
+          "status": "pass",
+          "measured_or_projected": "measured",
+          "actual_display": "europe-west4",
+          "threshold_display": "EU regions only (europe-*)",
+          "plain_explanation": "All data-storing services reside inside approved EU boundaries (Netherlands (EU)).",
+          "evidence": {
+            "source_api": "Cloud Asset Inventory (cloudasset.googleapis.com/v1/assets)",
+            "metric_name": "asset_location_compliance",
+            "resource_id": "claims-db",
+            "resource_label": "Claims Ledger Database (Netherlands)",
+            "policy_line": "locations=europe-west4 policy=europe-*",
+            "observed_summary": "1 asset locations audited",
+            "raw_excerpt": "asset_type=\"sqladmin.googleapis.com/Instance\" location=\"europe-west4\" kms_region=\"europe-west4\"",
+            "observed_at": "2026-11-20T18:17:37.294Z"
+          }
+        },
+        {
+          "id": "chk-CLM-04",
+          "requirement_id": "CLM-04",
+          "check_type": "monthly_cost",
+          "status": "fail",
+          "measured_or_projected": "projected",
+          "actual_display": "$575/mo",
+          "threshold_display": "<= $550/mo",
+          "plain_explanation": "Estimated monthly run rate ($575/mo) exceeds the $550/mo budget cap.",
+          "evidence": {
+            "source_api": "Cloud Billing Catalog API (cloudbilling.googleapis.com/v1/services)",
+            "metric_name": "projected_monthly_run_rate_usd",
+            "resource_id": "claims-portal",
+            "resource_label": "Claims Intake Portal",
+            "observed_summary": "SKU estimate: $575/mo vs $550/mo cap",
+            "raw_excerpt": "billing_skus=\"Cloud Run vCPU/GiB + Cloud SQL db-custom-2-7680 + Egress\" projected_usd=575 cap_usd=550",
+            "observed_at": "2026-11-20T18:17:37.294Z"
+          }
+        },
+        {
+          "id": "chk-CLM-05",
+          "requirement_id": "CLM-05",
+          "check_type": "iam_exposure",
+          "status": "warn",
+          "measured_or_projected": "measured",
+          "actual_display": "1 public binding(s)",
+          "threshold_display": "Restricted corporate users only",
+          "plain_explanation": "Public web entry point is reachable on HTTPS, while internal services and databases stay private.",
+          "evidence": {
+            "source_api": "Cloud Resource Manager IAM Policy (getIamPolicy)",
+            "metric_name": "iam_public_bindings_audit",
+            "resource_id": "claims-portal",
+            "resource_label": "Claims Intake Portal",
+            "policy_line": "service=\"claims-portal\" member=\"allAuthenticatedUsers\" role=\"roles/run.invoker\"",
+            "observed_summary": "Found: service=\"claims-portal\" member=\"allAuthenticatedUsers\" role=\"roles/run.invoker\"",
+            "raw_excerpt": "service=\"claims-portal\" member=\"allAuthenticatedUsers\" role=\"roles/run.invoker\"",
+            "observed_at": "2026-11-20T18:17:37.294Z"
+          }
+        }
+      ],
+      "pending_drafts": [],
+      "audit_log": [
+        {
+          "id": "aud-seed-2",
+          "poc_id": "poc-claims-triage",
+          "requested_provider": "azure_openai",
+          "answered_by_provider": "azure_openai",
+          "model": "gpt-4.1",
+          "prompt_version": "mapping-v1.2",
+          "latency_ms": 780,
+          "input_tokens": 390,
+          "output_tokens": 240,
+          "estimated_cost_usd": 0.0027,
+          "used_fallback": false,
+          "approved": true,
+          "created_at": "2026-11-20T06:04:29.805Z"
+        }
+      ],
+      "sign_offs": [
+        {
+          "id": "so-3",
+          "poc_id": "poc-claims-triage",
+          "requirement_id": "CLM-01",
+          "decision": "changes_requested",
+          "reviewer_name": "Marcus Vance",
+          "reviewer_email": "marcus.claims@acme-retail.example",
+          "reviewer_role": "stakeholder",
+          "note": "340 ms exceeds 300 ms goal; please test with min-instances=1 before Friday review.",
+          "updated_at": "2026-11-20T13:04:29.805Z"
+        }
+      ],
+      "comments": []
+    },
+    {
+      "id": "poc-partner-analytics",
+      "name": "Partner Sell-Through Insights",
+      "business_summary": "Newly provisioned US analytics POC for regional merchandising partners.",
+      "owner_name": "David Chen",
+      "workspace_id": "ws-acme-retail",
+      "data_policy": "global",
+      "allowed_providers": [
+        "none",
+        "vertex_gemini",
+        "vertex_claude",
+        "anthropic",
+        "openai",
+        "azure_openai",
+        "openai_compatible"
+      ],
+      "selected_llm_provider": "none",
+      "environment": {
+        "provider_name": "MockProvider",
+        "project_id": "poc-partner-analytics-us-01",
+        "primary_region": "us-central1",
+        "region_display": "Iowa (US)",
+        "service_url": "https://partner-insights-us.example.run.app",
+        "lifecycle_state": "provisioning",
+        "days_until_teardown": 7,
+        "teardown_date_iso": "2026-11-27",
+        "budget_cap_usd": 350,
+        "current_spend_usd": 42,
+        "terraform_template_ref": "infra/main.tf (Cloud Run + Cloud SQL US)",
+        "resources": [
+          {
+            "id": "insights-api",
+            "business_label": "Partner Insights Service",
+            "plain_description": "Aggregates anonymized weekly partner sell-through trends.",
+            "gcp_service": "Cloud Run Service",
+            "region": "us-central1",
+            "tier": "1 vCPU · 1 GiB · max 8 instances",
+            "depends_on": [
+              "insights-db"
+            ],
+            "monthly_base_cost_usd": 65,
+            "linked_check_types": [
+              "latency_p95",
+              "uptime"
+            ]
+          },
+          {
+            "id": "insights-db",
+            "business_label": "Partner Metrics Store (Iowa)",
+            "plain_description": "Holds weekly aggregated partner metrics in US Central.",
+            "gcp_service": "Cloud SQL PostgreSQL",
+            "region": "us-central1",
+            "tier": "db-f1-micro",
+            "depends_on": [],
+            "monthly_base_cost_usd": 95,
+            "linked_check_types": [
+              "data_region",
+              "monthly_cost"
+            ]
+          }
+        ],
+        "telemetry": {
+          "latency_p95_ms": 195,
+          "uptime_pct": 99.85,
+          "public_iam_bindings": [],
+          "observed_regions": [
+            "us-central1"
+          ],
+          "monthly_projected_cost_usd": 160,
+          "baseline_daily_users": 350,
+          "max_instances": 8,
+          "concurrency_per_instance": 25,
+          "db_max_connections": 40,
+          "has_multi_region_failover": false
+        }
+      },
+      "requirements": [
+        {
+          "id": "PRT-01",
+          "title": "Partner dashboards load within 350 ms",
+          "category": "Performance",
+          "check_type": "latency_p95",
+          "threshold": "<= 350 ms",
+          "target_numeric": 350,
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "none"
+        },
+        {
+          "id": "PRT-02",
+          "title": "Database access requires authenticated service identity",
+          "category": "Security",
+          "check_type": "iam_exposure",
+          "threshold": "Private access only",
+          "in_scope": true,
+          "approved_by_engineer": true,
+          "source_provider": "none"
+        }
+      ],
+      "checks": [
+        {
+          "id": "chk-PRT-01",
+          "requirement_id": "PRT-01",
+          "check_type": "latency_p95",
+          "status": "pass",
+          "measured_or_projected": "measured",
+          "actual_display": "195 ms",
+          "threshold_display": "<= 350 ms",
+          "plain_explanation": "95% of customer requests complete in 195 ms, well inside the 350 ms target.",
+          "evidence": {
+            "source_api": "Cloud Monitoring (run.googleapis.com/request_latencies)",
+            "metric_name": "request_latencies_p95_ms",
+            "resource_id": "insights-api",
+            "resource_label": "Partner Insights Service",
+            "observed_summary": "p95=195ms over 24h rolling window",
+            "raw_excerpt": "metric=\"run.googleapis.com/request_latencies\" percentile=95 value=195ms region=\"us-central1\"",
+            "observed_at": "2026-11-20T18:04:29.806Z"
+          }
+        },
+        {
+          "id": "chk-PRT-02",
+          "requirement_id": "PRT-02",
+          "check_type": "iam_exposure",
+          "status": "pass",
+          "measured_or_projected": "measured",
+          "actual_display": "Private access only",
+          "threshold_display": "Private access only",
+          "plain_explanation": "No public or broad access bindings exist; all entry points require authentication.",
+          "evidence": {
+            "source_api": "Cloud Resource Manager IAM Policy (getIamPolicy)",
+            "metric_name": "iam_public_bindings_audit",
+            "resource_id": "insights-api",
+            "resource_label": "Partner Insights Service",
+            "policy_line": "bindings: [] (no allUsers / allAuthenticatedUsers)",
+            "observed_summary": "0 public bindings found",
+            "raw_excerpt": "resource=\"//cloudresourcemanager.googleapis.com/projects/poc-partner-analytics-us-01\" public_members=none",
+            "observed_at": "2026-11-20T18:04:29.806Z"
+          }
+        }
+      ],
+      "pending_drafts": [],
+      "audit_log": [],
+      "sign_offs": [],
+      "comments": []
+    }
+  ],
+  "disabled_providers": [],
+  "encrypted_byok_keys": {},
+  "users": [
+    {
+      "id": "usr-claire",
+      "name": "Claire Bennett (VP Operations)",
+      "email": "claire.bennett@acme-retail.example",
+      "role": "stakeholder",
+      "auth_provider": "password",
+      "password_hash": "scrypt$91c4212206dcdf5c065a151d1fd8c571$955a6abe19f692075c0eecd23392f9bb34ee258cfb33e39684360bb061380bb2ce7969508aead5a8d3218563fcac191da70b0d4a83134b8b8bbc5f67ad38236d",
+      "created_at": "2026-11-20T18:04:29.806Z",
+      "last_login_at": "2026-11-20T18:24:53.255Z"
+    },
+    {
+      "id": "usr-priya",
+      "name": "Priya Nair (Lead Cloud Engineer)",
+      "email": "priya.nair@acme-retail.example",
+      "role": "engineer",
+      "auth_provider": "password",
+      "password_hash": "scrypt$91c4212206dcdf5c065a151d1fd8c571$955a6abe19f692075c0eecd23392f9bb34ee258cfb33e39684360bb061380bb2ce7969508aead5a8d3218563fcac191da70b0d4a83134b8b8bbc5f67ad38236d",
+      "created_at": "2026-11-20T18:04:29.806Z",
+      "last_login_at": "2026-11-20T18:04:37.943Z"
+    },
+    {
+      "id": "usr-1795198657255-6y61",
+      "name": "User Alpha",
+      "email": "usera-1795198657254@example.com",
+      "role": "stakeholder",
+      "auth_provider": "password",
+      "password_hash": "scrypt$32dd68a71a4fe00e3ec9561637afce5f$19e61c3de0ecb5dc82640abccb34a01dafcd6eb4dd78816053f91fc55bd0e5409a3e5dc119a18345a8f166a09d4a27d6f5d4f32e425a1a1836872146a39d812b",
+      "created_at": "2026-11-20T18:17:37.255Z",
+      "last_login_at": "2026-11-20T18:17:37.255Z"
+    },
+    {
+      "id": "usr-1795198657292-cx7g",
+      "name": "User Beta",
+      "email": "userb-1795198657291@example.com",
+      "role": "engineer",
+      "auth_provider": "google_identity",
+      "created_at": "2026-11-20T18:17:37.292Z",
+      "last_login_at": "2026-11-20T18:17:37.292Z"
+    }
+  ],
+  "history": [
+    {
+      "id": "hist-1795199093624-0a49",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-retail-checkout",
+      "poc_name": "Retail Checkout Redesign",
+      "action": "ran_whatif",
+      "summary": "Simulated ×10 users, ×1 burst + region outage",
+      "tab": "whatif",
+      "timestamp": "2026-11-20T18:24:53.624Z"
+    },
+    {
+      "id": "hist-1795199093579-vkks",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-retail-checkout",
+      "poc_name": "Retail Checkout Redesign",
+      "action": "ran_whatif",
+      "summary": "Simulated ×10 users, ×1 burst",
+      "tab": "whatif",
+      "timestamp": "2026-11-20T18:24:53.579Z"
+    },
+    {
+      "id": "hist-1795199093571-cssf",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-retail-checkout",
+      "poc_name": "Retail Checkout Redesign",
+      "action": "viewed",
+      "summary": "Opened What-If Simulator view",
+      "tab": "whatif",
+      "timestamp": "2026-11-20T18:24:53.571Z"
+    },
+    {
+      "id": "hist-1795199093445-15b2",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-retail-checkout",
+      "poc_name": "Retail Checkout Redesign",
+      "action": "viewed",
+      "summary": "Opened Requirements Scorecard view",
+      "tab": "scorecard",
+      "timestamp": "2026-11-20T18:24:53.445Z"
+    },
+    {
+      "id": "hist-1795199093367-brul",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-retail-checkout",
+      "poc_name": "Retail Checkout Redesign",
+      "action": "viewed",
+      "summary": "Opened Architecture Map view",
+      "tab": "architecture",
+      "timestamp": "2026-11-20T18:24:53.367Z"
+    },
+    {
+      "id": "hist-1795199044357-zkqy",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened Architecture Map view",
+      "tab": "architecture",
+      "timestamp": "2026-11-20T18:24:04.357Z"
+    },
+    {
+      "id": "hist-1795198987941-0hu3",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened Architecture Map view",
+      "tab": "architecture",
+      "timestamp": "2026-11-20T18:23:07.941Z"
+    },
+    {
+      "id": "hist-1795198804262-fl2h",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened Sign-Off view",
+      "tab": "signoff",
+      "timestamp": "2026-11-20T18:20:04.262Z"
+    },
+    {
+      "id": "hist-1795198803889-v1ys",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "ran_whatif",
+      "summary": "Simulated ×10 users, ×1 burst",
+      "tab": "whatif",
+      "timestamp": "2026-11-20T18:20:03.889Z"
+    },
+    {
+      "id": "hist-1795198803877-9f7u",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened What-If Simulator view",
+      "tab": "whatif",
+      "timestamp": "2026-11-20T18:20:03.877Z"
+    },
+    {
+      "id": "hist-1795198803517-kix8",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened Requirements Scorecard view",
+      "tab": "scorecard",
+      "timestamp": "2026-11-20T18:20:03.517Z"
+    },
+    {
+      "id": "hist-1795198802952-p97o",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened Architecture Map view",
+      "tab": "architecture",
+      "timestamp": "2026-11-20T18:20:02.952Z"
+    },
+    {
+      "id": "hist-1795198788963-hkj6",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened Sign-Off view",
+      "tab": "signoff",
+      "timestamp": "2026-11-20T18:19:48.963Z"
+    },
+    {
+      "id": "hist-1795198788577-gnku",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "ran_whatif",
+      "summary": "Simulated ×10 users, ×1 burst",
+      "tab": "whatif",
+      "timestamp": "2026-11-20T18:19:48.577Z"
+    },
+    {
+      "id": "hist-1795198788576-mlwu",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened What-If Simulator view",
+      "tab": "whatif",
+      "timestamp": "2026-11-20T18:19:48.576Z"
+    },
+    {
+      "id": "hist-1795198788161-jrfj",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened Requirements Scorecard view",
+      "tab": "scorecard",
+      "timestamp": "2026-11-20T18:19:48.161Z"
+    },
+    {
+      "id": "hist-1795198787502-xqnc",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "viewed",
+      "summary": "Opened Architecture Map view",
+      "tab": "architecture",
+      "timestamp": "2026-11-20T18:19:47.502Z"
+    },
+    {
+      "id": "hist-1795198657303-qa5i",
+      "user_email": "userb-1795198657291@example.com",
+      "user_name": "User Beta",
+      "user_role": "engineer",
+      "poc_id": "poc-claims-triage",
+      "poc_name": "Claims Triage Portal",
+      "action": "rechecked",
+      "summary": "Triggered live check refresh via MockProvider",
+      "tab": "console",
+      "timestamp": "2026-11-20T18:17:37.303Z"
+    },
+    {
+      "id": "hist-1795198657216-4u8x",
+      "user_email": "priya.nair@acme-retail.example",
+      "user_name": "Priya Nair (Lead Cloud Engineer)",
+      "user_role": "engineer",
+      "poc_id": "poc-supplier-invoice-portal-xh34",
+      "poc_name": "Supplier Invoice Portal",
+      "action": "created_poc",
+      "summary": "Created POC environment in Belgium (EU)",
+      "tab": "scorecard",
+      "timestamp": "2026-11-20T18:17:37.216Z"
+    },
+    {
+      "id": "hist-1795198657202-39ea",
+      "user_email": "priya.nair@acme-retail.example",
+      "user_name": "Priya Nair (Lead Cloud Engineer)",
+      "user_role": "engineer",
+      "poc_id": "poc-retail-checkout",
+      "poc_name": "Retail Checkout Redesign",
+      "action": "drafted_mapping",
+      "summary": "Drafted 1 mapping(s) with vertex_gemini",
+      "tab": "console",
+      "timestamp": "2026-11-20T18:17:37.202Z"
+    },
+    {
+      "id": "hist-1795198656869-ixhs",
+      "user_email": "bob@example.com",
+      "user_name": "Bob",
+      "user_role": "stakeholder",
+      "poc_id": "poc-claims-triage",
+      "poc_name": "Claims Triage Portal",
+      "action": "signed_off",
+      "summary": "Bob approved Check",
+      "tab": "signoff",
+      "timestamp": "2026-11-20T18:17:36.869Z"
+    },
+    {
+      "id": "hist-1795198656866-z59b",
+      "user_email": "alice@example.com",
+      "user_name": "Alice",
+      "user_role": "engineer",
+      "poc_id": "poc-retail-checkout",
+      "poc_name": "Retail Checkout Redesign",
+      "action": "viewed",
+      "summary": "Alice inspected Scorecard",
+      "tab": "scorecard",
+      "timestamp": "2026-11-20T18:17:36.868Z"
+    },
+    {
+      "id": "hist-seed-1",
+      "user_email": "priya.nair@acme-retail.example",
+      "user_name": "Priya Nair (Lead Cloud Engineer)",
+      "user_role": "engineer",
+      "poc_id": "poc-retail-checkout",
+      "poc_name": "Retail Checkout Redesign",
+      "action": "approved_mapping",
+      "summary": "Approved initial requirement mappings and published live scorecard",
+      "tab": "console",
+      "timestamp": "2026-11-20T14:04:29.872Z"
+    },
+    {
+      "id": "hist-seed-2",
+      "user_email": "claire.bennett@acme-retail.example",
+      "user_name": "Claire Bennett (VP Operations)",
+      "user_role": "stakeholder",
+      "poc_id": "poc-retail-checkout",
+      "poc_name": "Retail Checkout Redesign",
+      "action": "signed_off",
+      "summary": "Reviewed EU data residency evidence and approved REQ-3",
+      "tab": "signoff",
+      "timestamp": "2026-11-20T16:04:29.872Z"
+    },
+    {
+      "id": "hist-seed-3",
+      "user_email": "priya.nair@acme-retail.example",
+      "user_name": "Priya Nair (Lead Cloud Engineer)",
+      "user_role": "engineer",
+      "poc_id": "poc-claims-triage",
+      "poc_name": "Claims Triage Portal",
+      "action": "rechecked",
+      "summary": "Refreshed Cloud Run latency and uptime metrics",
+      "tab": "scorecard",
+      "timestamp": "2026-11-20T16:34:29.872Z"
+    }
+  ]
+}

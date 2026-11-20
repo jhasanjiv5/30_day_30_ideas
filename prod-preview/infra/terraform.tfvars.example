@@ -1,0 +1,9 @@
+project_id                = "poc-retail-checkout-eu-04"
+region                    = "europe-west1"
+poc_id                    = "poc-retail-checkout"
+app_image                 = "europe-west1-docker.pkg.dev/poc-retail-checkout-eu-04/apps/checkout:latest"
+billing_account_id        = "012345-6789AB-CDEF01"
+budget_cap_usd            = 450
+teardown_days             = 7
+teardown_webhook_url      = "https://teardown-controller.example.run.app/cleanup"
+scheduler_service_account = "teardown-invoker@poc-retail-checkout-eu-04.iam.gserviceaccount.com"

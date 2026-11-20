@@ -1,0 +1,6 @@
+{
+  "name": "Prod Preview",
+  "description": "Stakeholder-facing GCP POC review service with plain-language architecture maps, live requirement scorecards, what-if simulations, and steering-committee sign-off.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

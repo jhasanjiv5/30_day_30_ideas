@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-sans: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+    /* Microsoft Project / Fluent 2 Enterprise Tokens */
+    --ms-canvas: #faf9f8;
+    --ms-surface: #ffffff;
+    --ms-surface-subtle: #f3f2f1;
+    --ms-border: #e1dfdd;
+    --ms-border-subtle: #edebe9;
+    --ms-text-primary: #242424;
+    --ms-text-secondary: #605e5c;
+    --ms-project-brand: #107c41;
+    --ms-project-hover: #0c6233;
+    --ms-project-tint: #eff6f1;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: var(--ms-text-primary);
+    background-color: var(--ms-canvas);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+.ms-card {
+  background-color: var(--ms-surface);
+  border: 1px solid var(--ms-border);
+  border-radius: 4px;
+  box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.05), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.03);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* WCAG 2.1 AA high-visibility focus ring in Microsoft Project Emerald */
+:focus-visible {
+  outline: 2px solid #107c41;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

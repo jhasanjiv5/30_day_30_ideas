@@ -1,0 +1,51 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-prodpreview}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-prodpreview}
+      POSTGRES_DB: ${POSTGRES_DB:-prodpreview}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./backend/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U prodpreview"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    environment:
+      ENVIRONMENT_PROVIDER: ${ENVIRONMENT_PROVIDER:-mock}
+      DATABASE_URL: postgresql://prodpreview:prodpreview@postgres:5432/prodpreview
+      SESSION_TOKEN_SECRET: ${SESSION_TOKEN_SECRET:-YOUR_SESSION_TOKEN_SECRET_32_BYTES}
+      INVITE_TOKEN_SECRET: ${INVITE_TOKEN_SECRET:-YOUR_INVITE_TOKEN_SECRET_32_BYTES}
+      BYOK_ENCRYPTION_KEY: ${BYOK_ENCRYPTION_KEY:-YOUR_BYOK_ENCRYPTION_KEY_32_BYTES}
+      DEFAULT_LLM_PROVIDER: ${DEFAULT_LLM_PROVIDER:-vertex_gemini}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-YOUR_GEMINI_API_KEY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-YOUR_ANTHROPIC_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-YOUR_OPENAI_API_KEY}
+      AZURE_OPENAI_API_KEY: ${AZURE_OPENAI_API_KEY:-YOUR_AZURE_OPENAI_API_KEY}
+      AZURE_OPENAI_ENDPOINT: ${AZURE_OPENAI_ENDPOINT:-https://YOUR_RESOURCE.openai.azure.com}
+      OPENAI_COMPAT_BASE_URL: ${OPENAI_COMPAT_BASE_URL:-http://localhost:11434/v1}
+      OPENAI_COMPAT_API_KEY: ${OPENAI_COMPAT_API_KEY:-YOUR_OPENAI_COMPAT_API_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:

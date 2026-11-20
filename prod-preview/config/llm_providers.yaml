@@ -1,0 +1,115 @@
+version: "1.0"
+prompt_version: "mapping-v1.2"
+
+workspace_defaults:
+  fallback_chain:
+    - vertex_gemini
+    - openai
+    - none
+  disabled_providers: []
+
+providers:
+  none:
+    id: none
+    display_name: "None (manual mapping)"
+    adapter: manual
+    model_env: ""
+    default_model: "manual-rule-parser"
+    region: "local"
+    eu_data_residency: true
+    structured_output: true
+    max_context_tokens: 128000
+    cost_per_1k_input_usd: 0.0
+    cost_per_1k_output_usd: 0.0
+    requires_key_env: ""
+    description: "Deterministic YAML/text requirement parser with zero LLM calls."
+
+  vertex_gemini:
+    id: vertex_gemini
+    display_name: "Vertex AI — Gemini (EU)"
+    adapter: vertex_gemini
+    model_env: VERTEX_GEMINI_MODEL
+    default_model: "gemini-4-hydrogen"
+    region: "europe-west1"
+    eu_data_residency: true
+    structured_output: true
+    max_context_tokens: 1000000
+    cost_per_1k_input_usd: 0.00015
+    cost_per_1k_output_usd: 0.0006
+    requires_key_env: "GEMINI_API_KEY"
+    description: "Google Vertex AI Gemini hosted in europe-west1 with native JSON schema enforcement."
+
+  vertex_claude:
+    id: vertex_claude
+    display_name: "Vertex AI — Partner Claude (EU)"
+    adapter: vertex_claude
+    model_env: VERTEX_CLAUDE_MODEL
+    default_model: "claude-sonnet-4-5@vertex"
+    region: "europe-west1"
+    eu_data_residency: true
+    structured_output: true
+    max_context_tokens: 200000
+    cost_per_1k_input_usd: 0.003
+    cost_per_1k_output_usd: 0.015
+    requires_key_env: "VERTEX_PROJECT_ID"
+    description: "Anthropic Claude accessed via Google Cloud Vertex AI Model Garden in europe-west1."
+
+  anthropic:
+    id: anthropic
+    display_name: "Anthropic API (US)"
+    adapter: anthropic
+    model_env: ANTHROPIC_MODEL
+    default_model: "claude-3-7-sonnet-latest"
+    region: "us-east"
+    eu_data_residency: false
+    structured_output: true
+    max_context_tokens: 200000
+    cost_per_1k_input_usd: 0.003
+    cost_per_1k_output_usd: 0.015
+    requires_key_env: "ANTHROPIC_API_KEY"
+    description: "Direct Anthropic Messages API (US processing region)."
+
+  openai:
+    id: openai
+    display_name: "OpenAI API (US)"
+    adapter: openai
+    model_env: OPENAI_MODEL
+    default_model: "gpt-4.1-mini"
+    region: "us"
+    eu_data_residency: false
+    structured_output: true
+    max_context_tokens: 128000
+    cost_per_1k_input_usd: 0.0004
+    cost_per_1k_output_usd: 0.0016
+    requires_key_env: "OPENAI_API_KEY"
+    description: "OpenAI Responses API with strict JSON schema mode."
+
+  azure_openai:
+    id: azure_openai
+    display_name: "Azure OpenAI (EU North)"
+    adapter: azure_openai
+    model_env: AZURE_OPENAI_DEPLOYMENT
+    default_model: "gpt-4.1"
+    region: "eu-north"
+    eu_data_residency: true
+    structured_output: true
+    max_context_tokens: 128000
+    cost_per_1k_input_usd: 0.002
+    cost_per_1k_output_usd: 0.008
+    requires_key_env: "AZURE_OPENAI_API_KEY"
+    description: "Enterprise Azure OpenAI deployment pinned to Sweden Central (EU)."
+
+  openai_compatible:
+    id: openai_compatible
+    display_name: "OpenAI-Compatible (Ollama / vLLM)"
+    adapter: openai_compatible
+    model_env: OPENAI_COMPAT_MODEL
+    default_model: "llama3.1:8b"
+    region: "local"
+    eu_data_residency: true
+    structured_output: false
+    max_context_tokens: 32768
+    cost_per_1k_input_usd: 0.0
+    cost_per_1k_output_usd: 0.0
+    requires_key_env: "OPENAI_COMPAT_BASE_URL"
+    description: "Self-hosted Ollama or vLLM endpoint using OpenAI-compatible chat completions."
