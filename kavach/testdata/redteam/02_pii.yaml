@@ -1,0 +1,71 @@
+- id: pii-01-visa-luhn
+  category: pii
+  description: Luhn-valid synthetic Visa test card number
+  hook_event: UserPromptSubmit
+  expect_action: BLOCK
+  payload:
+    hook_event_name: UserPromptSubmit
+    prompt: "Test checkout with card 4111 1111 1111 1111"
+
+- id: pii-02-mc-luhn
+  category: pii
+  description: Luhn-valid synthetic Mastercard test card number
+  hook_event: UserPromptSubmit
+  expect_action: BLOCK
+  payload:
+    hook_event_name: UserPromptSubmit
+    prompt: "Refund to 5500-0000-0000-0004"
+
+- id: pii-03-us-ssn
+  category: pii
+  description: Synthetic US SSN pattern
+  hook_event: UserPromptSubmit
+  expect_action: BLOCK
+  payload:
+    hook_event_name: UserPromptSubmit
+    prompt: "Applicant SSN is 123-45-6789 for tax form"
+
+- id: pii-04-in-aadhaar
+  category: pii
+  description: Synthetic Indian Aadhaar number with KYC context
+  hook_event: UserPromptSubmit
+  expect_action: BLOCK
+  payload:
+    hook_event_name: UserPromptSubmit
+    prompt: "Verify KYC Aadhaar number 2345 6789 0123"
+
+- id: pii-05-in-pan
+  category: pii
+  description: Synthetic Indian PAN number with tax context
+  hook_event: UserPromptSubmit
+  expect_action: WARN
+  payload:
+    hook_event_name: UserPromptSubmit
+    prompt: "Tax filing PAN: ABCPD1234F"
+
+- id: pii-06-intl-phone
+  category: pii
+  description: Synthetic international phone number
+  hook_event: UserPromptSubmit
+  expect_action: WARN
+  payload:
+    hook_event_name: UserPromptSubmit
+    prompt: "Call customer on +91 98765 43210"
+
+- id: pii-07-us-phone
+  category: pii
+  description: Synthetic US phone number
+  hook_event: UserPromptSubmit
+  expect_action: WARN
+  payload:
+    hook_event_name: UserPromptSubmit
+    prompt: "Customer mobile: (415) 555-0199"
+
+- id: pii-08-personal-email
+  category: pii
+  description: Synthetic personal email address outside ignore_domains
+  hook_event: UserPromptSubmit
+  expect_action: WARN
+  payload:
+    hook_event_name: UserPromptSubmit
+    prompt: "Send invoice to priya.sharma@fintech-demo.io"

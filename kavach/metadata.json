@@ -1,0 +1,6 @@
+{
+  "name": "Kavach",
+  "description": "Local security guard for AI agent sessions — detects secrets, PII, prompt injection, and risky actions before they reach third-party LLMs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
