@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Saathi</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>If you opt in, Saathi checks today's calendar events on-device to tailor your walk and memory episode.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>If you opt in, Saathi checks today's calendar events on-device to tailor your walk and memory episode.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Saathi reads your Outdoor Walk workout from Apple Watch or iPhone to know when your walk ends and to add its distance, time and steps to your memory episode. Saathi reads totals only, never your route, and never writes health data.</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>SaathiLiveTourAccuracy</key>
+		<string>Saathi needs temporary precise location to tell which monument you are facing and position audio accurately.</string>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Saathi uses your location only during an active walk session to narrate nearby historic places. Exact coordinates stay in memory and are never saved.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Saathi listens for your voice questions and commands while a walk session is active. Audio is processed on-device.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Saathi counts your steps and notices when you stop walking or get into a vehicle, so it can wrap up your walk on its own. With AirPods, it also uses headphone motion to point landmark audio in the right direction and detect nods or shakes.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>If you opt in, Saathi matches your past photos taken near your current stop so your narration can mention your own memories.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Saathi transcribes your spoken questions on-device so you can ask about nearby places hands-free.</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>location</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict/>
+</dict>
+</plist>

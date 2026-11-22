@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Saathi Simulation">
+  <metadata>
+    <name>Rome Forum to Colosseum Walk</name>
+  </metadata>
+  <wpt lat="41.8925" lon="12.4853">
+    <name>Roman Forum (Temple of Saturn)</name>
+    <time>2026-11-22T11:00:00Z</time>
+  </wpt>
+  <wpt lat="41.8919" lon="12.4869">
+    <name>Arch of Titus</name>
+    <time>2026-11-22T11:08:00Z</time>
+  </wpt>
+  <wpt lat="41.8907" lon="12.4889">
+    <name>Arch of Constantine</name>
+    <time>2026-11-22T11:15:00Z</time>
+  </wpt>
+  <wpt lat="41.8902" lon="12.4922">
+    <name>Colosseum (Flavian Amphitheatre)</name>
+    <time>2026-11-22T11:24:00Z</time>
+  </wpt>
+</gpx>

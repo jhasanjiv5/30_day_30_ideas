@@ -1,0 +1,76 @@
+{
+  "entries": [
+    {
+      "term": "Hampi",
+      "ipa": "ˈhʌmpi",
+      "transliteration": "Hampi",
+      "localScripts": {
+        "hi-IN": "हम्पी",
+        "kn-IN": "ಹಂಪಿ",
+        "ta-IN": "ஹம்பி",
+        "ur-IN": "ہمپی"
+      }
+    },
+    {
+      "term": "Vittala",
+      "ipa": "ˈvɪʈːələ",
+      "transliteration": "Vittala",
+      "localScripts": {
+        "hi-IN": "विट्ठल",
+        "kn-IN": "ವಿಠ್ಠಲ",
+        "ta-IN": "விட்டல",
+        "ur-IN": "وٹل"
+      }
+    },
+    {
+      "term": "Virupaksha",
+      "ipa": "ʋɪruːˈpɑːkʂə",
+      "transliteration": "Virupaksha",
+      "localScripts": {
+        "hi-IN": "विरुपाक्ष",
+        "kn-IN": "ವಿರೂಪಾಕ್ಷ",
+        "ta-IN": "விருபாக்ஷ",
+        "ur-IN": "وروپاکش"
+      }
+    },
+    {
+      "term": "Chandni Chowk",
+      "ipa": "ˈtʃɑːndniː ˈtʃɔːk",
+      "transliteration": "Chandni Chowk",
+      "localScripts": {
+        "hi-IN": "चाँदनी चौक",
+        "ta-IN": "சாந்தினி சௌக்",
+        "ur-IN": "چاندنی چوک"
+      }
+    },
+    {
+      "term": "Lal Qila",
+      "ipa": "ˈlɑːl ˈqɪlɑː",
+      "transliteration": "Lal Qila (Red Fort)",
+      "localScripts": {
+        "hi-IN": "लाल क़िला",
+        "ta-IN": "செங்கோட்டை",
+        "ur-IN": "لال قلعہ"
+      }
+    },
+    {
+      "term": "Shahjahanabad",
+      "ipa": "ʃɑːdʒəhɑːnɑːˈbɑːd",
+      "transliteration": "Shahjahanabad",
+      "localScripts": {
+        "hi-IN": "शाहजहानाबाद",
+        "ur-IN": "شاہجہان آباد"
+      }
+    },
+    {
+      "term": "Colosseum",
+      "ipa": "ˌkɒləˈsiːəm",
+      "transliteration": "Colosseum",
+      "localScripts": {
+        "hi-IN": "कोलोसियम",
+        "ta-IN": "கொலோசியம்",
+        "ur-IN": "کولوزیم"
+      }
+    }
+  ]
+}

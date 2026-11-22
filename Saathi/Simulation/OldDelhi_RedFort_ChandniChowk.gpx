@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Saathi Simulation">
+  <metadata>
+    <name>Old Delhi Red Fort to Chandni Chowk Walk</name>
+  </metadata>
+  <wpt lat="28.6562" lon="77.2410">
+    <name>Lahori Gate, Red Fort (Lal Qila)</name>
+    <time>2026-11-22T10:00:00Z</time>
+  </wpt>
+  <wpt lat="28.6559" lon="77.2392">
+    <name>Chatta Chowk Covered Bazaar</name>
+    <time>2026-11-22T10:06:00Z</time>
+  </wpt>
+  <wpt lat="28.6560" lon="77.2354">
+    <name>Sri Digambar Jain Lal Mandir</name>
+    <time>2026-11-22T10:14:00Z</time>
+  </wpt>
+  <wpt lat="28.6557" lon="77.2323">
+    <name>Gurdwara Sis Ganj Sahib</name>
+    <time>2026-11-22T10:22:00Z</time>
+  </wpt>
+  <wpt lat="28.6556" lon="77.2279">
+    <name>Chandni Chowk Town Hall</name>
+    <time>2026-11-22T10:32:00Z</time>
+  </wpt>
+</gpx>

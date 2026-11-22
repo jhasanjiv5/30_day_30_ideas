@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000010000000000000001 /* SaathiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000010000000000000001 /* SaathiApp.swift */; };
+		A10000020000000000000002 /* StartSaathiIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000020000000000000002 /* StartSaathiIntent.swift */; };
+		A10000030000000000000003 /* EpisodeStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000030000000000000003 /* EpisodeStorageService.swift */; };
+		A10000040000000000000004 /* FoundationModelNarrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000040000000000000004 /* FoundationModelNarrator.swift */; };
+		A10000050000000000000005 /* LocationSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000050000000000000005 /* LocationSessionManager.swift */; };
+		A10000060000000000000006 /* PersonalContextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000060000000000000006 /* PersonalContextService.swift */; };
+		A10000070000000000000007 /* SpatialAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000070000000000000007 /* SpatialAudioService.swift */; };
+		A10000080000000000000008 /* SpeechCommandService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000080000000000000008 /* SpeechCommandService.swift */; };
+		A10000090000000000000009 /* SessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000090000000000000009 /* SessionCoordinator.swift */; };
+		A10000100000000000000010 /* CapabilityMatrixDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000100000000000000010 /* CapabilityMatrixDebugView.swift */; };
+		A10000110000000000000011 /* EpisodePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000110000000000000011 /* EpisodePlayerView.swift */; };
+		A10000120000000000000012 /* LanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000120000000000000012 /* LanguagePickerView.swift */; };
+		A10000130000000000000013 /* LiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000130000000000000013 /* LiveSessionView.swift */; };
+		A10000140000000000000014 /* OnboardingPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000140000000000000014 /* OnboardingPermissionsView.swift */; };
+		A10000150000000000000015 /* PrivacyReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000150000000000000015 /* PrivacyReceiptView.swift */; };
+		A10000160000000000000016 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B10000160000000000000016 /* Localizable.xcstrings */; };
+		A10000170000000000000017 /* pronunciations.json in Resources */ = {isa = PBXBuildFile; fileRef = B10000170000000000000017 /* pronunciations.json */; };
+		A10000180000000000000018 /* SaathiConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = B10000180000000000000018 /* SaathiConfig.json */; };
+		A10000190000000000000019 /* Hampi_Vittala.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B10000190000000000000019 /* Hampi_Vittala.gpx */; };
+		A10000200000000000000020 /* OldDelhi_RedFort_ChandniChowk.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B10000200000000000000020 /* OldDelhi_RedFort_ChandniChowk.gpx */; };
+		A10000210000000000000021 /* Rome_Forum_Colosseum.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B10000210000000000000021 /* Rome_Forum_Colosseum.gpx */; };
+		A10000220000000000000022 /* SaathiCore in Frameworks */ = {isa = PBXBuildFile; productRef = P10000010000000000000001 /* SaathiCore */; };
+		A10000230000000000000023 /* SaathiCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000220000000000000022 /* SaathiCoreTests.swift */; };
+		A10000240000000000000024 /* PrivacyAndNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000230000000000000023 /* PrivacyAndNetworkTests.swift */; };
+		A10000250000000000000025 /* SaathiCore in Frameworks */ = {isa = PBXBuildFile; productRef = P10000020000000000000002 /* SaathiCore */; };
+		A10000260000000000000026 /* SaathiFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000240000000000000024 /* SaathiFlowUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C10000010000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D10000010000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T10000010000000000000001;
+			remoteInfo = Saathi;
+		};
+		C10000020000000000000002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D10000010000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T10000010000000000000001;
+			remoteInfo = Saathi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7237896C30B346CD0096FD0F /* SaathiDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SaathiDebug.entitlements; sourceTree = "<group>"; };
+		B10000010000000000000001 /* SaathiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaathiApp.swift; sourceTree = "<group>"; };
+		B10000020000000000000002 /* StartSaathiIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSaathiIntent.swift; sourceTree = "<group>"; };
+		B10000030000000000000003 /* EpisodeStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeStorageService.swift; sourceTree = "<group>"; };
+		B10000040000000000000004 /* FoundationModelNarrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationModelNarrator.swift; sourceTree = "<group>"; };
+		B10000050000000000000005 /* LocationSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSessionManager.swift; sourceTree = "<group>"; };
+		B10000060000000000000006 /* PersonalContextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalContextService.swift; sourceTree = "<group>"; };
+		B10000070000000000000007 /* SpatialAudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialAudioService.swift; sourceTree = "<group>"; };
+		B10000080000000000000008 /* SpeechCommandService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechCommandService.swift; sourceTree = "<group>"; };
+		B10000090000000000000009 /* SessionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCoordinator.swift; sourceTree = "<group>"; };
+		B10000100000000000000010 /* CapabilityMatrixDebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilityMatrixDebugView.swift; sourceTree = "<group>"; };
+		B10000110000000000000011 /* EpisodePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodePlayerView.swift; sourceTree = "<group>"; };
+		B10000120000000000000012 /* LanguagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerView.swift; sourceTree = "<group>"; };
+		B10000130000000000000013 /* LiveSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionView.swift; sourceTree = "<group>"; };
+		B10000140000000000000014 /* OnboardingPermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPermissionsView.swift; sourceTree = "<group>"; };
+		B10000150000000000000015 /* PrivacyReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyReceiptView.swift; sourceTree = "<group>"; };
+		B10000160000000000000016 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B10000170000000000000017 /* pronunciations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pronunciations.json; sourceTree = "<group>"; };
+		B10000180000000000000018 /* SaathiConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SaathiConfig.json; sourceTree = "<group>"; };
+		B10000190000000000000019 /* Hampi_Vittala.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Hampi_Vittala.gpx; sourceTree = "<group>"; };
+		B10000200000000000000020 /* OldDelhi_RedFort_ChandniChowk.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OldDelhi_RedFort_ChandniChowk.gpx; sourceTree = "<group>"; };
+		B10000210000000000000021 /* Rome_Forum_Colosseum.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Rome_Forum_Colosseum.gpx; sourceTree = "<group>"; };
+		B10000220000000000000022 /* SaathiCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaathiCoreTests.swift; sourceTree = "<group>"; };
+		B10000230000000000000023 /* PrivacyAndNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndNetworkTests.swift; sourceTree = "<group>"; };
+		B10000240000000000000024 /* SaathiFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaathiFlowUITests.swift; sourceTree = "<group>"; };
+		B10000250000000000000025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000260000000000000026 /* Saathi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Saathi.entitlements; sourceTree = "<group>"; };
+		B10000270000000000000027 /* Saathi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saathi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000280000000000000028 /* SaathiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaathiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000290000000000000029 /* SaathiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaathiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F10000010000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000220000000000000022 /* SaathiCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F10000020000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000250000000000000025 /* SaathiCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F10000030000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G10000010000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				G10000020000000000000002 /* Saathi */,
+				G10000080000000000000008 /* Simulation */,
+				G10000090000000000000009 /* Tests */,
+				G10000130000000000000013 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G10000020000000000000002 /* Saathi */ = {
+			isa = PBXGroup;
+			children = (
+				7237896C30B346CD0096FD0F /* SaathiDebug.entitlements */,
+				B10000010000000000000001 /* SaathiApp.swift */,
+				G10000030000000000000003 /* Config */,
+				G10000040000000000000004 /* Intents */,
+				G10000050000000000000005 /* Services */,
+				G10000060000000000000006 /* ViewModels */,
+				G10000070000000000000007 /* Views */,
+			);
+			path = Saathi;
+			sourceTree = "<group>";
+		};
+		G10000030000000000000003 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B10000250000000000000025 /* Info.plist */,
+				B10000260000000000000026 /* Saathi.entitlements */,
+				B10000160000000000000016 /* Localizable.xcstrings */,
+				B10000170000000000000017 /* pronunciations.json */,
+				B10000180000000000000018 /* SaathiConfig.json */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		G10000040000000000000004 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				B10000020000000000000002 /* StartSaathiIntent.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		G10000050000000000000005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B10000030000000000000003 /* EpisodeStorageService.swift */,
+				B10000040000000000000004 /* FoundationModelNarrator.swift */,
+				B10000050000000000000005 /* LocationSessionManager.swift */,
+				B10000060000000000000006 /* PersonalContextService.swift */,
+				B10000070000000000000007 /* SpatialAudioService.swift */,
+				B10000080000000000000008 /* SpeechCommandService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G10000060000000000000006 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B10000090000000000000009 /* SessionCoordinator.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		G10000070000000000000007 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B10000100000000000000010 /* CapabilityMatrixDebugView.swift */,
+				B10000110000000000000011 /* EpisodePlayerView.swift */,
+				B10000120000000000000012 /* LanguagePickerView.swift */,
+				B10000130000000000000013 /* LiveSessionView.swift */,
+				B10000140000000000000014 /* OnboardingPermissionsView.swift */,
+				B10000150000000000000015 /* PrivacyReceiptView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G10000080000000000000008 /* Simulation */ = {
+			isa = PBXGroup;
+			children = (
+				B10000190000000000000019 /* Hampi_Vittala.gpx */,
+				B10000200000000000000020 /* OldDelhi_RedFort_ChandniChowk.gpx */,
+				B10000210000000000000021 /* Rome_Forum_Colosseum.gpx */,
+			);
+			path = Simulation;
+			sourceTree = "<group>";
+		};
+		G10000090000000000000009 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				G10000100000000000000010 /* SaathiCoreTests */,
+				G10000110000000000000011 /* SaathiPrivacyTests */,
+				G10000120000000000000012 /* SaathiUITests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		G10000100000000000000010 /* SaathiCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				B10000220000000000000022 /* SaathiCoreTests.swift */,
+			);
+			path = SaathiCoreTests;
+			sourceTree = "<group>";
+		};
+		G10000110000000000000011 /* SaathiPrivacyTests */ = {
+			isa = PBXGroup;
+			children = (
+				B10000230000000000000023 /* PrivacyAndNetworkTests.swift */,
+			);
+			path = SaathiPrivacyTests;
+			sourceTree = "<group>";
+		};
+		G10000120000000000000012 /* SaathiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B10000240000000000000024 /* SaathiFlowUITests.swift */,
+			);
+			path = SaathiUITests;
+			sourceTree = "<group>";
+		};
+		G10000130000000000000013 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10000270000000000000027 /* Saathi.app */,
+				B10000280000000000000028 /* SaathiTests.xctest */,
+				B10000290000000000000029 /* SaathiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T10000010000000000000001 /* Saathi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L10000020000000000000002 /* Build configuration list for PBXNativeTarget "Saathi" */;
+			buildPhases = (
+				S10000010000000000000001 /* Sources */,
+				F10000010000000000000001 /* Frameworks */,
+				R10000010000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Saathi;
+			packageProductDependencies = (
+				P10000010000000000000001 /* SaathiCore */,
+			);
+			productName = Saathi;
+			productReference = B10000270000000000000027 /* Saathi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		T10000020000000000000002 /* SaathiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L10000030000000000000003 /* Build configuration list for PBXNativeTarget "SaathiTests" */;
+			buildPhases = (
+				S10000020000000000000002 /* Sources */,
+				F10000020000000000000002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D20000010000000000000001 /* PBXTargetDependency */,
+			);
+			name = SaathiTests;
+			packageProductDependencies = (
+				P10000020000000000000002 /* SaathiCore */,
+			);
+			productName = SaathiTests;
+			productReference = B10000280000000000000028 /* SaathiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		T10000030000000000000003 /* SaathiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L10000040000000000000004 /* Build configuration list for PBXNativeTarget "SaathiUITests" */;
+			buildPhases = (
+				S10000030000000000000003 /* Sources */,
+				F10000030000000000000003 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D20000020000000000000002 /* PBXTargetDependency */,
+			);
+			name = SaathiUITests;
+			productName = SaathiUITests;
+			productReference = B10000290000000000000029 /* SaathiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D10000010000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2710;
+				TargetAttributes = {
+					T10000010000000000000001 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					T10000020000000000000002 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = T10000010000000000000001;
+					};
+					T10000030000000000000003 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = T10000010000000000000001;
+					};
+				};
+			};
+			buildConfigurationList = L10000010000000000000001 /* Build configuration list for PBXProject "Saathi" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = "en-IN";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				"en-IN",
+				Base,
+			);
+			mainGroup = G10000010000000000000001;
+			packageReferences = (
+				X10000010000000000000001 /* XCLocalSwiftPackageReference "." */,
+			);
+			productRefGroup = G10000130000000000000013 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T10000010000000000000001 /* Saathi */,
+				T10000020000000000000002 /* SaathiTests */,
+				T10000030000000000000003 /* SaathiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		R10000010000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000160000000000000016 /* Localizable.xcstrings in Resources */,
+				A10000170000000000000017 /* pronunciations.json in Resources */,
+				A10000180000000000000018 /* SaathiConfig.json in Resources */,
+				A10000190000000000000019 /* Hampi_Vittala.gpx in Resources */,
+				A10000200000000000000020 /* OldDelhi_RedFort_ChandniChowk.gpx in Resources */,
+				A10000210000000000000021 /* Rome_Forum_Colosseum.gpx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		S10000010000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000001 /* SaathiApp.swift in Sources */,
+				A10000020000000000000002 /* StartSaathiIntent.swift in Sources */,
+				A10000030000000000000003 /* EpisodeStorageService.swift in Sources */,
+				A10000040000000000000004 /* FoundationModelNarrator.swift in Sources */,
+				A10000050000000000000005 /* LocationSessionManager.swift in Sources */,
+				A10000060000000000000006 /* PersonalContextService.swift in Sources */,
+				A10000070000000000000007 /* SpatialAudioService.swift in Sources */,
+				A10000080000000000000008 /* SpeechCommandService.swift in Sources */,
+				A10000090000000000000009 /* SessionCoordinator.swift in Sources */,
+				A10000100000000000000010 /* CapabilityMatrixDebugView.swift in Sources */,
+				A10000110000000000000011 /* EpisodePlayerView.swift in Sources */,
+				A10000120000000000000012 /* LanguagePickerView.swift in Sources */,
+				A10000130000000000000013 /* LiveSessionView.swift in Sources */,
+				A10000140000000000000014 /* OnboardingPermissionsView.swift in Sources */,
+				A10000150000000000000015 /* PrivacyReceiptView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S10000020000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000230000000000000023 /* SaathiCoreTests.swift in Sources */,
+				A10000240000000000000024 /* PrivacyAndNetworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S10000030000000000000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000260000000000000026 /* SaathiFlowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D20000010000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T10000010000000000000001 /* Saathi */;
+			targetProxy = C10000010000000000000001 /* PBXContainerItemProxy */;
+		};
+		D20000020000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T10000010000000000000001 /* Saathi */;
+			targetProxy = C10000020000000000000002 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E10000010000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		E10000020000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E10000030000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Saathi/SaathiDebug.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8Y5MP8VTK;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Saathi/Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saathiCompanion.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E10000040000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Saathi/Config/Saathi.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8Y5MP8VTK;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Saathi/Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saathiCompanion.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E10000050000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8Y5MP8VTK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saathi.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saathi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Saathi";
+			};
+			name = Debug;
+		};
+		E10000060000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saathi.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saathi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Saathi";
+			};
+			name = Release;
+		};
+		E10000070000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8Y5MP8VTK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saathi.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Saathi;
+			};
+			name = Debug;
+		};
+		E10000080000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saathi.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Saathi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		L10000010000000000000001 /* Build configuration list for PBXProject "Saathi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E10000010000000000000001 /* Debug */,
+				E10000020000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L10000020000000000000002 /* Build configuration list for PBXNativeTarget "Saathi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E10000030000000000000003 /* Debug */,
+				E10000040000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L10000030000000000000003 /* Build configuration list for PBXNativeTarget "SaathiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E10000050000000000000005 /* Debug */,
+				E10000060000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L10000040000000000000004 /* Build configuration list for PBXNativeTarget "SaathiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E10000070000000000000007 /* Debug */,
+				E10000080000000000000008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		X10000010000000000000001 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		P10000010000000000000001 /* SaathiCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = X10000010000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = SaathiCore;
+		};
+		P10000020000000000000002 /* SaathiCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = X10000010000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = SaathiCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D10000010000000000000001 /* Project object */;
+}

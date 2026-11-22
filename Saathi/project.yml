@@ -1,0 +1,90 @@
+name: Saathi
+options:
+  bundleIdPrefix: com.saathi
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "26.0"
+  defaultConfig: Debug
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    IPHONEOS_DEPLOYMENT_TARGET: "26.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    DEVELOPMENT_TEAM: "YOUR_TEAM_ID"
+packages:
+  SaathiCore:
+    path: .
+targets:
+  Saathi:
+    type: application
+    platform: iOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: Saathi
+        excludes:
+          - Config/Info.plist
+          - Config/Saathi.entitlements
+      - path: Simulation
+        buildPhase: resources
+    resources:
+      - path: Saathi/Config/SaathiConfig.json
+      - path: Saathi/Config/pronunciations.json
+      - path: Saathi/Config/Localizable.xcstrings
+    info:
+      path: Saathi/Config/Info.plist
+    entitlements:
+      path: Saathi/Config/Saathi.entitlements
+    dependencies:
+      - package: SaathiCore
+      - sdk: FoundationModels.framework
+        weak: true
+      - sdk: Translation.framework
+        weak: true
+      - sdk: JournalingSuggestions.framework
+        weak: true
+      - sdk: Speech.framework
+      - sdk: CoreLocation.framework
+      - sdk: CoreMotion.framework
+      - sdk: AVFAudio.framework
+      - sdk: Photos.framework
+      - sdk: EventKit.framework
+      - sdk: PassKit.framework
+      - sdk: AppIntents.framework
+      - sdk: CloudKit.framework
+      - sdk: MapKit.framework
+  SaathiTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: Tests/SaathiCoreTests
+      - path: Tests/SaathiPrivacyTests
+    dependencies:
+      - target: Saathi
+      - package: SaathiCore
+  SaathiUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: Tests/SaathiUITests
+    dependencies:
+      - target: Saathi
+schemes:
+  Saathi:
+    build:
+      targets:
+        Saathi: all
+        SaathiTests: [test]
+        SaathiUITests: [test]
+    run:
+      config: Debug
+      simulateLocation:
+        allow: true
+        defaultLocation: Simulation/Hampi_Vittala.gpx
+    test:
+      config: Debug
+      targets:
+        - SaathiTests
+        - SaathiUITests

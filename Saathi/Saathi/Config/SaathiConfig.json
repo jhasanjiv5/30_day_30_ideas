@@ -1,0 +1,31 @@
+{
+  "userAgent": "Saathi/1.0 (Privacy-First Historic Audio Guide)",
+  "tileSizeMeters": 250.0,
+  "maxCandidateRadiusMeters": 300.0,
+  "interruptionBudgetSeconds": 180.0,
+  "dwellThresholdSeconds": 45.0,
+  "companionIdleSeconds": 240.0,
+  "areaRadiusMeters": 5000.0,
+  "walkEnd": {
+    "stationaryAskAfterSeconds": 600,
+    "vehicleAskAfterSeconds": 120,
+    "autoEndAfterAskSeconds": 300,
+    "maxSessionSeconds": 21600
+  },
+  "rankerWeights": {
+    "distanceWeight": 0.30,
+    "notabilityWeight": 0.25,
+    "interestWeight": 0.20,
+    "noveltyWeight": 0.15,
+    "dwellBoostWeight": 0.10
+  },
+  "allowedNetworkHosts": [
+    "wikipedia.org",
+    "www.wikidata.org"
+  ],
+  "curatedNotice": {
+    "enabled": false,
+    "rssURL": "https://asi.nic.in/feed/",
+    "sourceLabel": "Archaeological Survey Curated Notice"
+  }
+}

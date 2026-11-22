@@ -1,0 +1,378 @@
+{
+  "sourceLanguage" : "en-IN",
+  "strings" : {
+    "%@ steps" : {
+
+    },
+    "%@: %@ (%@)" : {
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@: %2$@ (%3$@)"
+          }
+        }
+      }
+    },
+    "app_title" : {
+      "localizations" : {
+        "bn-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "সাথী"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saathi"
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "साथी"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "சாத்தி"
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ساتھی"
+          }
+        }
+      }
+    },
+    "Continue to Memory Episode" : {
+
+    },
+    "coordinates_stored_label" : {
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coordinates stored"
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सहेजे गए निर्देशांक"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "சேமிக்கப்பட்ட ஆயத்தொலைவுகள்"
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "محفوظ کردہ نقاط"
+          }
+        }
+      }
+    },
+    "Duration: ~%@ min · 0 coordinates stored" : {
+
+    },
+    "end_session" : {
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End Session"
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सत्र समाप्त करें"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "அமர்வை முடி"
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیشن ختم کریں"
+          }
+        }
+      }
+    },
+    "Historical text: Wikipedia (CC BY-SA 4.0) & Wikidata (CC0 1.0). Map & POI data: OpenStreetMap contributors (ODbL 1.0)." : {
+
+    },
+    "iOS apps cannot revoke their own permission programmatically. Tap below to review or turn off location access in Settings." : {
+
+    },
+    "Linked PhotoKit References (No Copies)" : {
+
+    },
+    "Listen: %@" : {
+
+    },
+    "Narration & Listening Languages" : {
+
+    },
+    "No timer to set. Saathi keeps you company while you walk and wraps up on its own when your Apple Watch or iPhone Outdoor Walk ends, when you've stopped walking for a while (it asks first), or when you tap End. Your episode then includes your walk's distance, time and steps. Saathi reads totals only, never your route." : {
+
+    },
+    "no_source_fallback" : {
+      "comment" : "I don't have a source for that.",
+      "extractionState" : "stale",
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I don't have a source for that."
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मेरे पास इसके लिए कोई प्रमाणित स्रोत नहीं है।"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "இதற்கான நம்பகமான ஆதாரம் என்னிடம் இல்லை."
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "میرے پاس اس کے لیے کوئی مستند حوالہ موجود نہیں ہے۔"
+          }
+        }
+      }
+    },
+    "Nod AirPods for Yes · Shake for No" : {
+
+    },
+    "Optional On-Device Memories" : {
+
+    },
+    "privacy_receipt_title" : {
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Receipt"
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गोपनीयता रसीद"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "தனியுரிமை ரசீது"
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رازداری کی رسید"
+          }
+        }
+      }
+    },
+    "Queried ~250 m Tile IDs" : {
+
+    },
+    "quiet_20_min" : {
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiet for 20 min"
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20 मिनट शांत रहें"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20 நிமிடம் அமைதி"
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20 منٹ خاموش رہیں"
+          }
+        }
+      }
+    },
+    "Run this screen on a physical iPhone with Apple Intelligence to export the exact README capability table." : {
+
+    },
+    "Runtime Multilingual Capability Matrix" : {
+
+    },
+    "Saathi narrates nearby history in your ear using only on-device intelligence and ~250 m tile lookups. Coordinates stay in memory and are wiped when your walk ends." : {
+
+    },
+    "Say \"Hey Siri, Start Saathi here\" or tap Start Walk below. \"Allow Once\" works fully." : {
+
+    },
+    "skip_place" : {
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आगे बढ़ें"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "தவிர்"
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آگے بڑھیں"
+          }
+        }
+      }
+    },
+    "Sources & Licences" : {
+
+    },
+    "Speak: %@" : {
+
+    },
+    "start_walk" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Walk"
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सैर शुरू करें"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "நடைப்பயணத்தைத் தொடங்கு"
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیر شروع کریں"
+          }
+        }
+      }
+    },
+    "Stops in Order" : {
+
+    },
+    "tell_me_more" : {
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tell me more"
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "और बताओ"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "மேலும் சொல்"
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مزید بتائیں"
+          }
+        }
+      }
+    },
+    "Tip: Download an Enhanced/Premium voice in iOS Settings → Accessibility → Spoken Content." : {
+
+    },
+    "Transcript" : {
+
+    },
+    "Turn off location access" : {
+
+    },
+    "turn_off_location_access" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn off location access in Settings"
+          }
+        },
+        "hi-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेटिंग्स में लोकेशन बंद करें"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "அமைப்புகளில் இருப்பிட அணுகலை அணை"
+          }
+        },
+        "ur-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیٹنگز میں لوکیشن بند کریں"
+          }
+        }
+      }
+    },
+    "Walk near a historic landmark or ask a question below." : {
+
+    },
+    "Walking" : {
+
+    }
+  },
+  "version" : "1.0"
+}
