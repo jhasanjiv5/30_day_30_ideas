@@ -29,10 +29,10 @@ The goal of this repository is to turn **30 ideas into 30 projects in 30 days**:
 | 21 | 2026-11-15 | Mithila-Panji-Search | [Mithila-Panji-Search](./Mithila-Panji-Search/README.md) (local project; repository link not published) | ▰░░░░░░░░░ 1/10 |
 | 22 | 2026-11-16 | PersonalVoiceStudio | [PersonalVoiceStudio](./PersonalVoiceStudio/README.md) (local project; repository link not published) | ▰░░░░░░░░░ 1/10 |
 | 23 | 2026-11-17 |PersonalVideoStudio | [PersonalVideoStudio](./PersonalVideoStudio/README.md) (local project; repository link not published) | ▰░░░░░░░░░ 1/10 |
-| 24 | 2026-11-18 | — | — | — |
-| 25 | 2026-11-19 | — | — | — |
-| 26 | 2026-11-20 | — | — | — |
-| 27 | 2026-11-21 | — | — | — |
-| 28 | 2026-11-22 | — | — | — |
-| 29 | 2026-11-23 | — | — | — |
-| 30 | 2026-11-24 | — | — | — |
+| 24 | 2026-11-18 | RanklabAutopsy | [RanklabAutopsy](./ranklab-autopsy/README.md) (local project; repository link not published) | 
+| 25 | 2026-11-19 | Ensemble | [Ensemble](./Ensemble/README.md) (local project; repository link not published) | 
+| 26 | 2026-11-20 | Prod Preview | [Prod Preview](./prod-preview/README.md) (local project; repository link not published) | 
+| 27 | 2026-11-21 | Kavach | [Kavach](./kavach/README.md) (local project; repository link not published) | 
+| 28 | 2026-11-22 | Saathi | [Saathi](./saathi/README.md) (local project; repository link not published) | 
+| 29 | 2026-11-23 | Drishya | [Drishya](./drishya/README.md) (local project; repository link not published) | 
+| 30 | 2026-11-24 | PersonalVideoStudio | [PersonalVideoStudio](./PersonalVideoStudio/README.md) (local project; repository link not published) | 
