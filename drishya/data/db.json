@@ -1,0 +1,3573 @@
+{
+  "settingsByUser": {
+    "user_researcher_1": {
+      "ownerId": "user_researcher_1",
+      "mockMode": true,
+      "llmProvider": "mock",
+      "llmModels": {
+        "mock": "mock-deterministic-v1",
+        "gemini": "gemini-4-hydrogen",
+        "anthropic": "claude-sonnet-4-20250514",
+        "openai": "gpt-4.1-mini",
+        "ollama": "llama3.2:latest"
+      },
+      "fallbackChain": [
+        "gemini",
+        "mock"
+      ],
+      "ttsProvider": "mock",
+      "retentionDays": 30,
+      "searchProvider": "fixture",
+      "trainingOptOutConfirmed": true
+    }
+  },
+  "documents": {
+    "doc_monsoon_2025": {
+      "id": "doc_monsoon_2025",
+      "ownerId": "user_researcher_1",
+      "model": {
+        "id": "doc_monsoon_2025",
+        "title": "Sparse-Attention Transformers for Multi-Horizon Monsoon Rainfall Forecasting Across the Western Ghats",
+        "authors": [
+          "Ananya Deshmukh",
+          "Raghav Subramanian",
+          "Kaustav Banerjee",
+          "Meera Krishnan"
+        ],
+        "venue": "Journal of Hydrometeorological Computing (CC-BY 4.0)",
+        "year": 2025,
+        "license": "CC-BY-4.0",
+        "sourceUrl": "https://arxiv.org/abs/2502.11409",
+        "sourceFormat": "fixture",
+        "ocrUsed": false,
+        "sections": [
+          {
+            "id": "sec-intro",
+            "title": "1. Introduction & Orographic Context",
+            "pageStart": 1
+          },
+          {
+            "id": "sec-arch",
+            "title": "2. MonsoonFormer Sparse-Attention Architecture",
+            "pageStart": 2
+          },
+          {
+            "id": "sec-loss",
+            "title": "3. Composite Quantile-Hydrology Loss",
+            "pageStart": 4
+          },
+          {
+            "id": "sec-results",
+            "title": "4. Benchmark Accuracy & Ablation Results",
+            "pageStart": 5
+          },
+          {
+            "id": "sec-limits",
+            "title": "5. Limitations & Teleconnection Scope",
+            "pageStart": 7
+          },
+          {
+            "id": "sec-refs",
+            "title": "References",
+            "pageStart": 8
+          }
+        ],
+        "paragraphs": [
+          {
+            "id": "p1",
+            "sectionId": "sec-intro",
+            "sectionTitle": "1. Introduction & Orographic Context",
+            "page": 1,
+            "citationKey": "doc:p1/sec-intro",
+            "text": "Extreme monsoon rainfall along India’s Western Ghats triggers severe landslides and reservoir flash floods, yet 10-day operational numerical weather prediction grids at 25 km resolution smooth out steep terrain gradients."
+          },
+          {
+            "id": "p2",
+            "sectionId": "sec-intro",
+            "sectionTitle": "1. Introduction & Orographic Context",
+            "page": 1,
+            "citationKey": "doc:p1/sec-intro",
+            "text": "Downscaling ERA5 reanalysis fields with full self-attention Transformers scales quadratically with spatial grid tokens, requiring 38.4 GB of VRAM for a 0.25 degree subcontinent domain."
+          },
+          {
+            "id": "p3",
+            "sectionId": "sec-arch",
+            "sectionTitle": "2. MonsoonFormer Sparse-Attention Architecture",
+            "page": 2,
+            "citationKey": "doc:p2/sec-arch",
+            "text": "We introduce MonsoonFormer, a multi-scale encoder-decoder that couples 3D atmospheric inputs (SST, U850, V850, Q850, SLP, Z500) with topographically aligned sparse attention windows."
+          },
+          {
+            "id": "p4",
+            "sectionId": "sec-arch",
+            "sectionTitle": "2. MonsoonFormer Sparse-Attention Architecture",
+            "page": 3,
+            "citationKey": "doc:p3/sec-arch",
+            "text": "Instead of attending over all 16,384 grid cells, each query token restricts key-value interaction to a 7x7 coastal-orographic neighborhood W(i) plus 128 strided synoptic anchor tokens, cutting attention complexity by 84%."
+          },
+          {
+            "id": "p5",
+            "sectionId": "sec-loss",
+            "sectionTitle": "3. Composite Quantile-Hydrology Loss",
+            "page": 4,
+            "citationKey": "doc:p4/sec-loss",
+            "text": "Heavy-tail monsoon extremes (>115.6 mm/day) are under-predicted by standard MSE objectives, so we combine pinball quantile loss with an orographic gradient penalty weighted by lambda = 0.35."
+          },
+          {
+            "id": "p6",
+            "sectionId": "sec-results",
+            "sectionTitle": "4. Benchmark Accuracy & Ablation Results",
+            "page": 5,
+            "citationKey": "doc:p5/sec-results",
+            "text": "Evaluated on IMD 0.25-degree gridded rainfall across 2018-2023 JJAS seasons, MonsoonFormer lowers 5-day RMSE to 11.4 mm/day compared to 15.8 mm/day for ConvLSTM and 13.9 mm/day for PatchTST."
+          },
+          {
+            "id": "p7",
+            "sectionId": "sec-results",
+            "sectionTitle": "4. Benchmark Accuracy & Ablation Results",
+            "page": 6,
+            "citationKey": "doc:p6/sec-results",
+            "text": "Critical Success Index (CSI) at the heavy-rainfall threshold (>64.5 mm/day) reaches 0.61 versus 0.44 for ConvLSTM and 0.54 for Full-Attention Transformer, while inference latency drops to 42 ms per forecast."
+          },
+          {
+            "id": "p8",
+            "sectionId": "sec-limits",
+            "sectionTitle": "5. Limitations & Teleconnection Scope",
+            "page": 7,
+            "citationKey": "doc:p7/sec-limits",
+            "text": "Key limitations remain: sparse local windows under-represent planetary Rossby wave coupling beyond day 7, and training relies strictly on historical ERA5 reanalysis without real-time Doppler radar assimilation."
+          }
+        ],
+        "figures": [
+          {
+            "id": "fig-1",
+            "label": "Figure 1",
+            "page": 3,
+            "citationKey": "doc:p3/fig-1",
+            "imageUrl": "/src/assets/images/paper_fig1_architecture_1795429883616.jpg",
+            "caption": "Figure 1: MonsoonFormer multi-scale encoder-decoder with sparse attention routing over atmospheric grid inputs (SST, U850, V850, Q850, SLP, Z500) to 30-day precipitation probability maps."
+          },
+          {
+            "id": "fig-2",
+            "label": "Figure 2",
+            "page": 6,
+            "citationKey": "doc:p6/fig-2",
+            "imageUrl": "/src/assets/images/paper_fig2_rainfall_map_1795429883257.jpg",
+            "caption": "Figure 2: (A) Forecast Skill Score contour across the coastal ridge and (B) learned sparse spatial attention mask concentrating weight along the windward escarpment."
+          }
+        ],
+        "tables": [
+          {
+            "id": "table-1",
+            "label": "Table 1",
+            "page": 5,
+            "citationKey": "doc:p5/table-1",
+            "caption": "Table 1: Multi-horizon monsoon forecast accuracy and compute footprint (JJAS 2018-2023 test set).",
+            "columns": [
+              "Model",
+              "RMSE_5d",
+              "CSI_65mm",
+              "Latency_ms",
+              "VRAM_GB"
+            ],
+            "units": {
+              "RMSE_5d": "mm/day",
+              "CSI_65mm": "score",
+              "Latency_ms": "ms",
+              "VRAM_GB": "GB"
+            },
+            "rows": [
+              {
+                "Model": "ConvLSTM",
+                "RMSE_5d": 15.8,
+                "CSI_65mm": 0.44,
+                "Latency_ms": 88,
+                "VRAM_GB": 14.2
+              },
+              {
+                "Model": "PatchTST",
+                "RMSE_5d": 13.9,
+                "CSI_65mm": 0.49,
+                "Latency_ms": 61,
+                "VRAM_GB": 19.5
+              },
+              {
+                "Model": "Full-Attention",
+                "RMSE_5d": 12.1,
+                "CSI_65mm": 0.54,
+                "Latency_ms": 195,
+                "VRAM_GB": 38.4
+              },
+              {
+                "Model": "MonsoonFormer",
+                "RMSE_5d": 11.4,
+                "CSI_65mm": 0.61,
+                "Latency_ms": 42,
+                "VRAM_GB": 9.6
+              }
+            ]
+          },
+          {
+            "id": "table-2",
+            "label": "Table 2",
+            "page": 6,
+            "citationKey": "doc:p6/table-2",
+            "caption": "Table 2: Ablation study on sparse window radius and quantile-hydrology penalty (lambda).",
+            "columns": [
+              "Configuration",
+              "RMSE_5d",
+              "CSI_65mm",
+              "VRAM_GB"
+            ],
+            "units": {
+              "RMSE_5d": "mm/day",
+              "CSI_65mm": "score",
+              "VRAM_GB": "GB"
+            },
+            "rows": [
+              {
+                "Configuration": "Window 3x3 (No Anchors)",
+                "RMSE_5d": 13.2,
+                "CSI_65mm": 0.51,
+                "VRAM_GB": 6.4
+              },
+              {
+                "Configuration": "Window 7x7 + MSE Only",
+                "RMSE_5d": 12.5,
+                "CSI_65mm": 0.53,
+                "VRAM_GB": 9.4
+              },
+              {
+                "Configuration": "Window 7x7 + Anchors + Lambda 0.35",
+                "RMSE_5d": 11.4,
+                "CSI_65mm": 0.61,
+                "VRAM_GB": 9.6
+              }
+            ]
+          }
+        ],
+        "equations": [
+          {
+            "id": "eq-1",
+            "label": "Equation 1",
+            "page": 3,
+            "citationKey": "doc:p3/eq-1",
+            "latex": "\\alpha_{ij} = \\frac{\\exp\\left(\\frac{q_i^\\top k_j}{\\sqrt{d_k}}\\right)}{\\sum_{m \\in \\mathcal{W}(i)} \\exp\\left(\\frac{q_i^\\top k_m}{\\sqrt{d_k}}\\right)}",
+            "description": "Topographically restricted sparse attention weight over the local coastal-orographic neighborhood W(i)."
+          },
+          {
+            "id": "eq-2",
+            "label": "Equation 2",
+            "page": 4,
+            "citationKey": "doc:p4/eq-2",
+            "latex": "\\mathcal{L}_{\\text{hyd}} = \\mathcal{L}_{q}(\\hat{y}, y) + \\lambda \\|\\nabla_{\\text{elev}}(\\hat{y} - y)\\|_2^2",
+            "description": "Composite Quantile-Hydrology Loss pairing pinball quantile error with an elevation-gradient penalty."
+          }
+        ],
+        "references": [
+          {
+            "id": "ref-1",
+            "title": "Attention Is All You Need",
+            "authors": "Vaswani et al.",
+            "year": 2017,
+            "arxivId": "1706.03762",
+            "url": "https://arxiv.org/abs/1706.03762"
+          },
+          {
+            "id": "ref-2",
+            "title": "IMD High-Resolution 0.25 Degree Gridded Rainfall Dataset",
+            "authors": "Pai et al.",
+            "year": 2014,
+            "doi": "10.54302/mausam.v65i1.851",
+            "url": "https://doi.org/10.54302/mausam.v65i1.851"
+          },
+          {
+            "id": "ref-3",
+            "title": "Global Teleconnections and Sparse Transformers in Subseasonal Forecasting",
+            "authors": "Rao, Menon & Kulkarni",
+            "year": 2024,
+            "doi": "10.1029/2024GL109821",
+            "url": "https://doi.org/10.1029/2024GL109821"
+          }
+        ]
+      },
+      "createdAt": "2026-11-23T11:21:17.019Z",
+      "expiresAt": "2026-12-23T11:21:17.019Z",
+      "latestJobId": "job_4b8ad447",
+      "latestVideoId": "vid_60c216a7"
+    }
+  },
+  "jobs": {
+    "job_4b8ad447": {
+      "id": "job_4b8ad447",
+      "documentId": "doc_monsoon_2025",
+      "ownerId": "user_researcher_1",
+      "status": "ready",
+      "depth": "student",
+      "lengthTarget": "2min",
+      "language": "en",
+      "llmProvider": "mock",
+      "llmModel": "mock-deterministic-v1",
+      "ttsProvider": "mock",
+      "stages": [
+        {
+          "stage": "ingest",
+          "status": "completed",
+          "durationMs": 140,
+          "provider": "ingest-parser",
+          "model": "fixture",
+          "promptVersion": "v1.0",
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "costUsd": 0,
+          "message": "Document parsed into sections, figures, tables, and equations"
+        },
+        {
+          "stage": "understand",
+          "status": "completed",
+          "durationMs": 25,
+          "provider": "mock",
+          "model": "mock-deterministic-v1",
+          "promptVersion": "understand-v1.2",
+          "inputTokens": 420,
+          "outputTokens": 310,
+          "costUsd": 0,
+          "message": "Extracted 3 claims and 3 hard parts"
+        },
+        {
+          "stage": "clarify",
+          "status": "completed",
+          "durationMs": 25,
+          "provider": "fixture",
+          "model": "tier-1-2-3-ranker",
+          "promptVersion": "clarify-v1.1",
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "costUsd": 0,
+          "message": "Ranked 4 sources across Tiers 1–3 (fixture lookup)"
+        },
+        {
+          "stage": "plan",
+          "status": "completed",
+          "durationMs": 25,
+          "provider": "mock",
+          "model": "mock-deterministic-v1",
+          "promptVersion": "storyboard-v1.4",
+          "inputTokens": 620,
+          "outputTokens": 880,
+          "costUsd": 0,
+          "message": "Planned 9 grounded scenes; chart cells verified (8 cells)"
+        },
+        {
+          "stage": "translate",
+          "status": "completed",
+          "durationMs": 25,
+          "provider": "passthrough",
+          "model": "placeholder-guard-en",
+          "promptVersion": "translate-guard-v1.0",
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "costUsd": 0,
+          "message": "English narration verified"
+        },
+        {
+          "stage": "render",
+          "status": "completed",
+          "durationMs": 11518,
+          "provider": "mock+ffmpeg",
+          "model": "Cloud Studio Aria (en-IN) [Recorded Fixture]",
+          "promptVersion": "render-v1.0",
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "costUsd": 0,
+          "message": "Assembled MP4 (121s), WebVTT captions, and 9 chapters"
+        }
+      ],
+      "totalTokens": 2230,
+      "totalCostUsd": 0,
+      "createdAt": "2026-11-23T11:21:17.022Z",
+      "updatedAt": "2026-11-23T11:21:28.570Z",
+      "understand": {
+        "claims": [
+          {
+            "id": "claim-1",
+            "statement": "MonsoonFormer reduces 5-day rainfall RMSE to 11.4 mm/day while cutting VRAM from 38.4 GB to 9.6 GB.",
+            "citationKey": "doc:p5/table-1"
+          },
+          {
+            "id": "claim-2",
+            "statement": "Sparse 7x7 coastal-orographic windows plus 128 synoptic anchor tokens cut attention complexity by 84%.",
+            "citationKey": "doc:p3/sec-arch"
+          },
+          {
+            "id": "claim-3",
+            "statement": "Composite Quantile-Hydrology Loss raises heavy-rainfall (>64.5 mm/day) CSI skill score to 0.61.",
+            "citationKey": "doc:p6/sec-results"
+          }
+        ],
+        "methodSteps": [
+          {
+            "step": 1,
+            "title": "Atmospheric Grid Encoding",
+            "summary": "Ingest SST, U850, V850, Q850, SLP, and Z500 ERA5 reanalysis fields at 0.25 degree resolution.",
+            "citationKey": "doc:p2/sec-arch"
+          },
+          {
+            "step": 2,
+            "title": "Sparse Orographic Attention",
+            "summary": "Restrict attention keys to a 7x7 windward terrain neighborhood W(i) plus 128 strided synoptic anchors.",
+            "citationKey": "doc:p3/sec-arch"
+          },
+          {
+            "step": 3,
+            "title": "Quantile-Hydrology Optimization",
+            "summary": "Train with pinball quantile loss plus elevation-gradient penalty weighted at lambda = 0.35.",
+            "citationKey": "doc:p4/sec-loss"
+          }
+        ],
+        "results": [
+          {
+            "metric": "5-Day RMSE",
+            "value": "11.4 mm/day (vs 15.8 mm/day ConvLSTM)",
+            "citationKey": "doc:p5/table-1"
+          },
+          {
+            "metric": "Heavy Rain CSI (>64.5 mm/day)",
+            "value": "0.61 (vs 0.54 Full-Attention)",
+            "citationKey": "doc:p6/sec-results"
+          },
+          {
+            "metric": "Inference Latency & VRAM",
+            "value": "42 ms/forecast · 9.6 GB VRAM",
+            "citationKey": "doc:p5/table-1"
+          }
+        ],
+        "limitations": [
+          {
+            "statement": "Sparse local windows under-represent planetary Rossby wave coupling beyond day 7.",
+            "citationKey": "doc:p7/sec-limits"
+          },
+          {
+            "statement": "Training uses historical ERA5 reanalysis without real-time Doppler radar assimilation.",
+            "citationKey": "doc:p7/sec-limits"
+          }
+        ],
+        "glossary": [
+          {
+            "term": "Orographic Precipitation",
+            "definition": "Rainfall forced when moist monsoon winds ascend steep coastal mountain slopes like the Western Ghats.",
+            "citationKey": "doc:p1/sec-intro"
+          },
+          {
+            "term": "Critical Success Index (CSI)",
+            "definition": "Verification metric measuring correctly forecast extreme rain events divided by hits, misses, and false alarms.",
+            "citationKey": "doc:p6/sec-results"
+          }
+        ],
+        "hardParts": [
+          {
+            "id": "hp-orographic",
+            "term": "Orographic rainfall smoothing in 25 km NWP grids",
+            "reason": "Requires physical context on how steep coastal topography triggers concentrated monsoon rain.",
+            "targetDepth": "beginner"
+          },
+          {
+            "id": "hp-csi",
+            "term": "Critical Success Index (CSI) & heavy-rainfall threshold",
+            "reason": "Readers need intuition for why CSI beats plain accuracy on rare extreme events.",
+            "targetDepth": "student"
+          },
+          {
+            "id": "hp-teleconnection",
+            "term": "Sparse attention window vs planetary teleconnections",
+            "reason": "Technical trade-off between local window sparsity and long-range ENSO/Rossby wave propagation.",
+            "targetDepth": "expert"
+          }
+        ]
+      },
+      "clarifications": [
+        {
+          "id": "clar-1",
+          "hardPartId": "hp-orographic",
+          "term": "Orographic precipitation",
+          "tier": 1,
+          "providerName": "Semantic Scholar / OpenAlex",
+          "title": "Orographic Enhancement of Indian Summer Monsoon Rainfall along the Western Ghats",
+          "url": "https://doi.org/10.1002/qj.4192",
+          "year": 2022,
+          "relevanceScore": 0.96,
+          "quote": "Moist low-level westerly jets forced over steep escarpments double local rainfall intensity relative to adjacent coastal plains.",
+          "confidenceLabel": "high",
+          "contradictsPaper": false
+        },
+        {
+          "id": "clar-3",
+          "hardPartId": "hp-teleconnection",
+          "term": "Global Teleconnections & Sparse Windows",
+          "tier": 1,
+          "providerName": "Crossref / Cited Reference",
+          "title": "Global Teleconnections and Sparse Transformers in Subseasonal Forecasting (Rao et al.)",
+          "url": "https://doi.org/10.1029/2024GL109821",
+          "year": 2024,
+          "relevanceScore": 0.94,
+          "quote": "Local sparse windows degrade 10-to-14-day monsoon break predictions by severing tropical-extratropical Rossby wave links.",
+          "confidenceLabel": "high",
+          "contradictsPaper": true,
+          "viewLabel": "Differing view"
+        },
+        {
+          "id": "clar-2",
+          "hardPartId": "hp-csi",
+          "term": "Critical Success Index (CSI)",
+          "tier": 2,
+          "providerName": "Wikipedia",
+          "title": "Critical Success Index (Threat Score) in Meteorological Verification",
+          "url": "https://en.wikipedia.org/wiki/Critical_success_index",
+          "year": 2025,
+          "relevanceScore": 0.91,
+          "quote": "CSI equals hits divided by hits plus misses plus false alarms, ignoring correct negatives in rare event verification.",
+          "confidenceLabel": "high",
+          "contradictsPaper": false
+        },
+        {
+          "id": "clar-4",
+          "hardPartId": "hp-teleconnection",
+          "term": "Attention VRAM scaling benchmarks",
+          "tier": 3,
+          "providerName": "Web Search (Tech Blog)",
+          "title": "Practical GPU Memory Notes for Weather Transformers",
+          "url": "https://weatherml-notes.example.org/attention-memory-2025",
+          "year": 2025,
+          "relevanceScore": 0.72,
+          "quote": "Sparse window kernels typically save 70 to 85 percent memory compared with dense global attention.",
+          "confidenceLabel": "lower confidence",
+          "contradictsPaper": false
+        }
+      ],
+      "scenes": [
+        {
+          "id": "scene-1",
+          "order": 1,
+          "arcPhase": "why_it_matters",
+          "chapterTitle": "Why Monsoon Resolution Matters",
+          "narration": "Operational 25 km weather grids smooth out steep Western Ghats escarpments where extreme monsoon bursts trigger flash floods. MonsoonFormer downscales ERA5 fields while cutting attention complexity by 84% relative to dense Transformers.",
+          "sentences": [
+            {
+              "id": "s1-1",
+              "text": "Operational 25 km weather grids smooth out steep Western Ghats escarpments where extreme monsoon bursts trigger flash floods.",
+              "citations": [
+                "doc:p1/sec-intro"
+              ],
+              "isAnalogy": false,
+              "translatedText": "Operational 25 km weather grids smooth out steep Western Ghats escarpments where extreme monsoon bursts trigger flash floods."
+            },
+            {
+              "id": "s1-2",
+              "text": "MonsoonFormer downscales ERA5 fields while cutting attention complexity by 84% relative to dense Transformers.",
+              "citations": [
+                "doc:p2/sec-arch",
+                "doc:p3/sec-arch"
+              ],
+              "translatedText": "MonsoonFormer downscales ERA5 fields while cutting attention complexity by 84% relative to dense Transformers."
+            }
+          ],
+          "visualSpec": {
+            "kind": "title",
+            "title": "MonsoonFormer",
+            "subtitle": "Sparse-Attention Rainfall Forecasting",
+            "bullets": [
+              "Addresses 25 km operational grid smoothing",
+              "38.4 GB dense VRAM reduced to 9.6 GB",
+              "Tested on IMD 2018-2023 JJAS rainfall"
+            ],
+            "isAnalogy": false
+          },
+          "citations": [
+            "doc:p1/sec-intro",
+            "doc:p2/sec-arch",
+            "doc:p3/sec-arch"
+          ],
+          "durationSeconds": 13,
+          "startSeconds": 0,
+          "translatedChapterTitle": "Why Monsoon Resolution Matters",
+          "translatedNarration": "Operational 25 km weather grids smooth out steep Western Ghats escarpments where extreme monsoon bursts trigger flash floods. MonsoonFormer downscales ERA5 fields while cutting attention complexity by 84% relative to dense Transformers."
+        },
+        {
+          "id": "scene-2",
+          "order": 2,
+          "arcPhase": "background",
+          "chapterTitle": "Orographic Physics & Background",
+          "narration": "Moist low-level westerly jets forced over steep coastal slopes double local rainfall intensity compared with flat coastal plains. Evaluating forecasts on rare storms uses the Critical Success Index, which ignores correct dry-day negatives.",
+          "sentences": [
+            {
+              "id": "s2-1",
+              "text": "Moist low-level westerly jets forced over steep coastal slopes double local rainfall intensity compared with flat coastal plains.",
+              "citations": [
+                "https://doi.org/10.1002/qj.4192",
+                "doc:p1/sec-intro"
+              ],
+              "translatedText": "Moist low-level westerly jets forced over steep coastal slopes double local rainfall intensity compared with flat coastal plains."
+            },
+            {
+              "id": "s2-2",
+              "text": "Evaluating forecasts on rare storms uses the Critical Success Index, which ignores correct dry-day negatives.",
+              "citations": [
+                "https://en.wikipedia.org/wiki/Critical_success_index",
+                "doc:p6/sec-results"
+              ],
+              "translatedText": "Evaluating forecasts on rare storms uses the Critical Success Index, which ignores correct dry-day negatives."
+            }
+          ],
+          "visualSpec": {
+            "kind": "takeaway",
+            "title": "Background Context (Tier 1 & Tier 2 Verified)",
+            "subtitle": "Why terrain steepness & CSI matter",
+            "bullets": [
+              "Orographic lift doubles windward rainfall intensity",
+              "CSI = Hits / (Hits + Misses + False Alarms)",
+              "Heavy-rainfall threshold: >64.5 mm/day"
+            ]
+          },
+          "citations": [
+            "https://doi.org/10.1002/qj.4192",
+            "doc:p1/sec-intro",
+            "https://en.wikipedia.org/wiki/Critical_success_index",
+            "doc:p6/sec-results"
+          ],
+          "durationSeconds": 13,
+          "startSeconds": 13,
+          "translatedChapterTitle": "Orographic Physics & Background",
+          "translatedNarration": "Moist low-level westerly jets forced over steep coastal slopes double local rainfall intensity compared with flat coastal plains. Evaluating forecasts on rare storms uses the Critical Success Index, which ignores correct dry-day negatives."
+        },
+        {
+          "id": "scene-3",
+          "order": 3,
+          "arcPhase": "method",
+          "chapterTitle": "Sparse Orographic Architecture",
+          "narration": "MonsoonFormer ingests six atmospheric grid fields—SST, U850, V850, Q850, SLP, and Z500—into a multi-scale encoder. Each token attends only to a 7x7 local coastal window plus 128 strided synoptic anchor tokens, cutting complexity by 84%.",
+          "sentences": [
+            {
+              "id": "s3-1",
+              "text": "MonsoonFormer ingests six atmospheric grid fields—SST, U850, V850, Q850, SLP, and Z500—into a multi-scale encoder.",
+              "citations": [
+                "doc:p2/sec-arch",
+                "doc:p3/fig-1"
+              ],
+              "translatedText": "MonsoonFormer ingests six atmospheric grid fields—SST, U850, V850, Q850, SLP, and Z500—into a multi-scale encoder."
+            },
+            {
+              "id": "s3-2",
+              "text": "Each token attends only to a 7x7 local coastal window plus 128 strided synoptic anchor tokens, cutting complexity by 84%.",
+              "citations": [
+                "doc:p3/sec-arch"
+              ],
+              "translatedText": "Each token attends only to a 7x7 local coastal window plus 128 strided synoptic anchor tokens, cutting complexity by 84%."
+            }
+          ],
+          "visualSpec": {
+            "kind": "diagram",
+            "title": "MonsoonFormer Sparse Routing Flow",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "ERA5 Grid Inputs (6 Vars)",
+                "group": "Input",
+                "step": 1
+              },
+              {
+                "id": "n2",
+                "label": "Multi-Scale Spatial Encoder",
+                "group": "Encoder",
+                "step": 2
+              },
+              {
+                "id": "n3",
+                "label": "7x7 Orographic Window + 128 Anchors",
+                "group": "Attention",
+                "step": 3
+              },
+              {
+                "id": "n4",
+                "label": "30-Day Precipitation Decoder",
+                "group": "Output",
+                "step": 4
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "0.25 deg grid",
+                "step": 2
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "-84% complexity",
+                "step": 3
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": "lambda = 0.35 loss",
+                "step": 4
+              }
+            ]
+          },
+          "citations": [
+            "doc:p2/sec-arch",
+            "doc:p3/fig-1",
+            "doc:p3/sec-arch"
+          ],
+          "durationSeconds": 16,
+          "startSeconds": 26,
+          "translatedChapterTitle": "Sparse Orographic Architecture",
+          "translatedNarration": "MonsoonFormer ingests six atmospheric grid fields—SST, U850, V850, Q850, SLP, and Z500—into a multi-scale encoder. Each token attends only to a 7x7 local coastal window plus 128 strided synoptic anchor tokens, cutting complexity by 84%."
+        },
+        {
+          "id": "scene-4",
+          "order": 4,
+          "arcPhase": "method",
+          "chapterTitle": "Paper Figure 1 Walkthrough",
+          "narration": "Figure 1 illustrates how multi-scale spatial blocks route salient features through the sparse attention bottleneck directly into transposed-convolution decoder heads.",
+          "sentences": [
+            {
+              "id": "s4-1",
+              "text": "Figure 1 illustrates how multi-scale spatial blocks route salient features through the sparse attention bottleneck directly into transposed-convolution decoder heads.",
+              "citations": [
+                "doc:p3/fig-1",
+                "doc:p2/sec-arch"
+              ],
+              "translatedText": "Figure 1 illustrates how multi-scale spatial blocks route salient features through the sparse attention bottleneck directly into transposed-convolution decoder heads."
+            }
+          ],
+          "visualSpec": {
+            "kind": "figure",
+            "title": "Figure 1: Architecture Highlight",
+            "figureId": "fig-1",
+            "caption": "Figure 1: MonsoonFormer multi-scale encoder-decoder with sparse attention routing over atmospheric grid inputs (SST, U850, V850, Q850, SLP, Z500) to 30-day precipitation probability maps.",
+            "highlightBoxes": [
+              {
+                "xPct": 4,
+                "yPct": 24,
+                "wPct": 16,
+                "hPct": 52,
+                "label": "6 Atmospheric Inputs",
+                "step": 1
+              },
+              {
+                "xPct": 45,
+                "yPct": 24,
+                "wPct": 16,
+                "hPct": 52,
+                "label": "Sparse Attention Bottleneck",
+                "step": 2
+              },
+              {
+                "xPct": 81,
+                "yPct": 24,
+                "wPct": 16,
+                "hPct": 52,
+                "label": "Precipitation Maps",
+                "step": 3
+              }
+            ]
+          },
+          "citations": [
+            "doc:p3/fig-1",
+            "doc:p2/sec-arch"
+          ],
+          "durationSeconds": 13,
+          "startSeconds": 42,
+          "translatedChapterTitle": "Paper Figure 1 Walkthrough",
+          "translatedNarration": "Figure 1 illustrates how multi-scale spatial blocks route salient features through the sparse attention bottleneck directly into transposed-convolution decoder heads."
+        },
+        {
+          "id": "scene-5",
+          "order": 5,
+          "arcPhase": "method",
+          "chapterTitle": "Sparse Attention Equation",
+          "narration": "In Equation 1, attention weight alpha_ij scores query q_i against key k_j scaled by square-root d_k, normalized strictly inside the local 7x7 neighborhood W(i) instead of all 16,384 grid cells.",
+          "sentences": [
+            {
+              "id": "s5-1",
+              "text": "In Equation 1, attention weight alpha_ij scores query q_i against key k_j scaled by square-root d_k, normalized strictly inside the local 7x7 neighborhood W(i) instead of all 16,384 grid cells.",
+              "citations": [
+                "doc:p3/eq-1",
+                "doc:p3/sec-arch"
+              ],
+              "translatedText": "In Equation 1, attention weight alpha_ij scores query q_i against key k_j scaled by square-root d_k, normalized strictly inside the local 7x7 neighborhood W(i) instead of all 16,384 grid cells."
+            }
+          ],
+          "visualSpec": {
+            "kind": "equation",
+            "title": "Equation 1: Windowed Sparse Attention",
+            "equationId": "eq-1",
+            "latex": "\\alpha_{ij} = \\frac{\\exp\\left(\\frac{q_i^\\top k_j}{\\sqrt{d_k}}\\right)}{\\sum_{m \\in \\mathcal{W}(i)} \\exp\\left(\\frac{q_i^\\top k_m}{\\sqrt{d_k}}\\right)}",
+            "terms": [
+              {
+                "symbolLatex": "\\alpha_{ij}",
+                "meaning": "Normalized attention weight between grid cell i and neighbor j",
+                "step": 1
+              },
+              {
+                "symbolLatex": "q_i^\\top k_j / \\sqrt{d_k}",
+                "meaning": "Scaled dot-product similarity of atmospheric state embeddings",
+                "step": 2
+              },
+              {
+                "symbolLatex": "\\mathcal{W}(i)",
+                "meaning": "7x7 coastal-orographic neighborhood + 128 synoptic anchors (not all 16,384 cells)",
+                "step": 3
+              }
+            ]
+          },
+          "citations": [
+            "doc:p3/eq-1",
+            "doc:p3/sec-arch"
+          ],
+          "durationSeconds": 15,
+          "startSeconds": 55,
+          "translatedChapterTitle": "Sparse Attention Equation",
+          "translatedNarration": "In Equation 1, attention weight alpha_ij scores query q_i against key k_j scaled by square-root d_k, normalized strictly inside the local 7x7 neighborhood W(i) instead of all 16,384 grid cells."
+        },
+        {
+          "id": "scene-6",
+          "order": 6,
+          "arcPhase": "results",
+          "chapterTitle": "Benchmark Results (Table 1)",
+          "narration": "On 2018-2023 JJAS rainfall, MonsoonFormer reaches 11.4 mm/day 5-day RMSE and 0.61 CSI, outperforming Full-Attention at 12.1 mm/day RMSE and 0.54 CSI while cutting VRAM from 38.4 GB to 9.6 GB and latency from 195 ms to 42 ms.",
+          "sentences": [
+            {
+              "id": "s6-1",
+              "text": "On 2018-2023 JJAS rainfall, MonsoonFormer reaches 11.4 mm/day 5-day RMSE and 0.61 CSI, outperforming Full-Attention at 12.1 mm/day RMSE and 0.54 CSI while cutting VRAM from 38.4 GB to 9.6 GB and latency from 195 ms to 42 ms.",
+              "citations": [
+                "doc:p5/table-1",
+                "doc:p5/sec-results",
+                "doc:p6/sec-results"
+              ],
+              "translatedText": "On 2018-2023 JJAS rainfall, MonsoonFormer reaches 11.4 mm/day 5-day RMSE and 0.61 CSI, outperforming Full-Attention at 12.1 mm/day RMSE and 0.54 CSI while cutting VRAM from 38.4 GB to 9.6 GB and latency from 195 ms to 42 ms."
+            }
+          ],
+          "visualSpec": {
+            "kind": "chart",
+            "title": "Table 1: 5-Day RMSE (mm/day) & VRAM (GB)",
+            "chartType": "grouped-bar",
+            "tableId": "table-1",
+            "xColumn": "Model",
+            "yColumns": [
+              "RMSE_5d",
+              "VRAM_GB"
+            ],
+            "highlightRow": "MonsoonFormer",
+            "resolvedSeries": [
+              {
+                "label": "ConvLSTM",
+                "values": {
+                  "RMSE_5d": 15.8,
+                  "VRAM_GB": 14.2
+                }
+              },
+              {
+                "label": "PatchTST",
+                "values": {
+                  "RMSE_5d": 13.9,
+                  "VRAM_GB": 19.5
+                }
+              },
+              {
+                "label": "Full-Attention",
+                "values": {
+                  "RMSE_5d": 12.1,
+                  "VRAM_GB": 38.4
+                }
+              },
+              {
+                "label": "MonsoonFormer",
+                "values": {
+                  "RMSE_5d": 11.4,
+                  "VRAM_GB": 9.6
+                }
+              }
+            ]
+          },
+          "citations": [
+            "doc:p5/table-1",
+            "doc:p5/sec-results",
+            "doc:p6/sec-results"
+          ],
+          "durationSeconds": 16,
+          "startSeconds": 70,
+          "translatedChapterTitle": "Benchmark Results (Table 1)",
+          "translatedNarration": "On 2018-2023 JJAS rainfall, MonsoonFormer reaches 11.4 mm/day 5-day RMSE and 0.61 CSI, outperforming Full-Attention at 12.1 mm/day RMSE and 0.54 CSI while cutting VRAM from 38.4 GB to 9.6 GB and latency from 195 ms to 42 ms."
+        },
+        {
+          "id": "scene-7",
+          "order": 7,
+          "arcPhase": "results",
+          "chapterTitle": "Spatial Skill & Attention Map",
+          "narration": "Figure 2 compares forecast skill contours in Panel A with the learned sparse spatial attention mask in Panel B, showing tight alignment along the steep windward coastal ridge.",
+          "sentences": [
+            {
+              "id": "s7-1",
+              "text": "Figure 2 compares forecast skill contours in Panel A with the learned sparse spatial attention mask in Panel B, showing tight alignment along the steep windward coastal ridge.",
+              "citations": [
+                "doc:p6/fig-2"
+              ],
+              "translatedText": "Figure 2 compares forecast skill contours in Panel A with the learned sparse spatial attention mask in Panel B, showing tight alignment along the steep windward coastal ridge."
+            }
+          ],
+          "visualSpec": {
+            "kind": "figure",
+            "title": "Figure 2: Skill Score & Attention Mask",
+            "figureId": "fig-2",
+            "caption": "Figure 2: (A) Forecast Skill Score contour across the coastal ridge and (B) learned sparse spatial attention mask concentrating weight along the windward escarpment.",
+            "highlightBoxes": [
+              {
+                "xPct": 4,
+                "yPct": 8,
+                "wPct": 44,
+                "hPct": 84,
+                "label": "Panel A: Forecast Skill Contour",
+                "step": 1
+              },
+              {
+                "xPct": 52,
+                "yPct": 8,
+                "wPct": 44,
+                "hPct": 84,
+                "label": "Panel B: Windward Attention Mask",
+                "step": 2
+              }
+            ]
+          },
+          "citations": [
+            "doc:p6/fig-2"
+          ],
+          "durationSeconds": 12,
+          "startSeconds": 86,
+          "translatedChapterTitle": "Spatial Skill & Attention Map",
+          "translatedNarration": "Figure 2 compares forecast skill contours in Panel A with the learned sparse spatial attention mask in Panel B, showing tight alignment along the steep windward coastal ridge."
+        },
+        {
+          "id": "scene-8",
+          "order": 8,
+          "arcPhase": "limitations",
+          "chapterTitle": "Limitations & Differing View",
+          "narration": "Local sparse windows under-represent planetary Rossby wave coupling beyond day 7, and the model relies on historical ERA5 reanalysis rather than real-time Doppler radar. A differing scholarly view by Rao et al. (2024) notes sparse windows can degrade 10-to-14-day monsoon break predictions.",
+          "sentences": [
+            {
+              "id": "s8-1",
+              "text": "Local sparse windows under-represent planetary Rossby wave coupling beyond day 7, and the model relies on historical ERA5 reanalysis rather than real-time Doppler radar.",
+              "citations": [
+                "doc:p7/sec-limits"
+              ],
+              "translatedText": "Local sparse windows under-represent planetary Rossby wave coupling beyond day 7, and the model relies on historical ERA5 reanalysis rather than real-time Doppler radar."
+            },
+            {
+              "id": "s8-2",
+              "text": "A differing scholarly view by Rao et al. (2024) notes sparse windows can degrade 10-to-14-day monsoon break predictions.",
+              "citations": [
+                "https://doi.org/10.1029/2024GL109821"
+              ],
+              "translatedText": "A differing scholarly view by Rao et al. (2024) notes sparse windows can degrade 10-to-14-day monsoon break predictions."
+            }
+          ],
+          "visualSpec": {
+            "kind": "takeaway",
+            "title": "Limitations & Differing View",
+            "subtitle": "What remains open beyond 7 days",
+            "bullets": [
+              "Rossby wave coupling under-represented past day 7",
+              "No real-time Doppler radar assimilation yet",
+              "Differing view (Rao et al., 2024): 10-14 day break risk"
+            ]
+          },
+          "citations": [
+            "doc:p7/sec-limits",
+            "https://doi.org/10.1029/2024GL109821"
+          ],
+          "durationSeconds": 13,
+          "startSeconds": 98,
+          "translatedChapterTitle": "Limitations & Differing View",
+          "translatedNarration": "Local sparse windows under-represent planetary Rossby wave coupling beyond day 7, and the model relies on historical ERA5 reanalysis rather than real-time Doppler radar. A differing scholarly view by Rao et al. (2024) notes sparse windows can degrade 10-to-14-day monsoon break predictions."
+        },
+        {
+          "id": "scene-9",
+          "order": 9,
+          "arcPhase": "whats_next",
+          "chapterTitle": "Next Steps & Takeaways",
+          "narration": "Next steps pair global synoptic anchor hierarchies with live Doppler radar assimilation to preserve 9.6 GB efficiency while extending skill past day 10.",
+          "sentences": [
+            {
+              "id": "s9-1",
+              "text": "Next steps pair global synoptic anchor hierarchies with live Doppler radar assimilation to preserve 9.6 GB efficiency while extending skill past day 10.",
+              "citations": [
+                "doc:p7/sec-limits",
+                "doc:p5/table-1"
+              ],
+              "translatedText": "Next steps pair global synoptic anchor hierarchies with live Doppler radar assimilation to preserve 9.6 GB efficiency while extending skill past day 10."
+            }
+          ],
+          "visualSpec": {
+            "kind": "takeaway",
+            "title": "What's Next",
+            "subtitle": "Key takeaway & future path",
+            "bullets": [
+              "11.4 mm/day 5-day RMSE at 42 ms inference",
+              "Combine 7x7 windows with radar assimilation",
+              "Explore the Q&A panel to verify any claim"
+            ]
+          },
+          "citations": [
+            "doc:p7/sec-limits",
+            "doc:p5/table-1"
+          ],
+          "durationSeconds": 10,
+          "startSeconds": 111,
+          "translatedChapterTitle": "Next Steps & Takeaways",
+          "translatedNarration": "Next steps pair global synoptic anchor hierarchies with live Doppler radar assimilation to preserve 9.6 GB efficiency while extending skill past day 10."
+        }
+      ],
+      "videoId": "vid_60c216a7"
+    }
+  },
+  "videos": {
+    "vid_60c216a7": {
+      "id": "vid_60c216a7",
+      "jobId": "job_4b8ad447",
+      "documentId": "doc_monsoon_2025",
+      "depth": "student",
+      "lengthTarget": "2min",
+      "language": "en",
+      "languageDir": "ltr",
+      "languageCapability": "voice_and_captions",
+      "ttsVoice": "Cloud Studio Aria (en-IN) [Recorded Fixture]",
+      "ttsProvider": "mock",
+      "llmProvider": "mock",
+      "llmModel": "mock-deterministic-v1",
+      "mp4Url": "/api/videos/vid_60c216a7/stream.mp4",
+      "vttUrl": "/api/videos/vid_60c216a7/captions.vtt",
+      "audioUrl": "/api/videos/vid_60c216a7/narration.wav",
+      "durationSeconds": 121,
+      "chapters": [
+        {
+          "title": "Why Monsoon Resolution Matters",
+          "startSeconds": 0,
+          "endSeconds": 13,
+          "sceneId": "scene-1"
+        },
+        {
+          "title": "Orographic Physics & Background",
+          "startSeconds": 13,
+          "endSeconds": 26,
+          "sceneId": "scene-2"
+        },
+        {
+          "title": "Sparse Orographic Architecture",
+          "startSeconds": 26,
+          "endSeconds": 42,
+          "sceneId": "scene-3"
+        },
+        {
+          "title": "Paper Figure 1 Walkthrough",
+          "startSeconds": 42,
+          "endSeconds": 55,
+          "sceneId": "scene-4"
+        },
+        {
+          "title": "Sparse Attention Equation",
+          "startSeconds": 55,
+          "endSeconds": 70,
+          "sceneId": "scene-5"
+        },
+        {
+          "title": "Benchmark Results (Table 1)",
+          "startSeconds": 70,
+          "endSeconds": 86,
+          "sceneId": "scene-6"
+        },
+        {
+          "title": "Spatial Skill & Attention Map",
+          "startSeconds": 86,
+          "endSeconds": 98,
+          "sceneId": "scene-7"
+        },
+        {
+          "title": "Limitations & Differing View",
+          "startSeconds": 98,
+          "endSeconds": 111,
+          "sceneId": "scene-8"
+        },
+        {
+          "title": "Next Steps & Takeaways",
+          "startSeconds": 111,
+          "endSeconds": 121,
+          "sceneId": "scene-9"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "scene-1",
+          "order": 1,
+          "arcPhase": "why_it_matters",
+          "chapterTitle": "Why Monsoon Resolution Matters",
+          "narration": "Operational 25 km weather grids smooth out steep Western Ghats escarpments where extreme monsoon bursts trigger flash floods. MonsoonFormer downscales ERA5 fields while cutting attention complexity by 84% relative to dense Transformers.",
+          "sentences": [
+            {
+              "id": "s1-1",
+              "text": "Operational 25 km weather grids smooth out steep Western Ghats escarpments where extreme monsoon bursts trigger flash floods.",
+              "citations": [
+                "doc:p1/sec-intro"
+              ],
+              "isAnalogy": false,
+              "translatedText": "Operational 25 km weather grids smooth out steep Western Ghats escarpments where extreme monsoon bursts trigger flash floods."
+            },
+            {
+              "id": "s1-2",
+              "text": "MonsoonFormer downscales ERA5 fields while cutting attention complexity by 84% relative to dense Transformers.",
+              "citations": [
+                "doc:p2/sec-arch",
+                "doc:p3/sec-arch"
+              ],
+              "translatedText": "MonsoonFormer downscales ERA5 fields while cutting attention complexity by 84% relative to dense Transformers."
+            }
+          ],
+          "visualSpec": {
+            "kind": "title",
+            "title": "MonsoonFormer",
+            "subtitle": "Sparse-Attention Rainfall Forecasting",
+            "bullets": [
+              "Addresses 25 km operational grid smoothing",
+              "38.4 GB dense VRAM reduced to 9.6 GB",
+              "Tested on IMD 2018-2023 JJAS rainfall"
+            ],
+            "isAnalogy": false
+          },
+          "citations": [
+            "doc:p1/sec-intro",
+            "doc:p2/sec-arch",
+            "doc:p3/sec-arch"
+          ],
+          "durationSeconds": 13,
+          "startSeconds": 0,
+          "translatedChapterTitle": "Why Monsoon Resolution Matters",
+          "translatedNarration": "Operational 25 km weather grids smooth out steep Western Ghats escarpments where extreme monsoon bursts trigger flash floods. MonsoonFormer downscales ERA5 fields while cutting attention complexity by 84% relative to dense Transformers."
+        },
+        {
+          "id": "scene-2",
+          "order": 2,
+          "arcPhase": "background",
+          "chapterTitle": "Orographic Physics & Background",
+          "narration": "Moist low-level westerly jets forced over steep coastal slopes double local rainfall intensity compared with flat coastal plains. Evaluating forecasts on rare storms uses the Critical Success Index, which ignores correct dry-day negatives.",
+          "sentences": [
+            {
+              "id": "s2-1",
+              "text": "Moist low-level westerly jets forced over steep coastal slopes double local rainfall intensity compared with flat coastal plains.",
+              "citations": [
+                "https://doi.org/10.1002/qj.4192",
+                "doc:p1/sec-intro"
+              ],
+              "translatedText": "Moist low-level westerly jets forced over steep coastal slopes double local rainfall intensity compared with flat coastal plains."
+            },
+            {
+              "id": "s2-2",
+              "text": "Evaluating forecasts on rare storms uses the Critical Success Index, which ignores correct dry-day negatives.",
+              "citations": [
+                "https://en.wikipedia.org/wiki/Critical_success_index",
+                "doc:p6/sec-results"
+              ],
+              "translatedText": "Evaluating forecasts on rare storms uses the Critical Success Index, which ignores correct dry-day negatives."
+            }
+          ],
+          "visualSpec": {
+            "kind": "takeaway",
+            "title": "Background Context (Tier 1 & Tier 2 Verified)",
+            "subtitle": "Why terrain steepness & CSI matter",
+            "bullets": [
+              "Orographic lift doubles windward rainfall intensity",
+              "CSI = Hits / (Hits + Misses + False Alarms)",
+              "Heavy-rainfall threshold: >64.5 mm/day"
+            ]
+          },
+          "citations": [
+            "https://doi.org/10.1002/qj.4192",
+            "doc:p1/sec-intro",
+            "https://en.wikipedia.org/wiki/Critical_success_index",
+            "doc:p6/sec-results"
+          ],
+          "durationSeconds": 13,
+          "startSeconds": 13,
+          "translatedChapterTitle": "Orographic Physics & Background",
+          "translatedNarration": "Moist low-level westerly jets forced over steep coastal slopes double local rainfall intensity compared with flat coastal plains. Evaluating forecasts on rare storms uses the Critical Success Index, which ignores correct dry-day negatives."
+        },
+        {
+          "id": "scene-3",
+          "order": 3,
+          "arcPhase": "method",
+          "chapterTitle": "Sparse Orographic Architecture",
+          "narration": "MonsoonFormer ingests six atmospheric grid fields—SST, U850, V850, Q850, SLP, and Z500—into a multi-scale encoder. Each token attends only to a 7x7 local coastal window plus 128 strided synoptic anchor tokens, cutting complexity by 84%.",
+          "sentences": [
+            {
+              "id": "s3-1",
+              "text": "MonsoonFormer ingests six atmospheric grid fields—SST, U850, V850, Q850, SLP, and Z500—into a multi-scale encoder.",
+              "citations": [
+                "doc:p2/sec-arch",
+                "doc:p3/fig-1"
+              ],
+              "translatedText": "MonsoonFormer ingests six atmospheric grid fields—SST, U850, V850, Q850, SLP, and Z500—into a multi-scale encoder."
+            },
+            {
+              "id": "s3-2",
+              "text": "Each token attends only to a 7x7 local coastal window plus 128 strided synoptic anchor tokens, cutting complexity by 84%.",
+              "citations": [
+                "doc:p3/sec-arch"
+              ],
+              "translatedText": "Each token attends only to a 7x7 local coastal window plus 128 strided synoptic anchor tokens, cutting complexity by 84%."
+            }
+          ],
+          "visualSpec": {
+            "kind": "diagram",
+            "title": "MonsoonFormer Sparse Routing Flow",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "ERA5 Grid Inputs (6 Vars)",
+                "group": "Input",
+                "step": 1
+              },
+              {
+                "id": "n2",
+                "label": "Multi-Scale Spatial Encoder",
+                "group": "Encoder",
+                "step": 2
+              },
+              {
+                "id": "n3",
+                "label": "7x7 Orographic Window + 128 Anchors",
+                "group": "Attention",
+                "step": 3
+              },
+              {
+                "id": "n4",
+                "label": "30-Day Precipitation Decoder",
+                "group": "Output",
+                "step": 4
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "0.25 deg grid",
+                "step": 2
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "-84% complexity",
+                "step": 3
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": "lambda = 0.35 loss",
+                "step": 4
+              }
+            ]
+          },
+          "citations": [
+            "doc:p2/sec-arch",
+            "doc:p3/fig-1",
+            "doc:p3/sec-arch"
+          ],
+          "durationSeconds": 16,
+          "startSeconds": 26,
+          "translatedChapterTitle": "Sparse Orographic Architecture",
+          "translatedNarration": "MonsoonFormer ingests six atmospheric grid fields—SST, U850, V850, Q850, SLP, and Z500—into a multi-scale encoder. Each token attends only to a 7x7 local coastal window plus 128 strided synoptic anchor tokens, cutting complexity by 84%."
+        },
+        {
+          "id": "scene-4",
+          "order": 4,
+          "arcPhase": "method",
+          "chapterTitle": "Paper Figure 1 Walkthrough",
+          "narration": "Figure 1 illustrates how multi-scale spatial blocks route salient features through the sparse attention bottleneck directly into transposed-convolution decoder heads.",
+          "sentences": [
+            {
+              "id": "s4-1",
+              "text": "Figure 1 illustrates how multi-scale spatial blocks route salient features through the sparse attention bottleneck directly into transposed-convolution decoder heads.",
+              "citations": [
+                "doc:p3/fig-1",
+                "doc:p2/sec-arch"
+              ],
+              "translatedText": "Figure 1 illustrates how multi-scale spatial blocks route salient features through the sparse attention bottleneck directly into transposed-convolution decoder heads."
+            }
+          ],
+          "visualSpec": {
+            "kind": "figure",
+            "title": "Figure 1: Architecture Highlight",
+            "figureId": "fig-1",
+            "caption": "Figure 1: MonsoonFormer multi-scale encoder-decoder with sparse attention routing over atmospheric grid inputs (SST, U850, V850, Q850, SLP, Z500) to 30-day precipitation probability maps.",
+            "highlightBoxes": [
+              {
+                "xPct": 4,
+                "yPct": 24,
+                "wPct": 16,
+                "hPct": 52,
+                "label": "6 Atmospheric Inputs",
+                "step": 1
+              },
+              {
+                "xPct": 45,
+                "yPct": 24,
+                "wPct": 16,
+                "hPct": 52,
+                "label": "Sparse Attention Bottleneck",
+                "step": 2
+              },
+              {
+                "xPct": 81,
+                "yPct": 24,
+                "wPct": 16,
+                "hPct": 52,
+                "label": "Precipitation Maps",
+                "step": 3
+              }
+            ]
+          },
+          "citations": [
+            "doc:p3/fig-1",
+            "doc:p2/sec-arch"
+          ],
+          "durationSeconds": 13,
+          "startSeconds": 42,
+          "translatedChapterTitle": "Paper Figure 1 Walkthrough",
+          "translatedNarration": "Figure 1 illustrates how multi-scale spatial blocks route salient features through the sparse attention bottleneck directly into transposed-convolution decoder heads."
+        },
+        {
+          "id": "scene-5",
+          "order": 5,
+          "arcPhase": "method",
+          "chapterTitle": "Sparse Attention Equation",
+          "narration": "In Equation 1, attention weight alpha_ij scores query q_i against key k_j scaled by square-root d_k, normalized strictly inside the local 7x7 neighborhood W(i) instead of all 16,384 grid cells.",
+          "sentences": [
+            {
+              "id": "s5-1",
+              "text": "In Equation 1, attention weight alpha_ij scores query q_i against key k_j scaled by square-root d_k, normalized strictly inside the local 7x7 neighborhood W(i) instead of all 16,384 grid cells.",
+              "citations": [
+                "doc:p3/eq-1",
+                "doc:p3/sec-arch"
+              ],
+              "translatedText": "In Equation 1, attention weight alpha_ij scores query q_i against key k_j scaled by square-root d_k, normalized strictly inside the local 7x7 neighborhood W(i) instead of all 16,384 grid cells."
+            }
+          ],
+          "visualSpec": {
+            "kind": "equation",
+            "title": "Equation 1: Windowed Sparse Attention",
+            "equationId": "eq-1",
+            "latex": "\\alpha_{ij} = \\frac{\\exp\\left(\\frac{q_i^\\top k_j}{\\sqrt{d_k}}\\right)}{\\sum_{m \\in \\mathcal{W}(i)} \\exp\\left(\\frac{q_i^\\top k_m}{\\sqrt{d_k}}\\right)}",
+            "terms": [
+              {
+                "symbolLatex": "\\alpha_{ij}",
+                "meaning": "Normalized attention weight between grid cell i and neighbor j",
+                "step": 1
+              },
+              {
+                "symbolLatex": "q_i^\\top k_j / \\sqrt{d_k}",
+                "meaning": "Scaled dot-product similarity of atmospheric state embeddings",
+                "step": 2
+              },
+              {
+                "symbolLatex": "\\mathcal{W}(i)",
+                "meaning": "7x7 coastal-orographic neighborhood + 128 synoptic anchors (not all 16,384 cells)",
+                "step": 3
+              }
+            ]
+          },
+          "citations": [
+            "doc:p3/eq-1",
+            "doc:p3/sec-arch"
+          ],
+          "durationSeconds": 15,
+          "startSeconds": 55,
+          "translatedChapterTitle": "Sparse Attention Equation",
+          "translatedNarration": "In Equation 1, attention weight alpha_ij scores query q_i against key k_j scaled by square-root d_k, normalized strictly inside the local 7x7 neighborhood W(i) instead of all 16,384 grid cells."
+        },
+        {
+          "id": "scene-6",
+          "order": 6,
+          "arcPhase": "results",
+          "chapterTitle": "Benchmark Results (Table 1)",
+          "narration": "On 2018-2023 JJAS rainfall, MonsoonFormer reaches 11.4 mm/day 5-day RMSE and 0.61 CSI, outperforming Full-Attention at 12.1 mm/day RMSE and 0.54 CSI while cutting VRAM from 38.4 GB to 9.6 GB and latency from 195 ms to 42 ms.",
+          "sentences": [
+            {
+              "id": "s6-1",
+              "text": "On 2018-2023 JJAS rainfall, MonsoonFormer reaches 11.4 mm/day 5-day RMSE and 0.61 CSI, outperforming Full-Attention at 12.1 mm/day RMSE and 0.54 CSI while cutting VRAM from 38.4 GB to 9.6 GB and latency from 195 ms to 42 ms.",
+              "citations": [
+                "doc:p5/table-1",
+                "doc:p5/sec-results",
+                "doc:p6/sec-results"
+              ],
+              "translatedText": "On 2018-2023 JJAS rainfall, MonsoonFormer reaches 11.4 mm/day 5-day RMSE and 0.61 CSI, outperforming Full-Attention at 12.1 mm/day RMSE and 0.54 CSI while cutting VRAM from 38.4 GB to 9.6 GB and latency from 195 ms to 42 ms."
+            }
+          ],
+          "visualSpec": {
+            "kind": "chart",
+            "title": "Table 1: 5-Day RMSE (mm/day) & VRAM (GB)",
+            "chartType": "grouped-bar",
+            "tableId": "table-1",
+            "xColumn": "Model",
+            "yColumns": [
+              "RMSE_5d",
+              "VRAM_GB"
+            ],
+            "highlightRow": "MonsoonFormer",
+            "resolvedSeries": [
+              {
+                "label": "ConvLSTM",
+                "values": {
+                  "RMSE_5d": 15.8,
+                  "VRAM_GB": 14.2
+                }
+              },
+              {
+                "label": "PatchTST",
+                "values": {
+                  "RMSE_5d": 13.9,
+                  "VRAM_GB": 19.5
+                }
+              },
+              {
+                "label": "Full-Attention",
+                "values": {
+                  "RMSE_5d": 12.1,
+                  "VRAM_GB": 38.4
+                }
+              },
+              {
+                "label": "MonsoonFormer",
+                "values": {
+                  "RMSE_5d": 11.4,
+                  "VRAM_GB": 9.6
+                }
+              }
+            ]
+          },
+          "citations": [
+            "doc:p5/table-1",
+            "doc:p5/sec-results",
+            "doc:p6/sec-results"
+          ],
+          "durationSeconds": 16,
+          "startSeconds": 70,
+          "translatedChapterTitle": "Benchmark Results (Table 1)",
+          "translatedNarration": "On 2018-2023 JJAS rainfall, MonsoonFormer reaches 11.4 mm/day 5-day RMSE and 0.61 CSI, outperforming Full-Attention at 12.1 mm/day RMSE and 0.54 CSI while cutting VRAM from 38.4 GB to 9.6 GB and latency from 195 ms to 42 ms."
+        },
+        {
+          "id": "scene-7",
+          "order": 7,
+          "arcPhase": "results",
+          "chapterTitle": "Spatial Skill & Attention Map",
+          "narration": "Figure 2 compares forecast skill contours in Panel A with the learned sparse spatial attention mask in Panel B, showing tight alignment along the steep windward coastal ridge.",
+          "sentences": [
+            {
+              "id": "s7-1",
+              "text": "Figure 2 compares forecast skill contours in Panel A with the learned sparse spatial attention mask in Panel B, showing tight alignment along the steep windward coastal ridge.",
+              "citations": [
+                "doc:p6/fig-2"
+              ],
+              "translatedText": "Figure 2 compares forecast skill contours in Panel A with the learned sparse spatial attention mask in Panel B, showing tight alignment along the steep windward coastal ridge."
+            }
+          ],
+          "visualSpec": {
+            "kind": "figure",
+            "title": "Figure 2: Skill Score & Attention Mask",
+            "figureId": "fig-2",
+            "caption": "Figure 2: (A) Forecast Skill Score contour across the coastal ridge and (B) learned sparse spatial attention mask concentrating weight along the windward escarpment.",
+            "highlightBoxes": [
+              {
+                "xPct": 4,
+                "yPct": 8,
+                "wPct": 44,
+                "hPct": 84,
+                "label": "Panel A: Forecast Skill Contour",
+                "step": 1
+              },
+              {
+                "xPct": 52,
+                "yPct": 8,
+                "wPct": 44,
+                "hPct": 84,
+                "label": "Panel B: Windward Attention Mask",
+                "step": 2
+              }
+            ]
+          },
+          "citations": [
+            "doc:p6/fig-2"
+          ],
+          "durationSeconds": 12,
+          "startSeconds": 86,
+          "translatedChapterTitle": "Spatial Skill & Attention Map",
+          "translatedNarration": "Figure 2 compares forecast skill contours in Panel A with the learned sparse spatial attention mask in Panel B, showing tight alignment along the steep windward coastal ridge."
+        },
+        {
+          "id": "scene-8",
+          "order": 8,
+          "arcPhase": "limitations",
+          "chapterTitle": "Limitations & Differing View",
+          "narration": "Local sparse windows under-represent planetary Rossby wave coupling beyond day 7, and the model relies on historical ERA5 reanalysis rather than real-time Doppler radar. A differing scholarly view by Rao et al. (2024) notes sparse windows can degrade 10-to-14-day monsoon break predictions.",
+          "sentences": [
+            {
+              "id": "s8-1",
+              "text": "Local sparse windows under-represent planetary Rossby wave coupling beyond day 7, and the model relies on historical ERA5 reanalysis rather than real-time Doppler radar.",
+              "citations": [
+                "doc:p7/sec-limits"
+              ],
+              "translatedText": "Local sparse windows under-represent planetary Rossby wave coupling beyond day 7, and the model relies on historical ERA5 reanalysis rather than real-time Doppler radar."
+            },
+            {
+              "id": "s8-2",
+              "text": "A differing scholarly view by Rao et al. (2024) notes sparse windows can degrade 10-to-14-day monsoon break predictions.",
+              "citations": [
+                "https://doi.org/10.1029/2024GL109821"
+              ],
+              "translatedText": "A differing scholarly view by Rao et al. (2024) notes sparse windows can degrade 10-to-14-day monsoon break predictions."
+            }
+          ],
+          "visualSpec": {
+            "kind": "takeaway",
+            "title": "Limitations & Differing View",
+            "subtitle": "What remains open beyond 7 days",
+            "bullets": [
+              "Rossby wave coupling under-represented past day 7",
+              "No real-time Doppler radar assimilation yet",
+              "Differing view (Rao et al., 2024): 10-14 day break risk"
+            ]
+          },
+          "citations": [
+            "doc:p7/sec-limits",
+            "https://doi.org/10.1029/2024GL109821"
+          ],
+          "durationSeconds": 13,
+          "startSeconds": 98,
+          "translatedChapterTitle": "Limitations & Differing View",
+          "translatedNarration": "Local sparse windows under-represent planetary Rossby wave coupling beyond day 7, and the model relies on historical ERA5 reanalysis rather than real-time Doppler radar. A differing scholarly view by Rao et al. (2024) notes sparse windows can degrade 10-to-14-day monsoon break predictions."
+        },
+        {
+          "id": "scene-9",
+          "order": 9,
+          "arcPhase": "whats_next",
+          "chapterTitle": "Next Steps & Takeaways",
+          "narration": "Next steps pair global synoptic anchor hierarchies with live Doppler radar assimilation to preserve 9.6 GB efficiency while extending skill past day 10.",
+          "sentences": [
+            {
+              "id": "s9-1",
+              "text": "Next steps pair global synoptic anchor hierarchies with live Doppler radar assimilation to preserve 9.6 GB efficiency while extending skill past day 10.",
+              "citations": [
+                "doc:p7/sec-limits",
+                "doc:p5/table-1"
+              ],
+              "translatedText": "Next steps pair global synoptic anchor hierarchies with live Doppler radar assimilation to preserve 9.6 GB efficiency while extending skill past day 10."
+            }
+          ],
+          "visualSpec": {
+            "kind": "takeaway",
+            "title": "What's Next",
+            "subtitle": "Key takeaway & future path",
+            "bullets": [
+              "11.4 mm/day 5-day RMSE at 42 ms inference",
+              "Combine 7x7 windows with radar assimilation",
+              "Explore the Q&A panel to verify any claim"
+            ]
+          },
+          "citations": [
+            "doc:p7/sec-limits",
+            "doc:p5/table-1"
+          ],
+          "durationSeconds": 10,
+          "startSeconds": 111,
+          "translatedChapterTitle": "Next Steps & Takeaways",
+          "translatedNarration": "Next steps pair global synoptic anchor hierarchies with live Doppler radar assimilation to preserve 9.6 GB efficiency while extending skill past day 10."
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clar-1",
+          "hardPartId": "hp-orographic",
+          "term": "Orographic precipitation",
+          "tier": 1,
+          "providerName": "Semantic Scholar / OpenAlex",
+          "title": "Orographic Enhancement of Indian Summer Monsoon Rainfall along the Western Ghats",
+          "url": "https://doi.org/10.1002/qj.4192",
+          "year": 2022,
+          "relevanceScore": 0.96,
+          "quote": "Moist low-level westerly jets forced over steep escarpments double local rainfall intensity relative to adjacent coastal plains.",
+          "confidenceLabel": "high",
+          "contradictsPaper": false
+        },
+        {
+          "id": "clar-3",
+          "hardPartId": "hp-teleconnection",
+          "term": "Global Teleconnections & Sparse Windows",
+          "tier": 1,
+          "providerName": "Crossref / Cited Reference",
+          "title": "Global Teleconnections and Sparse Transformers in Subseasonal Forecasting (Rao et al.)",
+          "url": "https://doi.org/10.1029/2024GL109821",
+          "year": 2024,
+          "relevanceScore": 0.94,
+          "quote": "Local sparse windows degrade 10-to-14-day monsoon break predictions by severing tropical-extratropical Rossby wave links.",
+          "confidenceLabel": "high",
+          "contradictsPaper": true,
+          "viewLabel": "Differing view"
+        },
+        {
+          "id": "clar-2",
+          "hardPartId": "hp-csi",
+          "term": "Critical Success Index (CSI)",
+          "tier": 2,
+          "providerName": "Wikipedia",
+          "title": "Critical Success Index (Threat Score) in Meteorological Verification",
+          "url": "https://en.wikipedia.org/wiki/Critical_success_index",
+          "year": 2025,
+          "relevanceScore": 0.91,
+          "quote": "CSI equals hits divided by hits plus misses plus false alarms, ignoring correct negatives in rare event verification.",
+          "confidenceLabel": "high",
+          "contradictsPaper": false
+        },
+        {
+          "id": "clar-4",
+          "hardPartId": "hp-teleconnection",
+          "term": "Attention VRAM scaling benchmarks",
+          "tier": 3,
+          "providerName": "Web Search (Tech Blog)",
+          "title": "Practical GPU Memory Notes for Weather Transformers",
+          "url": "https://weatherml-notes.example.org/attention-memory-2025",
+          "year": 2025,
+          "relevanceScore": 0.72,
+          "quote": "Sparse window kernels typically save 70 to 85 percent memory compared with dense global attention.",
+          "confidenceLabel": "lower confidence",
+          "contradictsPaper": false
+        }
+      ],
+      "chartAccuracyReport": [
+        {
+          "sceneId": "scene-6",
+          "tableId": "table-1",
+          "tableLabel": "Table 1",
+          "verified": true,
+          "checkedCells": 8,
+          "mismatches": []
+        }
+      ],
+      "droppedUncitedSentences": 0,
+      "numberGuardViolations": 0,
+      "translationGuardVerified": true,
+      "createdAt": "2026-11-23T11:21:28.568Z"
+    }
+  },
+  "shareLinks": {},
+  "auditLogs": [
+    {
+      "id": "aud_751a39e6",
+      "timestamp": "2026-11-23T11:21:28.640Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_9497f111",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_325ae09d",
+      "timestamp": "2026-11-23T11:21:28.614Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_9497f111",
+      "metadataRedacted": true,
+      "note": "Ingested format=pdf, ocr=false"
+    },
+    {
+      "id": "aud_286735d1",
+      "timestamp": "2026-11-23T11:21:28.575Z",
+      "actorId": "user_researcher_1",
+      "action": "sketch.create",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "citation=doc:p3/sec-arch"
+    },
+    {
+      "id": "aud_950531e6",
+      "timestamp": "2026-11-23T11:21:28.573Z",
+      "actorId": "user_researcher_1",
+      "action": "note.create",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "citation=doc:p5/table-1"
+    },
+    {
+      "id": "aud_6ca4857a",
+      "timestamp": "2026-11-23T11:21:28.570Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_4b8ad447",
+      "metadataRedacted": true,
+      "note": "video=vid_60c216a7"
+    },
+    {
+      "id": "aud_64d7edc1",
+      "timestamp": "2026-11-23T11:21:17.022Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_4b8ad447",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_33a87a5f",
+      "timestamp": "2026-11-23T11:21:17.019Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_b2f2c273",
+      "timestamp": "2026-11-23T11:21:08.897Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_0c71d876",
+      "timestamp": "2026-11-23T11:21:08.869Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_30c15679",
+      "metadataRedacted": true,
+      "note": "expiresHours=12"
+    },
+    {
+      "id": "aud_edcdc9e2",
+      "timestamp": "2026-11-23T11:21:08.866Z",
+      "actorId": "user_researcher_1",
+      "action": "sketch.create",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "citation=doc:p3/sec-arch"
+    },
+    {
+      "id": "aud_825f00ee",
+      "timestamp": "2026-11-23T11:21:08.863Z",
+      "actorId": "user_researcher_1",
+      "action": "note.create",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "citation=doc:p5/table-1"
+    },
+    {
+      "id": "aud_7a062176",
+      "timestamp": "2026-11-23T11:21:08.859Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_1e1abf4d",
+      "metadataRedacted": true,
+      "note": "video=vid_30c15679"
+    },
+    {
+      "id": "aud_93894343",
+      "timestamp": "2026-11-23T11:20:58.756Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_1e1abf4d",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_e2cd0c38",
+      "timestamp": "2026-11-23T11:20:58.755Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_827dcd4e",
+      "timestamp": "2026-11-23T11:20:58.753Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_b3c48f64",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_0ec749ef",
+      "timestamp": "2026-11-23T11:20:58.750Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_4eebddc6",
+      "metadataRedacted": true,
+      "note": "video=vid_a41b94d3"
+    },
+    {
+      "id": "aud_2f34830a",
+      "timestamp": "2026-11-23T11:20:51.686Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_4eebddc6",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_432b4eb5",
+      "timestamp": "2026-11-23T11:20:51.685Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_b3c48f64",
+      "metadataRedacted": true,
+      "note": "Ingested format=html, ocr=false"
+    },
+    {
+      "id": "aud_a3b22339",
+      "timestamp": "2026-11-23T11:20:51.672Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_048f36d7",
+      "timestamp": "2026-11-23T11:20:51.666Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_8de389f4",
+      "metadataRedacted": true,
+      "note": "video=vid_8f6c026c"
+    },
+    {
+      "id": "aud_e7f3c39f",
+      "timestamp": "2026-11-23T11:20:48.738Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_8de389f4",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=pa"
+    },
+    {
+      "id": "aud_982c5f07",
+      "timestamp": "2026-11-23T11:20:48.609Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_fc8c67c3",
+      "metadataRedacted": true,
+      "note": "video=vid_b3734894"
+    },
+    {
+      "id": "aud_6372109c",
+      "timestamp": "2026-11-23T11:20:38.653Z",
+      "actorId": "user_researcher_1",
+      "action": "job.stage_failed",
+      "resourceId": "job_fc8c67c3",
+      "metadataRedacted": true,
+      "note": "stage=plan"
+    },
+    {
+      "id": "aud_c9620d84",
+      "timestamp": "2026-11-23T11:20:38.646Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_fc8c67c3",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=hi"
+    },
+    {
+      "id": "aud_7d63779e",
+      "timestamp": "2026-11-23T11:20:38.645Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_f04af437",
+      "timestamp": "2026-11-23T11:20:38.639Z",
+      "actorId": "system",
+      "action": "retention.sweep",
+      "resourceId": "workspace",
+      "metadataRedacted": true,
+      "note": "deletedDocs=3, expiredShares=0"
+    },
+    {
+      "id": "aud_909bd950",
+      "timestamp": "2026-11-23T11:20:38.639Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_4bd7538e",
+      "timestamp": "2026-11-23T11:20:38.636Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_73a1c334",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_8699f646",
+      "timestamp": "2026-11-23T11:20:38.633Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_a2d0a886",
+      "timestamp": "2026-11-23T11:20:38.627Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_3d3c3a6e",
+      "metadataRedacted": true,
+      "note": "expiresHours=-1"
+    },
+    {
+      "id": "aud_fd551bcd",
+      "timestamp": "2026-11-23T11:20:38.622Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_d259671a",
+      "metadataRedacted": true,
+      "note": "video=vid_3d3c3a6e"
+    },
+    {
+      "id": "aud_cd5bc34a",
+      "timestamp": "2026-11-23T11:20:28.275Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_d259671a",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_10d22f9c",
+      "timestamp": "2026-11-23T11:20:28.271Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_bc93ab0e",
+      "timestamp": "2026-11-23T11:19:53.985Z",
+      "actorId": "user_researcher_1",
+      "action": "sketch.create",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "citation=doc:p3/sec-arch"
+    },
+    {
+      "id": "aud_105178fb",
+      "timestamp": "2026-11-23T11:19:53.982Z",
+      "actorId": "user_researcher_1",
+      "action": "note.create",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "citation=doc:p5/table-1"
+    },
+    {
+      "id": "aud_50393441",
+      "timestamp": "2026-11-23T11:19:53.976Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_7b3c3282",
+      "metadataRedacted": true,
+      "note": "video=vid_dc0b160f"
+    },
+    {
+      "id": "aud_d5f2743f",
+      "timestamp": "2026-11-23T11:19:48.388Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_73a1c334",
+      "metadataRedacted": true,
+      "note": "Ingested format=pdf, ocr=false"
+    },
+    {
+      "id": "aud_ee384b55",
+      "timestamp": "2026-11-23T11:19:42.574Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_7b3c3282",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_a0726b83",
+      "timestamp": "2026-11-23T11:19:42.572Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_e86afe21",
+      "timestamp": "2026-11-23T11:19:33.056Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_d4bb2f0f",
+      "timestamp": "2026-11-23T11:19:33.021Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_8bbcd41e",
+      "metadataRedacted": true,
+      "note": "expiresHours=12"
+    },
+    {
+      "id": "aud_ea262c77",
+      "timestamp": "2026-11-23T11:19:33.017Z",
+      "actorId": "user_researcher_1",
+      "action": "sketch.create",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "citation=doc:p3/sec-arch"
+    },
+    {
+      "id": "aud_1e4ebc93",
+      "timestamp": "2026-11-23T11:19:33.012Z",
+      "actorId": "user_researcher_1",
+      "action": "note.create",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "citation=doc:p5/table-1"
+    },
+    {
+      "id": "aud_b1f7b7a6",
+      "timestamp": "2026-11-23T11:19:33.008Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_82315bba",
+      "metadataRedacted": true,
+      "note": "video=vid_8bbcd41e"
+    },
+    {
+      "id": "aud_4c43c5fb",
+      "timestamp": "2026-11-23T11:19:22.979Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_82315bba",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_6b6c8b95",
+      "timestamp": "2026-11-23T11:19:22.977Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_ce3d1e2e",
+      "timestamp": "2026-11-23T11:19:22.976Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_267b8973",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_c2e6ac07",
+      "timestamp": "2026-11-23T11:19:22.973Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_d5aa15b5",
+      "metadataRedacted": true,
+      "note": "video=vid_542fc9f1"
+    },
+    {
+      "id": "aud_6629de06",
+      "timestamp": "2026-11-23T11:19:15.994Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_d5aa15b5",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_49955e86",
+      "timestamp": "2026-11-23T11:19:15.993Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_267b8973",
+      "metadataRedacted": true,
+      "note": "Ingested format=html, ocr=false"
+    },
+    {
+      "id": "aud_6248c1e8",
+      "timestamp": "2026-11-23T11:19:15.982Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_a9e059de",
+      "timestamp": "2026-11-23T11:19:15.975Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_c1bdb6f5",
+      "metadataRedacted": true,
+      "note": "video=vid_cf56c98f"
+    },
+    {
+      "id": "aud_1f34d62c",
+      "timestamp": "2026-11-23T11:19:13.152Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_c1bdb6f5",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=pa"
+    },
+    {
+      "id": "aud_454ffa4a",
+      "timestamp": "2026-11-23T11:19:13.002Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_e0895b52",
+      "metadataRedacted": true,
+      "note": "video=vid_4d4a55a6"
+    },
+    {
+      "id": "aud_315d2f2e",
+      "timestamp": "2026-11-23T11:19:02.947Z",
+      "actorId": "user_researcher_1",
+      "action": "job.stage_failed",
+      "resourceId": "job_e0895b52",
+      "metadataRedacted": true,
+      "note": "stage=plan"
+    },
+    {
+      "id": "aud_21369d9f",
+      "timestamp": "2026-11-23T11:19:02.941Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_e0895b52",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=hi"
+    },
+    {
+      "id": "aud_787a1660",
+      "timestamp": "2026-11-23T11:19:02.940Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_8062b8b3",
+      "timestamp": "2026-11-23T11:19:02.934Z",
+      "actorId": "system",
+      "action": "retention.sweep",
+      "resourceId": "workspace",
+      "metadataRedacted": true,
+      "note": "deletedDocs=1, expiredShares=0"
+    },
+    {
+      "id": "aud_cd0ceafc",
+      "timestamp": "2026-11-23T11:19:02.933Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_e25837e5",
+      "timestamp": "2026-11-23T11:19:02.925Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_17c2c64d",
+      "metadataRedacted": true,
+      "note": "expiresHours=-1"
+    },
+    {
+      "id": "aud_341948f4",
+      "timestamp": "2026-11-23T11:19:02.921Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_5181d6eb",
+      "metadataRedacted": true,
+      "note": "video=vid_17c2c64d"
+    },
+    {
+      "id": "aud_0ddf1997",
+      "timestamp": "2026-11-23T11:18:52.573Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_5181d6eb",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_96cb39fa",
+      "timestamp": "2026-11-23T11:18:52.572Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_aca34194",
+      "timestamp": "2026-11-23T11:18:02.766Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_bab05b58",
+      "timestamp": "2026-11-23T11:18:02.732Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_759f7866",
+      "metadataRedacted": true,
+      "note": "expiresHours=12"
+    },
+    {
+      "id": "aud_64bb290e",
+      "timestamp": "2026-11-23T11:18:02.729Z",
+      "actorId": "user_researcher_1",
+      "action": "sketch.create",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "citation=doc:p3/sec-arch"
+    },
+    {
+      "id": "aud_d09cdc62",
+      "timestamp": "2026-11-23T11:18:02.725Z",
+      "actorId": "user_researcher_1",
+      "action": "note.create",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "citation=doc:p5/table-1"
+    },
+    {
+      "id": "aud_057db732",
+      "timestamp": "2026-11-23T11:18:02.721Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_f41bacda",
+      "metadataRedacted": true,
+      "note": "video=vid_759f7866"
+    },
+    {
+      "id": "aud_6041515f",
+      "timestamp": "2026-11-23T11:17:52.453Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_f41bacda",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_5d19e181",
+      "timestamp": "2026-11-23T11:17:52.451Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_bf613c08",
+      "timestamp": "2026-11-23T11:17:52.449Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_c94b881e",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_f25cec6c",
+      "timestamp": "2026-11-23T11:17:52.446Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_8b6872c9",
+      "metadataRedacted": true,
+      "note": "video=vid_5260840f"
+    },
+    {
+      "id": "aud_171d3cb6",
+      "timestamp": "2026-11-23T11:17:44.945Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_8b6872c9",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_68598df0",
+      "timestamp": "2026-11-23T11:17:44.944Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_c94b881e",
+      "metadataRedacted": true,
+      "note": "Ingested format=html, ocr=false"
+    },
+    {
+      "id": "aud_d4189494",
+      "timestamp": "2026-11-23T11:17:44.934Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_0143742c",
+      "timestamp": "2026-11-23T11:17:44.927Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_a15ceb98",
+      "metadataRedacted": true,
+      "note": "video=vid_ee259c90"
+    },
+    {
+      "id": "aud_067af7f8",
+      "timestamp": "2026-11-23T11:17:42.063Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_a15ceb98",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=pa"
+    },
+    {
+      "id": "aud_1a973ae0",
+      "timestamp": "2026-11-23T11:17:41.905Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_93fd9bdc",
+      "metadataRedacted": true,
+      "note": "video=vid_04fe303d"
+    },
+    {
+      "id": "aud_23ed05a4",
+      "timestamp": "2026-11-23T11:17:31.759Z",
+      "actorId": "user_researcher_1",
+      "action": "job.stage_failed",
+      "resourceId": "job_93fd9bdc",
+      "metadataRedacted": true,
+      "note": "stage=plan"
+    },
+    {
+      "id": "aud_2648783f",
+      "timestamp": "2026-11-23T11:17:31.753Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_93fd9bdc",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=hi"
+    },
+    {
+      "id": "aud_b18b3b9e",
+      "timestamp": "2026-11-23T11:17:31.752Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_a81e171d",
+      "timestamp": "2026-11-23T11:17:31.746Z",
+      "actorId": "system",
+      "action": "retention.sweep",
+      "resourceId": "workspace",
+      "metadataRedacted": true,
+      "note": "deletedDocs=2, expiredShares=0"
+    },
+    {
+      "id": "aud_0fc14258",
+      "timestamp": "2026-11-23T11:17:31.746Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_b9cc5014",
+      "timestamp": "2026-11-23T11:17:31.742Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_b9b682f9",
+      "timestamp": "2026-11-23T11:17:31.736Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_83c3fe82",
+      "metadataRedacted": true,
+      "note": "expiresHours=-1"
+    },
+    {
+      "id": "aud_3b0719aa",
+      "timestamp": "2026-11-23T11:17:31.729Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_9eddc594",
+      "metadataRedacted": true,
+      "note": "video=vid_83c3fe82"
+    },
+    {
+      "id": "aud_cb263241",
+      "timestamp": "2026-11-23T11:17:20.129Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_9eddc594",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_33612a54",
+      "timestamp": "2026-11-23T11:17:20.125Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_b03bd2f5",
+      "timestamp": "2026-11-23T11:15:10.275Z",
+      "actorId": "user_researcher_1",
+      "action": "sketch.create",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "citation=doc:p3/sec-arch"
+    },
+    {
+      "id": "aud_75cb72e8",
+      "timestamp": "2026-11-23T11:15:10.270Z",
+      "actorId": "user_researcher_1",
+      "action": "note.create",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "citation=doc:p5/table-1"
+    },
+    {
+      "id": "aud_129be74d",
+      "timestamp": "2026-11-23T11:15:10.266Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_05036baa",
+      "metadataRedacted": true,
+      "note": "video=vid_eb5d5922"
+    },
+    {
+      "id": "aud_da4d4fb3",
+      "timestamp": "2026-11-23T11:14:59.160Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_05036baa",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_9b3ed302",
+      "timestamp": "2026-11-23T11:14:59.157Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_b3d09456",
+      "timestamp": "2026-11-23T11:10:56.794Z",
+      "actorId": "user_researcher_1",
+      "action": "sketch.delete",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "sketch=sk_b4161daa"
+    },
+    {
+      "id": "aud_b7015545",
+      "timestamp": "2026-11-23T11:10:56.384Z",
+      "actorId": "user_researcher_1",
+      "action": "note.delete",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "note=note_6900139e"
+    },
+    {
+      "id": "aud_d2ccdcea",
+      "timestamp": "2026-11-23T11:10:56.189Z",
+      "actorId": "user_researcher_1",
+      "action": "sketch.create",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "citation=doc:p3/sec-arch"
+    },
+    {
+      "id": "aud_b93396f9",
+      "timestamp": "2026-11-23T11:10:56.172Z",
+      "actorId": "user_researcher_1",
+      "action": "note.create",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "citation=doc:p5/table-1"
+    },
+    {
+      "id": "aud_4767cd15",
+      "timestamp": "2026-11-23T11:10:51.500Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_a0f1f745",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_5a091982",
+      "timestamp": "2026-11-23T11:10:51.498Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_0a5e3b9a",
+      "timestamp": "2026-11-23T11:10:44.194Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_9a246f4b",
+      "timestamp": "2026-11-23T11:10:44.163Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_a20108ef",
+      "metadataRedacted": true,
+      "note": "expiresHours=12"
+    },
+    {
+      "id": "aud_0ec94bf0",
+      "timestamp": "2026-11-23T11:10:44.160Z",
+      "actorId": "user_researcher_1",
+      "action": "sketch.create",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "citation=doc:p3/sec-arch"
+    },
+    {
+      "id": "aud_e937e82e",
+      "timestamp": "2026-11-23T11:10:44.156Z",
+      "actorId": "user_researcher_1",
+      "action": "note.create",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "citation=doc:p5/table-1"
+    },
+    {
+      "id": "aud_c3a42fa1",
+      "timestamp": "2026-11-23T11:10:44.153Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_6e48a8d4",
+      "metadataRedacted": true,
+      "note": "video=vid_a20108ef"
+    },
+    {
+      "id": "aud_cdbdcd10",
+      "timestamp": "2026-11-23T11:10:34.143Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_6e48a8d4",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_54ab418c",
+      "timestamp": "2026-11-23T11:10:34.142Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_annotations_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_c2b06395",
+      "timestamp": "2026-11-23T11:10:34.140Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_3e8714f8",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_890de0a2",
+      "timestamp": "2026-11-23T11:10:34.137Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_41c6e3a6",
+      "metadataRedacted": true,
+      "note": "video=vid_3c0e3b8c"
+    },
+    {
+      "id": "aud_f7725942",
+      "timestamp": "2026-11-23T11:10:26.993Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_41c6e3a6",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_b628accf",
+      "timestamp": "2026-11-23T11:10:26.992Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_3e8714f8",
+      "metadataRedacted": true,
+      "note": "Ingested format=html, ocr=false"
+    },
+    {
+      "id": "aud_8aadad76",
+      "timestamp": "2026-11-23T11:10:26.983Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_291d33e1",
+      "timestamp": "2026-11-23T11:10:26.976Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_12d0e7eb",
+      "metadataRedacted": true,
+      "note": "video=vid_52f6dc37"
+    },
+    {
+      "id": "aud_1b75d07c",
+      "timestamp": "2026-11-23T11:10:24.122Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_12d0e7eb",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=pa"
+    },
+    {
+      "id": "aud_81ef8338",
+      "timestamp": "2026-11-23T11:10:23.962Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_cd31af31",
+      "metadataRedacted": true,
+      "note": "video=vid_ff59c7a7"
+    },
+    {
+      "id": "aud_c6d49f74",
+      "timestamp": "2026-11-23T11:10:13.272Z",
+      "actorId": "user_researcher_1",
+      "action": "job.stage_failed",
+      "resourceId": "job_cd31af31",
+      "metadataRedacted": true,
+      "note": "stage=plan"
+    },
+    {
+      "id": "aud_834105d2",
+      "timestamp": "2026-11-23T11:10:13.265Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_cd31af31",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=hi"
+    },
+    {
+      "id": "aud_ca4bc005",
+      "timestamp": "2026-11-23T11:10:13.264Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_7b36b979",
+      "timestamp": "2026-11-23T11:10:13.257Z",
+      "actorId": "system",
+      "action": "retention.sweep",
+      "resourceId": "workspace",
+      "metadataRedacted": true,
+      "note": "deletedDocs=2, expiredShares=0"
+    },
+    {
+      "id": "aud_74749990",
+      "timestamp": "2026-11-23T11:10:13.256Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_f4189d15",
+      "timestamp": "2026-11-23T11:10:13.253Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_814cefb3",
+      "timestamp": "2026-11-23T11:10:13.247Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_8cdc40c0",
+      "metadataRedacted": true,
+      "note": "expiresHours=-1"
+    },
+    {
+      "id": "aud_7479a984",
+      "timestamp": "2026-11-23T11:10:13.241Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_4ac4bdd1",
+      "metadataRedacted": true,
+      "note": "video=vid_8cdc40c0"
+    },
+    {
+      "id": "aud_0f19a109",
+      "timestamp": "2026-11-23T11:10:02.654Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_4ac4bdd1",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_64af87ab",
+      "timestamp": "2026-11-23T11:10:02.651Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_73807570",
+      "timestamp": "2026-11-23T11:04:14.765Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_f0cc0390",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_3a3330a4",
+      "timestamp": "2026-11-23T11:04:14.728Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_1ffc5911",
+      "metadataRedacted": true,
+      "note": "video=vid_a863e4dc"
+    },
+    {
+      "id": "aud_7cd48b61",
+      "timestamp": "2026-11-23T11:04:07.058Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_df81dfce",
+      "metadataRedacted": true,
+      "note": "video=vid_5d434e66"
+    },
+    {
+      "id": "aud_0562bd2a",
+      "timestamp": "2026-11-23T11:04:06.371Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_1ffc5911",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_823259c3",
+      "timestamp": "2026-11-23T11:04:06.353Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_f0cc0390",
+      "metadataRedacted": true,
+      "note": "Ingested format=arxiv-latex, ocr=false"
+    },
+    {
+      "id": "aud_ac4f2242",
+      "timestamp": "2026-11-23T11:03:55.623Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_df81dfce",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_335f3d45",
+      "timestamp": "2026-11-23T11:03:55.621Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_4beab699",
+      "timestamp": "2026-11-23T11:03:50.183Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_a9f1e8da",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_91edc236",
+      "timestamp": "2026-11-23T11:03:50.180Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_064b5852",
+      "metadataRedacted": true,
+      "note": "video=vid_d7306747"
+    },
+    {
+      "id": "aud_93b4612d",
+      "timestamp": "2026-11-23T11:03:42.974Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_064b5852",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_f26630d3",
+      "timestamp": "2026-11-23T11:03:42.974Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_a9f1e8da",
+      "metadataRedacted": true,
+      "note": "Ingested format=html, ocr=false"
+    },
+    {
+      "id": "aud_ff7ba6fc",
+      "timestamp": "2026-11-23T11:03:42.964Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_d8a235b9",
+      "timestamp": "2026-11-23T11:03:42.955Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_cb57f363",
+      "metadataRedacted": true,
+      "note": "video=vid_51b4fa27"
+    },
+    {
+      "id": "aud_35ed2eb1",
+      "timestamp": "2026-11-23T11:03:39.996Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_cb57f363",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=pa"
+    },
+    {
+      "id": "aud_3829e41e",
+      "timestamp": "2026-11-23T11:03:39.864Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_bc9a7185",
+      "metadataRedacted": true,
+      "note": "video=vid_85c048ea"
+    },
+    {
+      "id": "aud_334c9d4a",
+      "timestamp": "2026-11-23T11:03:29.472Z",
+      "actorId": "user_researcher_1",
+      "action": "job.stage_failed",
+      "resourceId": "job_bc9a7185",
+      "metadataRedacted": true,
+      "note": "stage=plan"
+    },
+    {
+      "id": "aud_de89aad7",
+      "timestamp": "2026-11-23T11:03:29.465Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_bc9a7185",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=hi"
+    },
+    {
+      "id": "aud_f9828584",
+      "timestamp": "2026-11-23T11:03:29.464Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_3ed576b3",
+      "timestamp": "2026-11-23T11:03:29.458Z",
+      "actorId": "system",
+      "action": "retention.sweep",
+      "resourceId": "workspace",
+      "metadataRedacted": true,
+      "note": "deletedDocs=1, expiredShares=0"
+    },
+    {
+      "id": "aud_925567cf",
+      "timestamp": "2026-11-23T11:03:29.458Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_3e4db94a",
+      "timestamp": "2026-11-23T11:03:29.454Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_5cb00056",
+      "metadataRedacted": true,
+      "note": "expiresHours=-1"
+    },
+    {
+      "id": "aud_c8cc7bd8",
+      "timestamp": "2026-11-23T11:03:29.450Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_2eb81788",
+      "metadataRedacted": true,
+      "note": "video=vid_5cb00056"
+    },
+    {
+      "id": "aud_43e66be7",
+      "timestamp": "2026-11-23T11:03:18.926Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_2eb81788",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_f2f525a6",
+      "timestamp": "2026-11-23T11:03:18.925Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_1219a50e",
+      "timestamp": "2026-11-23T11:03:18.179Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_8009e3ed",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_b527f5d9",
+      "timestamp": "2026-11-23T11:03:18.176Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_52e70325",
+      "metadataRedacted": true,
+      "note": "video=vid_2856d995"
+    },
+    {
+      "id": "aud_2c20e12d",
+      "timestamp": "2026-11-23T11:03:08.356Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_52e70325",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_208c4463",
+      "timestamp": "2026-11-23T11:03:08.356Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_8009e3ed",
+      "metadataRedacted": true,
+      "note": "Ingested format=html, ocr=false"
+    },
+    {
+      "id": "aud_323dae11",
+      "timestamp": "2026-11-23T11:03:08.346Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_c81c3f9e",
+      "timestamp": "2026-11-23T11:03:08.341Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_1bd9bcc0",
+      "metadataRedacted": true,
+      "note": "video=vid_6af9bf2d"
+    },
+    {
+      "id": "aud_c371e324",
+      "timestamp": "2026-11-23T11:03:05.423Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_1bd9bcc0",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=pa"
+    },
+    {
+      "id": "aud_68526522",
+      "timestamp": "2026-11-23T11:03:05.275Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_cdd2ed90",
+      "metadataRedacted": true,
+      "note": "video=vid_f3655385"
+    },
+    {
+      "id": "aud_cda92cf8",
+      "timestamp": "2026-11-23T11:02:54.939Z",
+      "actorId": "user_researcher_1",
+      "action": "job.stage_failed",
+      "resourceId": "job_cdd2ed90",
+      "metadataRedacted": true,
+      "note": "stage=plan"
+    },
+    {
+      "id": "aud_fbfcd3e7",
+      "timestamp": "2026-11-23T11:02:54.933Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_cdd2ed90",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=hi"
+    },
+    {
+      "id": "aud_bf923889",
+      "timestamp": "2026-11-23T11:02:54.932Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_8eb3bb15",
+      "timestamp": "2026-11-23T11:02:54.925Z",
+      "actorId": "system",
+      "action": "retention.sweep",
+      "resourceId": "workspace",
+      "metadataRedacted": true,
+      "note": "deletedDocs=2, expiredShares=0"
+    },
+    {
+      "id": "aud_f78169de",
+      "timestamp": "2026-11-23T11:02:54.924Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_a0475d44",
+      "timestamp": "2026-11-23T11:02:54.921Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_d1c85ba6",
+      "timestamp": "2026-11-23T11:02:54.915Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_74d932bf",
+      "metadataRedacted": true,
+      "note": "expiresHours=-1"
+    },
+    {
+      "id": "aud_97ebb7e4",
+      "timestamp": "2026-11-23T11:02:54.909Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_bdf895af",
+      "metadataRedacted": true,
+      "note": "video=vid_74d932bf"
+    },
+    {
+      "id": "aud_25f4f6bf",
+      "timestamp": "2026-11-23T11:02:44.363Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_bdf895af",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_668c99b6",
+      "timestamp": "2026-11-23T11:02:44.359Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_720277cc",
+      "timestamp": "2026-11-23T10:55:21.127Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_abefbcf5",
+      "metadataRedacted": true,
+      "note": "video=vid_11386a5e"
+    },
+    {
+      "id": "aud_1066929a",
+      "timestamp": "2026-11-23T10:55:10.533Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_abefbcf5",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_cf1882c4",
+      "timestamp": "2026-11-23T10:55:10.532Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_80047491",
+      "timestamp": "2026-11-23T10:54:48.397Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_3f908a84",
+      "timestamp": "2026-11-23T10:54:48.391Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_7a49d6ce",
+      "metadataRedacted": true,
+      "note": "video=vid_2f63ea13"
+    },
+    {
+      "id": "aud_e3f71049",
+      "timestamp": "2026-11-23T10:54:45.524Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_7a49d6ce",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=pa"
+    },
+    {
+      "id": "aud_76294287",
+      "timestamp": "2026-11-23T10:54:45.367Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_626cf260",
+      "metadataRedacted": true,
+      "note": "video=vid_c2ef851f"
+    },
+    {
+      "id": "aud_53a19840",
+      "timestamp": "2026-11-23T10:54:35.216Z",
+      "actorId": "user_researcher_1",
+      "action": "job.stage_failed",
+      "resourceId": "job_626cf260",
+      "metadataRedacted": true,
+      "note": "stage=plan"
+    },
+    {
+      "id": "aud_749711d0",
+      "timestamp": "2026-11-23T10:54:35.211Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_626cf260",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=hi"
+    },
+    {
+      "id": "aud_f5ed1c10",
+      "timestamp": "2026-11-23T10:54:35.210Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_6403953f",
+      "timestamp": "2026-11-23T10:54:35.204Z",
+      "actorId": "system",
+      "action": "retention.sweep",
+      "resourceId": "workspace",
+      "metadataRedacted": true,
+      "note": "deletedDocs=2, expiredShares=0"
+    },
+    {
+      "id": "aud_0a57573e",
+      "timestamp": "2026-11-23T10:54:35.203Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_b3527547",
+      "timestamp": "2026-11-23T10:54:35.200Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_f3394c6d",
+      "timestamp": "2026-11-23T10:54:35.193Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_e37020b2",
+      "metadataRedacted": true,
+      "note": "expiresHours=-1"
+    },
+    {
+      "id": "aud_6cffb87f",
+      "timestamp": "2026-11-23T10:54:35.189Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_8c4bde3d",
+      "metadataRedacted": true,
+      "note": "video=vid_e37020b2"
+    },
+    {
+      "id": "aud_0f8bc94f",
+      "timestamp": "2026-11-23T10:54:24.947Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_8c4bde3d",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_cd35d1f7",
+      "timestamp": "2026-11-23T10:54:24.945Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_89099346",
+      "timestamp": "2026-11-23T10:51:40.312Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_639644ad",
+      "metadataRedacted": true,
+      "note": "video=vid_cccddb52"
+    },
+    {
+      "id": "aud_8ac93f6c",
+      "timestamp": "2026-11-23T10:51:35.927Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_639644ad",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_1e1f3314",
+      "timestamp": "2026-11-23T10:51:35.926Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_60f3fb88",
+      "timestamp": "2026-11-23T10:48:14.386Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_8f138edc",
+      "timestamp": "2026-11-23T10:48:14.383Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_a1b69b78",
+      "metadataRedacted": true,
+      "note": "video=vid_38bd97a0"
+    },
+    {
+      "id": "aud_b426a0e6",
+      "timestamp": "2026-11-23T10:48:10.349Z",
+      "actorId": "user_researcher_1",
+      "action": "job.stage_failed",
+      "resourceId": "job_a1b69b78",
+      "metadataRedacted": true,
+      "note": "stage=plan"
+    },
+    {
+      "id": "aud_8b1fa05a",
+      "timestamp": "2026-11-23T10:48:10.347Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_a1b69b78",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=hi"
+    },
+    {
+      "id": "aud_5900fd5f",
+      "timestamp": "2026-11-23T10:48:10.346Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_e2e_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_2fa002ec",
+      "timestamp": "2026-11-23T10:48:10.342Z",
+      "actorId": "system",
+      "action": "retention.sweep",
+      "resourceId": "workspace",
+      "metadataRedacted": true,
+      "note": "deletedDocs=2, expiredShares=0"
+    },
+    {
+      "id": "aud_2f30f6b9",
+      "timestamp": "2026-11-23T10:48:10.342Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_4ce8e7d5",
+      "timestamp": "2026-11-23T10:48:10.339Z",
+      "actorId": "user_researcher_1",
+      "action": "document.delete_now",
+      "resourceId": "doc_monsoon_2025",
+      "metadataRedacted": true,
+      "note": "Purged database rows and object storage artifacts"
+    },
+    {
+      "id": "aud_e29dd299",
+      "timestamp": "2026-11-23T10:48:10.335Z",
+      "actorId": "user_researcher_1",
+      "action": "share.create",
+      "resourceId": "vid_7145cb6c",
+      "metadataRedacted": true,
+      "note": "expiresHours=-1"
+    },
+    {
+      "id": "aud_ad1c7acc",
+      "timestamp": "2026-11-23T10:48:10.330Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_932d93da",
+      "metadataRedacted": true,
+      "note": "video=vid_7145cb6c"
+    },
+    {
+      "id": "aud_ef33ee2f",
+      "timestamp": "2026-11-23T10:48:06.440Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_932d93da",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    },
+    {
+      "id": "aud_b0370bc3",
+      "timestamp": "2026-11-23T10:48:06.437Z",
+      "actorId": "user_researcher_1",
+      "action": "document.ingest",
+      "resourceId": "doc_privacy_test",
+      "metadataRedacted": true,
+      "note": "Ingested format=fixture, ocr=false"
+    },
+    {
+      "id": "aud_394c5fd2",
+      "timestamp": "2026-11-23T10:46:31.385Z",
+      "actorId": "user_researcher_1",
+      "action": "job.ready",
+      "resourceId": "job_1c0a77f2",
+      "metadataRedacted": true,
+      "note": "video=vid_1b1b0863"
+    },
+    {
+      "id": "aud_e835d8cb",
+      "timestamp": "2026-11-23T10:46:26.872Z",
+      "actorId": "user_researcher_1",
+      "action": "job.create",
+      "resourceId": "job_1c0a77f2",
+      "metadataRedacted": true,
+      "note": "depth=student, len=2min, lang=en"
+    }
+  ],
+  "notesByDoc": {
+    "doc_monsoon_2025": [
+      {
+        "id": "note_79571d33",
+        "documentId": "doc_monsoon_2025",
+        "citationKey": "doc:p5/table-1",
+        "page": 5,
+        "title": "Key efficiency takeaway (Table 1)",
+        "body": "MonsoonFormer lowers 5-day RMSE from 15.8 to 11.4 mm/day while cutting VRAM by 75% (38.4 GB down to 9.6 GB).",
+        "colorTag": "amber",
+        "createdAt": "2026-11-23T11:21:28.573Z",
+        "updatedAt": "2026-11-23T11:21:28.573Z"
+      }
+    ]
+  },
+  "sketchesByDoc": {
+    "doc_monsoon_2025": [
+      {
+        "id": "sk_b81607e1",
+        "documentId": "doc_monsoon_2025",
+        "citationKey": "doc:p3/sec-arch",
+        "page": 3,
+        "title": "7x7 Window + Anchors Intuition",
+        "width": 360,
+        "height": 180,
+        "strokes": [
+          {
+            "color": "#1d4ed8",
+            "width": 3,
+            "points": [
+              {
+                "x": 40,
+                "y": 42
+              },
+              {
+                "x": 130,
+                "y": 42
+              },
+              {
+                "x": 130,
+                "y": 132
+              },
+              {
+                "x": 40,
+                "y": 132
+              },
+              {
+                "x": 40,
+                "y": 42
+              }
+            ]
+          },
+          {
+            "color": "#d97706",
+            "width": 3,
+            "points": [
+              {
+                "x": 85,
+                "y": 86
+              },
+              {
+                "x": 165,
+                "y": 86
+              },
+              {
+                "x": 245,
+                "y": 55
+              }
+            ]
+          },
+          {
+            "color": "#059669",
+            "width": 3,
+            "points": [
+              {
+                "x": 245,
+                "y": 40
+              },
+              {
+                "x": 325,
+                "y": 40
+              },
+              {
+                "x": 325,
+                "y": 130
+              },
+              {
+                "x": 245,
+                "y": 130
+              },
+              {
+                "x": 245,
+                "y": 40
+              }
+            ]
+          }
+        ],
+        "createdAt": "2026-11-23T11:21:28.575Z"
+      }
+    ]
+  }
+}

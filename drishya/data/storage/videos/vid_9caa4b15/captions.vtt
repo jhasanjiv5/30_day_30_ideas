@@ -1,0 +1,37 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:13.000
+[Why Monsoon Resolution Matters] Operational 25 km weather grids smooth out steep Western Ghats escarpments where extreme monsoon bursts trigger flash floods. MonsoonFormer downscales ERA5 fields while cutting attention complexity by 84% relative to dense Transformers.
+
+2
+00:00:13.000 --> 00:00:26.000
+[Orographic Physics & Background] Moist low-level westerly jets forced over steep coastal slopes double local rainfall intensity compared with flat coastal plains. Evaluating forecasts on rare storms uses the Critical Success Index, which ignores correct dry-day negatives.
+
+3
+00:00:26.000 --> 00:00:42.000
+[Sparse Orographic Architecture] MonsoonFormer ingests six atmospheric grid fields—SST, U850, V850, Q850, SLP, and Z500—into a multi-scale encoder. Each token attends only to a 7x7 local coastal window plus 128 strided synoptic anchor tokens, cutting complexity by 84%.
+
+4
+00:00:42.000 --> 00:00:55.000
+[Paper Figure 1 Walkthrough] Figure 1 illustrates how multi-scale spatial blocks route salient features through the sparse attention bottleneck directly into transposed-convolution decoder heads.
+
+5
+00:00:55.000 --> 00:01:10.000
+[Sparse Attention Equation] In Equation 1, attention weight alpha_ij scores query q_i against key k_j scaled by square-root d_k, normalized strictly inside the local 7x7 neighborhood W(i) instead of all 16,384 grid cells.
+
+6
+00:01:10.000 --> 00:01:26.000
+[Benchmark Results (Table 1)] On 2018-2023 JJAS rainfall, MonsoonFormer reaches 11.4 mm/day 5-day RMSE and 0.61 CSI, outperforming Full-Attention at 12.1 mm/day RMSE and 0.54 CSI while cutting VRAM from 38.4 GB to 9.6 GB and latency from 195 ms to 42 ms.
+
+7
+00:01:26.000 --> 00:01:38.000
+[Spatial Skill & Attention Map] Figure 2 compares forecast skill contours in Panel A with the learned sparse spatial attention mask in Panel B, showing tight alignment along the steep windward coastal ridge.
+
+8
+00:01:38.000 --> 00:01:51.000
+[Limitations & Differing View] Local sparse windows under-represent planetary Rossby wave coupling beyond day 7, and the model relies on historical ERA5 reanalysis rather than real-time Doppler radar. A differing scholarly view by Rao et al. (2024) notes sparse windows can degrade 10-to-14-day monsoon break predictions.
+
+9
+00:01:51.000 --> 00:02:01.000
+[Next Steps & Takeaways] Next steps pair global synoptic anchor hierarchies with live Doppler radar assimilation to preserve 9.6 GB efficiency while extending skill past day 10.

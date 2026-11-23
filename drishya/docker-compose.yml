@@ -1,0 +1,112 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: drishya
+      POSTGRES_PASSWORD: drishya
+      POSTGRES_DB: drishya
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U drishya"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - miniodata:/data
+
+  minio-init:
+    image: minio/mc:latest
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      sleep 3;
+      mc alias set local http://minio:9000 minioadmin minioadmin;
+      mc mb -p local/drishya-artifacts || true;
+      exit 0;
+      "
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      DRISHYA_MOCK_MODE: ${DRISHYA_MOCK_MODE:-true}
+      DRISHYA_RETENTION_DAYS: ${DRISHYA_RETENTION_DAYS:-30}
+      DATABASE_URL: postgresql+psycopg://drishya:drishya@postgres:5432/drishya
+      REDIS_URL: redis://redis:6379/0
+      S3_ENDPOINT: http://minio:9000
+      S3_ACCESS_KEY: minioadmin
+      S3_SECRET_KEY: minioadmin
+      S3_BUCKET: drishya-artifacts
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_started
+
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: rq worker --url redis://redis:6379/0 drishya
+    environment:
+      DRISHYA_MOCK_MODE: ${DRISHYA_MOCK_MODE:-true}
+      DATABASE_URL: postgresql+psycopg://drishya:drishya@postgres:5432/drishya
+      REDIS_URL: redis://redis:6379/0
+      S3_ENDPOINT: http://minio:9000
+      S3_ACCESS_KEY: minioadmin
+      S3_SECRET_KEY: minioadmin
+      S3_BUCKET: drishya-artifacts
+    depends_on:
+      - redis
+      - postgres
+      - minio
+
+  web:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: sh -c "npm ci && npm run dev"
+    environment:
+      PORT: "3000"
+      DRISHYA_MOCK_MODE: ${DRISHYA_MOCK_MODE:-true}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  miniodata:

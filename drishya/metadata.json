@@ -1,0 +1,6 @@
+{
+  "name": "Drishya",
+  "description": "Research document to narrated visual video podcast with strict citation grounding, Indian language support, and grounded Q&A.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

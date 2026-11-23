@@ -1,0 +1,56 @@
+;FFMETADATA1
+title=Drishya Grounded Research Video
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+END=13000
+title=Why Monsoon Resolution Matters
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=13000
+END=26000
+title=Orographic Physics & Background
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=26000
+END=42000
+title=Sparse Orographic Architecture
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=42000
+END=55000
+title=Paper Figure 1 Walkthrough
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=55000
+END=70000
+title=Sparse Attention Equation
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=70000
+END=86000
+title=Benchmark Results (Table 1)
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=86000
+END=98000
+title=Spatial Skill & Attention Map
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=98000
+END=111000
+title=Limitations & Differing View
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=111000
+END=121000
+title=Next Steps & Takeaways
