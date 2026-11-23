@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="Lab bench: how finished each project is versus its business value">
+<title>Lab bench: how finished each project is versus its business value</title>
+<defs>
+  <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"/>
+  </filter>
+  <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="1" seed="3" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="1.8"/>
+  </filter>
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20 0H0V20" fill="none" stroke="#d9e4ef" stroke-width="1"/>
+  </pattern>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+    <line x1="0" y1="0" x2="0" y2="6" stroke="#2b2d42" stroke-opacity=".18" stroke-width="2"/>
+  </pattern>
+</defs>
+<style>
+  text { font-family: 'Segoe Print','Bradley Hand','Chalkboard SE','Comic Sans MS','Marker Felt',cursive; fill: #2b2d42; }
+  .pencil { fill: #6c6f7d; }
+  .bubble { animation: rise 6s ease-in infinite; opacity: 0; }
+  @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .8; } 100% { transform: translateY(-120px); opacity: 0; } }
+  .blink { animation: blink 1.2s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .float { animation: float 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  @keyframes float { 50% { transform: translateY(-4px) rotate(-1deg); } }
+</style>
+<rect width="1000" height="640" fill="#fbf7ec"/>
+<rect width="1000" height="640" fill="url(#grid)"/>
+
+<text x="110" y="44" font-size="28" font-weight="700" filter="url(#wobble)">Fig. 1 · The lab bench</text>
+<rect x="476" y="70" width="244" height="172" fill="#2a9d8f" opacity=".10"/>
+<text x="486" y="94" font-size="15" class="pencil" opacity=".9" text-anchor="start">SHIP IT 🚀</text>
+<rect x="110" y="70" width="366" height="172" fill="#e9c46a" opacity=".10"/>
+<text x="120" y="94" font-size="15" class="pencil" opacity=".9" text-anchor="start">FUND THE BUILD 💸</text>
+<rect x="476" y="242" width="244" height="318" fill="#8ecae6" opacity=".10"/>
+<text x="708" y="428" font-size="15" class="pencil" opacity=".9" text-anchor="end">POLISHED PORTFOLIO ✨</text>
+<rect x="110" y="242" width="366" height="318" fill="#e76f51" opacity=".10"/>
+<text x="120" y="548" font-size="15" class="pencil" opacity=".9" text-anchor="start">BACK TO THE NOTEBOOK 📓</text>
+<g filter="url(#sketch)">
+<path d="M110.0 560.0 Q418.9 557.9 730.0 560.0" fill="none" stroke="#2b2d42" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M110.0 560.0 Q110.9 307.4 110.0 60.0" fill="none" stroke="#2b2d42" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M476.0 70.0 Q476.2 314.2 476.0 560.0" fill="none" stroke="#6c6f7d" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M110.0 241.5 Q412.3 241.5 720.0 241.5" fill="none" stroke="#6c6f7d" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+</g>
+<text x="171" y="586" font-size="14" text-anchor="middle">💡 Spark</text>
+<text x="293" y="586" font-size="14" text-anchor="middle">✏️ Sketch</text>
+<text x="415" y="586" font-size="14" text-anchor="middle">⚗️ Prototype</text>
+<text x="537" y="586" font-size="14" text-anchor="middle">🧫 MVP</text>
+<text x="659" y="586" font-size="14" text-anchor="middle">🚀 Field-tested</text>
+<text x="415" y="618" font-size="17" text-anchor="middle" font-weight="700">how finished is it? →</text>
+<text x="96" y="540" font-size="14" text-anchor="end">1</text>
+<text x="96" y="394" font-size="14" text-anchor="end">4</text>
+<text x="96" y="246" font-size="14" text-anchor="end">7</text>
+<text x="96" y="100" font-size="14" text-anchor="end">10</text>
+<text x="40" y="315" font-size="17" font-weight="700" text-anchor="middle" transform="rotate(-90 40 315)">business value →</text>
+<g class="float" style="animation-delay:0.13s">
+<title>Day 1 · 30 Days · 30 Apps — maturity 4/5, research 1/5, business 2/10</title>
+<path d="M549.0 486.5 L546.9 491.3 L543.9 495.1 L539.7 498.2 L534.1 499.3 L530.1 495.2 L526.7 491.5 L524.4 486.5 L524.9 480.7 L529.3 476.8 L534.3 474.9 L540.0 473.3 L543.8 478.0 L548.9 480.8 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="537.0" y="491.5" font-size="13" font-weight="700" text-anchor="middle">1</text>
+</g>
+<g class="float" style="animation-delay:0.26s">
+<title>Day 2 · PlantLens — maturity 3/5, research 2/5, business 8/10</title>
+<path d="M429.4 192.5 L427.9 198.7 L424.3 204.1 L418.6 208.4 L411.8 206.6 L405.3 204.7 L400.8 199.4 L400.0 192.5 L401.0 185.8 L406.2 181.4 L411.8 178.7 L418.2 178.3 L424.9 180.1 L428.7 185.9 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="415.0" y="197.5" font-size="13" font-weight="700" text-anchor="middle">2</text>
+</g>
+<g class="float" style="animation-delay:0.39s">
+<title>Day 3 · German–Hindi Flashcards — maturity 3/5, research 2/5, business 8/10</title>
+<path d="M471.4 194.4 L469.5 201.0 L465.0 206.0 L459.4 210.2 L452.2 209.9 L446.6 205.8 L441.7 201.1 L440.3 194.4 L440.9 187.2 L445.8 181.8 L452.5 179.9 L459.5 178.0 L464.7 183.1 L469.4 187.8 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="455.8" y="199.4" font-size="13" font-weight="700" text-anchor="middle">3</text>
+</g>
+<g class="float" style="animation-delay:0.52s">
+<title>Day 4 · ArtLens — maturity 2/5, research 3/5, business 3/10</title>
+<path d="M310.6 437.5 L309.7 445.6 L303.8 451.0 L297.2 456.1 L288.7 456.4 L281.3 452.2 L275.3 446.0 L274.9 437.5 L275.7 429.2 L281.2 422.8 L288.8 419.1 L297.1 419.5 L305.2 422.2 L310.9 428.9 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="293.0" y="442.5" font-size="13" font-weight="700" text-anchor="middle">4</text>
+</g>
+<g class="float" style="animation-delay:0.65s">
+<title>Day 5 · AmbientRAG Architect &amp; Autonomous Interface — maturity 3/5, research 4/5, business 9/10</title>
+<path d="M437.3 143.5 L433.5 152.4 L428.9 161.0 L419.9 165.2 L409.8 166.1 L400.8 161.2 L395.9 152.7 L393.5 143.5 L394.9 133.8 L402.2 127.5 L410.2 122.4 L419.6 123.2 L427.9 127.3 L433.5 134.6 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="415.0" y="148.5" font-size="15" font-weight="700" text-anchor="middle">5</text>
+</g>
+<g class="float" style="animation-delay:0.78s">
+<title>Day 6 · MacOSMediaCenter — maturity 3/5, research 1/5, business 4/10</title>
+<path d="M426.2 388.5 L425.4 393.5 L422.4 397.8 L417.9 401.4 L412.5 399.2 L407.5 397.9 L403.9 393.9 L401.7 388.5 L403.2 382.8 L406.8 378.2 L412.4 377.2 L417.7 376.8 L422.4 379.3 L427.0 382.7 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="415.0" y="393.5" font-size="13" font-weight="700" text-anchor="middle">6</text>
+</g>
+<g class="float" style="animation-delay:0.91s">
+<title>Day 7 · CookLens — maturity 2/5, research 2/5, business 8/10</title>
+<path d="M307.4 192.5 L306.1 198.8 L302.1 204.0 L296.3 206.8 L289.6 207.5 L283.2 204.7 L279.7 198.9 L279.0 192.5 L279.3 185.9 L283.6 180.7 L289.5 177.3 L296.7 176.2 L302.9 180.0 L306.9 185.8 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="293.0" y="197.5" font-size="13" font-weight="700" text-anchor="middle">7</text>
+</g>
+<g class="float" style="animation-delay:1.04s">
+<title>Day 8 · LuminaLightCamera — maturity 2/5, research 1/5, business 2/10</title>
+<path d="M305.7 486.5 L302.9 491.3 L301.3 496.9 L295.9 499.2 L290.1 499.4 L284.9 496.7 L282.3 491.7 L281.1 486.5 L283.0 481.7 L285.2 476.7 L290.6 475.8 L295.4 475.8 L300.1 477.6 L303.1 481.6 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="293.0" y="491.5" font-size="13" font-weight="700" text-anchor="middle">8</text>
+</g>
+<g class="float" style="animation-delay:1.17s">
+<title>Day 9 · Daybreak — maturity 3/5, research 2/5, business 6/10</title>
+<path d="M429.1 290.5 L427.6 296.6 L424.0 301.8 L418.2 304.4 L411.7 305.1 L406.2 301.5 L400.2 297.6 L399.3 290.5 L402.0 284.2 L405.8 279.0 L411.7 275.9 L418.3 275.9 L423.9 279.3 L429.8 283.4 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="415.0" y="295.5" font-size="13" font-weight="700" text-anchor="middle">9</text>
+</g>
+<g class="float" style="animation-delay:1.30s">
+<title>Day 10 · AquaWatch — maturity 2/5, research 3/5, business 5/10</title>
+<path d="M311.5 339.5 L309.7 347.6 L303.9 353.1 L296.9 356.5 L289.0 357.2 L281.8 353.5 L275.4 348.0 L275.3 339.5 L277.4 332.0 L280.6 324.0 L288.8 321.3 L296.9 322.3 L304.7 324.9 L308.6 332.0 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="293.0" y="344.5" font-size="13" font-weight="700" text-anchor="middle">10</text>
+</g>
+<g class="float" style="animation-delay:1.43s">
+<title>Day 11 · SovereignSocial — maturity 2/5, research 2/5, business 7/10</title>
+<path d="M309.7 241.5 L307.8 248.6 L302.9 254.0 L296.3 255.9 L289.7 256.2 L284.0 252.8 L278.4 248.5 L277.5 241.5 L278.4 234.5 L283.7 229.8 L289.7 227.2 L296.6 225.6 L303.4 228.4 L307.8 234.4 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="293.0" y="246.5" font-size="13" font-weight="700" text-anchor="middle">11</text>
+</g>
+<g class="float" style="animation-delay:1.56s">
+<title>Day 12 · SpatialRoomAI — maturity 2/5, research 3/5, business 7/10</title>
+<path d="M271.3 240.1 L269.2 248.4 L262.9 254.0 L256.0 258.3 L247.8 257.8 L241.0 253.6 L236.2 247.6 L233.8 240.1 L235.7 232.3 L239.9 225.1 L247.4 220.7 L255.9 222.1 L264.2 224.6 L269.8 231.4 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="251.8" y="245.1" font-size="13" font-weight="700" text-anchor="middle">12</text>
+</g>
+<g class="float" style="animation-delay:1.69s">
+<title>Day 13 · FastShopper '84 — maturity 3/5, research 1/5, business 1/10</title>
+<path d="M426.8 535.5 L425.3 540.5 L422.1 544.4 L417.5 546.6 L412.5 546.6 L407.2 545.3 L403.0 541.3 L401.8 535.5 L404.1 530.2 L407.1 525.6 L412.1 522.8 L417.5 524.7 L422.9 525.6 L427.0 529.7 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="415.0" y="540.5" font-size="13" font-weight="700" text-anchor="middle">13</text>
+</g>
+<g class="float" style="animation-delay:1.82s">
+<title>Day 14 · LightMeinKraft — maturity 3/5, research 2/5, business 1/10</title>
+<path d="M461.0 532.7 L458.7 539.4 L453.9 544.0 L448.5 548.5 L441.6 547.3 L434.8 545.4 L429.8 540.0 L429.8 532.7 L431.3 526.1 L434.5 519.7 L441.3 517.1 L448.1 518.6 L453.9 521.5 L457.9 526.5 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="444.9" y="537.7" font-size="13" font-weight="700" text-anchor="middle">14</text>
+</g>
+<g class="float" style="animation-delay:1.95s">
+<title>Day 15 · ErgoPods — maturity 2/5, research 3/5, business 6/10</title>
+<path d="M312.5 290.5 L308.9 298.1 L305.2 305.8 L297.4 309.9 L288.8 309.1 L281.7 304.7 L276.1 298.6 L275.4 290.5 L277.5 283.0 L280.6 274.9 L288.8 272.0 L297.2 272.3 L305.4 275.0 L309.6 282.5 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="293.0" y="295.5" font-size="13" font-weight="700" text-anchor="middle">15</text>
+</g>
+<g class="float" style="animation-delay:2.08s">
+<title>Day 16 · SnippetAI — maturity 2/5, research 3/5, business 9/10</title>
+<path d="M312.5 143.5 L309.0 151.2 L304.2 157.5 L297.0 161.1 L289.0 160.9 L281.3 158.2 L276.8 151.3 L274.6 143.5 L277.2 135.9 L280.7 128.1 L289.0 125.8 L297.1 125.5 L304.7 128.8 L310.8 134.9 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="293.0" y="148.5" font-size="13" font-weight="700" text-anchor="middle">16</text>
+</g>
+<g class="float" style="animation-delay:2.21s">
+<title>Day 17 · Sanctuary — maturity 3/5, research 3/5, business 5/10</title>
+<path d="M434.8 339.5 L431.8 347.6 L426.7 354.1 L419.2 357.7 L411.2 356.3 L403.5 353.9 L399.0 347.2 L397.8 339.5 L397.5 331.1 L404.0 325.7 L410.9 321.4 L419.3 320.8 L426.7 324.8 L431.3 331.6 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="415.0" y="344.5" font-size="13" font-weight="700" text-anchor="middle">17</text>
+</g>
+<g class="float" style="animation-delay:2.34s">
+<title>Day 18 · KineScanVisionOS — maturity 2/5, research 3/5, business 4/10</title>
+<path d="M311.8 388.5 L310.5 396.9 L303.9 402.2 L297.2 406.8 L289.0 405.9 L281.8 402.6 L275.6 396.9 L274.4 388.5 L276.1 380.4 L280.9 373.4 L288.6 369.2 L297.1 370.5 L304.8 373.7 L309.8 380.4 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="293.0" y="393.5" font-size="13" font-weight="700" text-anchor="middle">18</text>
+</g>
+<g class="float" style="animation-delay:2.47s">
+<title>Day 19 · FieldTwin — maturity 2/5, research 4/5, business 10/10</title>
+<path d="M315.3 94.5 L312.5 103.9 L306.7 111.6 L297.8 115.7 L287.9 117.0 L279.1 112.0 L272.4 104.4 L270.0 94.5 L274.0 85.3 L279.3 77.3 L287.9 72.0 L298.1 72.3 L306.0 78.3 L311.7 85.5 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="293.0" y="99.5" font-size="15" font-weight="700" text-anchor="middle">19</text>
+</g>
+<g class="float" style="animation-delay:2.60s">
+<title>Day 20 · ColdTwin — maturity 3/5, research 3/5, business 8/10</title>
+<path d="M388.5 195.4 L387.2 203.1 L381.9 209.0 L375.3 214.0 L366.8 214.3 L358.8 210.8 L355.2 203.0 L351.9 195.4 L353.9 187.1 L360.1 181.6 L366.7 176.2 L375.5 175.9 L382.2 181.4 L389.0 186.7 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="371.1" y="200.4" font-size="13" font-weight="700" text-anchor="middle">20</text>
+</g>
+<g class="float" style="animation-delay:2.73s">
+<title>Day 21 · Mithila Panji Search — maturity 4/5, research 4/5, business 1/10</title>
+<path d="M558.8 535.5 L557.9 545.6 L551.2 553.3 L541.6 555.8 L532.2 556.6 L523.4 552.6 L517.8 544.8 L516.1 535.5 L517.8 526.3 L523.0 518.0 L532.4 515.6 L541.9 514.1 L550.5 518.6 L555.4 526.6 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="537.0" y="540.5" font-size="15" font-weight="700" text-anchor="middle">21</text>
+</g>
+<g class="float" style="animation-delay:2.86s">
+<title>Day 22 · PersonalVoiceStudio — maturity 4/5, research 3/5, business 1/10</title>
+<path d="M507.8 536.6 L505.7 544.6 L499.7 550.1 L493.3 556.0 L484.6 555.5 L476.5 552.1 L473.1 544.1 L470.9 536.6 L473.3 529.0 L476.8 521.4 L484.9 519.0 L492.8 519.4 L500.4 522.2 L506.7 528.0 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="488.9" y="541.6" font-size="13" font-weight="700" text-anchor="middle">22</text>
+</g>
+<g class="float" style="animation-delay:2.99s">
+<title>Day 23 · PersonalVideoStudio — maturity 4/5, research 2/5, business 1/10</title>
+<path d="M599.3 533.7 L597.5 539.9 L594.9 546.6 L588.0 548.9 L581.0 549.2 L575.6 544.8 L571.8 539.8 L568.6 533.7 L570.8 527.1 L575.7 522.6 L580.8 517.5 L588.0 518.3 L594.7 521.0 L597.4 527.5 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="584.5" y="538.7" font-size="13" font-weight="700" text-anchor="middle">23</text>
+</g>
+<g class="float" style="animation-delay:3.12s">
+<title>Day 24 · RankLab Autopsy — maturity 3/5, research 4/5, business 3/10</title>
+<path d="M435.6 437.5 L435.6 447.4 L428.5 454.4 L419.8 458.3 L410.1 458.9 L400.7 455.5 L395.9 446.7 L394.2 437.5 L395.3 428.0 L401.9 421.0 L410.4 417.3 L419.6 417.2 L427.8 421.4 L433.9 428.4 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="415.0" y="442.5" font-size="15" font-weight="700" text-anchor="middle">24</text>
+</g>
+<g class="float" style="animation-delay:3.25s">
+<title>Day 25 · Ensemble — maturity 4/5, research 4/5, business 4/10</title>
+<path d="M558.3 388.5 L557.3 398.3 L550.2 405.1 L541.9 409.8 L532.3 408.9 L523.7 405.2 L518.6 397.4 L515.9 388.5 L518.6 379.6 L523.0 370.9 L532.1 367.1 L541.7 368.1 L550.5 371.5 L557.7 378.5 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="537.0" y="393.5" font-size="15" font-weight="700" text-anchor="middle">25</text>
+</g>
+<g class="float" style="animation-delay:3.38s">
+<title>Day 26 · Prod Preview — maturity 4/5, research 3/5, business 7/10</title>
+<path d="M556.5 241.5 L553.6 249.5 L548.6 256.0 L541.3 260.5 L532.9 259.3 L525.4 256.1 L519.8 249.8 L517.0 241.5 L520.6 233.6 L524.8 226.2 L532.7 222.8 L541.2 223.0 L548.4 227.2 L553.4 233.6 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="537.0" y="246.5" font-size="13" font-weight="700" text-anchor="middle">26</text>
+</g>
+<g class="float" style="animation-delay:3.51s">
+<title>Day 27 · Kavach — maturity 5/5, research 4/5, business 8/10</title>
+<path d="M679.8 192.5 L677.6 201.4 L673.0 210.1 L663.7 213.1 L654.4 212.8 L646.1 208.6 L638.5 202.4 L636.2 192.5 L638.9 182.8 L645.8 175.9 L654.3 172.0 L663.7 171.8 L672.5 175.5 L677.8 183.5 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="659.0" y="197.5" font-size="15" font-weight="700" text-anchor="middle">27</text>
+</g>
+<g class="float" style="animation-delay:3.64s">
+<title>Day 28 · Saathi — maturity 4/5, research 4/5, business 6/10</title>
+<path d="M558.1 290.5 L557.8 300.5 L551.4 308.6 L541.9 311.9 L532.3 311.1 L522.6 308.6 L517.8 299.7 L515.6 290.5 L518.6 281.6 L523.6 273.7 L532.2 269.3 L541.9 269.2 L550.1 274.1 L556.7 281.0 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="537.0" y="295.5" font-size="15" font-weight="700" text-anchor="middle">28</text>
+</g>
+<g class="float" style="animation-delay:3.77s">
+<title>Day 29 · Drishya — maturity 4/5, research 4/5, business 6/10</title>
+<path d="M604.2 291.3 L601.7 300.2 L596.5 308.1 L587.6 311.3 L578.5 311.2 L569.8 307.9 L564.1 300.4 L561.0 291.3 L563.3 281.8 L569.0 273.7 L578.1 269.6 L588.0 269.4 L597.3 273.4 L602.4 281.9 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="583.0" y="296.3" font-size="15" font-weight="700" text-anchor="middle">29</text>
+</g>
+<text x="750" y="86" font-size="17" font-weight="700">Specimen key</text>
+<circle cx="756" cy="104" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="108" font-size="12.5"> 1 · Idea Calendar</text>
+<circle cx="756" cy="120" r="5" fill="#2a9d8f" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="124" font-size="12.5"> 2 · PlantLens</text>
+<circle cx="756" cy="136" r="5" fill="#2a9d8f" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="140" font-size="12.5"> 3 · Flashcards</text>
+<circle cx="756" cy="152" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="156" font-size="12.5"> 4 · ArtLens</text>
+<circle cx="756" cy="168" r="5" fill="#2a9d8f" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="172" font-size="12.5"> 5 · AmbientRAG</text>
+<circle cx="756" cy="184" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="188" font-size="12.5"> 6 · Media Center</text>
+<circle cx="756" cy="200" r="5" fill="#2a9d8f" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="204" font-size="12.5"> 7 · CookLens</text>
+<circle cx="756" cy="216" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="220" font-size="12.5"> 8 · Lumina</text>
+<circle cx="756" cy="232" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="236" font-size="12.5"> 9 · Daybreak</text>
+<circle cx="756" cy="248" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="252" font-size="12.5">10 · AquaWatch</text>
+<circle cx="756" cy="264" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="268" font-size="12.5">11 · SovereignSocial</text>
+<circle cx="756" cy="280" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="284" font-size="12.5">12 · SpatialRoom</text>
+<circle cx="756" cy="296" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="300" font-size="12.5">13 · FastShopper</text>
+<circle cx="756" cy="312" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="316" font-size="12.5">14 · LightMeinKraft</text>
+<circle cx="756" cy="328" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="332" font-size="12.5">15 · ErgoPods</text>
+<circle cx="756" cy="344" r="5" fill="#2a9d8f" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="348" font-size="12.5">16 · SnippetAI</text>
+<circle cx="756" cy="360" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="364" font-size="12.5">17 · Sanctuary</text>
+<circle cx="756" cy="376" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="380" font-size="12.5">18 · KineScan</text>
+<circle cx="756" cy="392" r="5" fill="#2a9d8f" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="396" font-size="12.5">19 · FieldTwin</text>
+<circle cx="756" cy="408" r="5" fill="#2a9d8f" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="412" font-size="12.5">20 · ColdTwin</text>
+<circle cx="756" cy="424" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="428" font-size="12.5">21 · Panji Search</text>
+<circle cx="756" cy="440" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="444" font-size="12.5">22 · Voice Studio</text>
+<circle cx="756" cy="456" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="460" font-size="12.5">23 · Video Studio</text>
+<circle cx="756" cy="472" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="476" font-size="12.5">24 · RankLab</text>
+<circle cx="756" cy="488" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="492" font-size="12.5">25 · Ensemble</text>
+<circle cx="756" cy="504" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="508" font-size="12.5">26 · Prod Preview</text>
+<circle cx="756" cy="520" r="5" fill="#2a9d8f" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="524" font-size="12.5">27 · Kavach</text>
+<circle cx="756" cy="536" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="540" font-size="12.5">28 · Saathi</text>
+<circle cx="756" cy="552" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="556" font-size="12.5">29 · Drishya</text>
+<text x="750" y="578" font-size="12" class="pencil">bubble size = research value</text>
+</svg>

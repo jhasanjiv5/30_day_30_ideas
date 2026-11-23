@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 630" width="960" height="630" role="img" aria-label="Specimen tray: all 30 days coloured by business value">
+<title>Specimen tray: all 30 days coloured by business value</title>
+<defs>
+  <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"/>
+  </filter>
+  <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="1" seed="3" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="1.8"/>
+  </filter>
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20 0H0V20" fill="none" stroke="#d9e4ef" stroke-width="1"/>
+  </pattern>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+    <line x1="0" y1="0" x2="0" y2="6" stroke="#2b2d42" stroke-opacity=".18" stroke-width="2"/>
+  </pattern>
+</defs>
+<style>
+  text { font-family: 'Segoe Print','Bradley Hand','Chalkboard SE','Comic Sans MS','Marker Felt',cursive; fill: #2b2d42; }
+  .pencil { fill: #6c6f7d; }
+  .bubble { animation: rise 6s ease-in infinite; opacity: 0; }
+  @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .8; } 100% { transform: translateY(-120px); opacity: 0; } }
+  .blink { animation: blink 1.2s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .float { animation: float 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  @keyframes float { 50% { transform: translateY(-4px) rotate(-1deg); } }
+</style>
+<rect width="960" height="630" fill="#fbf7ec"/>
+<rect width="960" height="630" fill="url(#grid)"/>
+
+<text x="30" y="46" font-size="28" font-weight="700" filter="url(#wobble)">Fig. 2 · The specimen tray</text>
+<text x="930" y="46" font-size="14" class="pencil" text-anchor="end">one jar per day · colour = business value · flask = maturity</text>
+<g transform="rotate(-0.2 105.0 122.0)">
+<g filter="url(#sketch)"><path d="M36.3 77.9 L171.8 76.0 L172.4 164.6 L36.1 166.6 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M37.3 74.2 L171.1 74.2 L173.4 166.9 L34.0 168.1 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="46" y="100" font-size="13" font-weight="700" opacity=".7">DAY 1</text>
+<text x="46" y="126" font-size="14" font-weight="700">Idea Calendar</text>
+<text x="46" y="152" font-size="15">2/10  🧫</text>
+</g>
+<g transform="rotate(2.3 255.0 122.0)">
+<g filter="url(#sketch)"><path d="M186.7 76.5 L320.5 73.9 L322.1 164.1 L184.6 164.9 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M183.9 75.8 L321.7 77.5 L322.1 166.6 L186.0 166.7 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="196" y="100" font-size="13" font-weight="700" opacity=".7">DAY 2</text>
+<text x="196" y="126" font-size="17" font-weight="700">PlantLens</text>
+<text x="196" y="152" font-size="15">8/10  ⚗️</text>
+</g>
+<g transform="rotate(-0.2 405.0 122.0)">
+<g filter="url(#sketch)"><path d="M335.0 78.2 L474.2 77.5 L472.9 165.2 L334.8 165.1 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M334.1 77.2 L471.6 77.5 L471.5 168.0 L337.5 163.8 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="346" y="100" font-size="13" font-weight="700" opacity=".7">DAY 3</text>
+<text x="346" y="126" font-size="17" font-weight="700">Flashcards</text>
+<text x="346" y="152" font-size="15">8/10  ⚗️</text>
+</g>
+<g transform="rotate(-1.5 555.0 122.0)">
+<g filter="url(#sketch)"><path d="M487.8 75.9 L624.1 75.5 L620.1 166.6 L487.2 165.0 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M484.2 75.3 L624.0 77.1 L620.3 164.9 L484.2 164.1 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="496" y="100" font-size="13" font-weight="700" opacity=".7">DAY 4</text>
+<text x="496" y="126" font-size="17" font-weight="700">ArtLens</text>
+<text x="496" y="152" font-size="15">3/10  ✏️</text>
+</g>
+<g transform="rotate(1.5 705.0 122.0)">
+<g filter="url(#sketch)"><path d="M634.6 76.3 L771.8 74.6 L773.0 164.4 L636.6 164.3 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M635.7 74.7 L771.0 78.1 L773.3 165.1 L637.7 164.7 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="646" y="100" font-size="13" font-weight="700" opacity=".7">DAY 5</text>
+<text x="646" y="126" font-size="17" font-weight="700">AmbientRAG</text>
+<text x="646" y="152" font-size="15">9/10  ⚗️</text>
+</g>
+<g transform="rotate(-0.5 855.0 122.0)">
+<g filter="url(#sketch)"><path d="M787.6 76.6 L920.2 78.2 L920.7 164.9 L787.2 165.2 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M785.1 74.1 L920.2 76.4 L920.9 166.4 L785.4 165.8 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="796" y="100" font-size="13" font-weight="700" opacity=".7">DAY 6</text>
+<text x="796" y="126" font-size="17" font-weight="700">Media Center</text>
+<text x="796" y="152" font-size="15">4/10  ⚗️</text>
+</g>
+<g transform="rotate(2.3 105.0 226.0)">
+<g filter="url(#sketch)"><path d="M35.9 180.3 L173.6 178.6 L170.5 271.8 L37.4 268.9 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M34.6 181.1 L173.9 178.7 L174.0 271.7 L36.5 269.7 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="46" y="204" font-size="13" font-weight="700" opacity=".7">DAY 7</text>
+<text x="46" y="230" font-size="17" font-weight="700">CookLens</text>
+<text x="46" y="256" font-size="15">8/10  ✏️</text>
+</g>
+<g transform="rotate(-2.0 255.0 226.0)">
+<g filter="url(#sketch)"><path d="M184.0 182.0 L320.8 180.9 L320.9 271.4 L186.4 269.1 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M184.6 181.0 L320.1 178.8 L322.3 271.6 L186.5 269.0 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="196" y="204" font-size="13" font-weight="700" opacity=".7">DAY 8</text>
+<text x="196" y="230" font-size="17" font-weight="700">Lumina</text>
+<text x="196" y="256" font-size="15">2/10  ✏️</text>
+</g>
+<g transform="rotate(2.1 405.0 226.0)">
+<g filter="url(#sketch)"><path d="M334.7 177.9 L471.0 179.8 L470.1 268.6 L335.4 270.3 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M334.4 179.4 L473.7 182.1 L472.7 270.8 L336.4 268.4 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="346" y="204" font-size="13" font-weight="700" opacity=".7">DAY 9</text>
+<text x="346" y="230" font-size="17" font-weight="700">Daybreak</text>
+<text x="346" y="256" font-size="15">6/10  ⚗️</text>
+</g>
+<g transform="rotate(-2.3 555.0 226.0)">
+<g filter="url(#sketch)"><path d="M483.9 181.8 L622.9 182.0 L619.9 270.6 L485.9 271.0 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M485.2 182.2 L620.1 180.2 L623.0 271.8 L487.0 270.9 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="496" y="204" font-size="13" font-weight="700" opacity=".7">DAY 10</text>
+<text x="496" y="230" font-size="17" font-weight="700">AquaWatch</text>
+<text x="496" y="256" font-size="15">5/10  ✏️</text>
+</g>
+<g transform="rotate(1.5 705.0 226.0)">
+<g filter="url(#sketch)"><path d="M637.8 179.3 L772.8 181.8 L773.6 269.6 L637.3 271.6 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M636.3 180.5 L771.5 180.4 L772.5 268.2 L636.6 272.2 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="646" y="204" font-size="13" font-weight="700" opacity=".7">DAY 11</text>
+<text x="646" y="230" font-size="14" font-weight="700">SovereignSocial</text>
+<text x="646" y="256" font-size="15">7/10  ✏️</text>
+</g>
+<g transform="rotate(1.9 855.0 226.0)">
+<g filter="url(#sketch)"><path d="M787.0 179.5 L923.0 180.4 L921.7 271.5 L784.2 271.1 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M783.9 180.4 L921.9 178.8 L922.9 270.0 L786.5 271.9 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="796" y="204" font-size="13" font-weight="700" opacity=".7">DAY 12</text>
+<text x="796" y="230" font-size="17" font-weight="700">SpatialRoom</text>
+<text x="796" y="256" font-size="15">7/10  ✏️</text>
+</g>
+<g transform="rotate(-1.2 105.0 330.0)">
+<g filter="url(#sketch)"><path d="M33.8 283.1 L172.8 282.7 L170.5 375.8 L36.7 373.7 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M37.7 283.2 L172.7 282.7 L171.7 375.3 L37.8 375.7 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="46" y="308" font-size="13" font-weight="700" opacity=".7">DAY 13</text>
+<text x="46" y="334" font-size="17" font-weight="700">FastShopper</text>
+<text x="46" y="360" font-size="15">1/10  ⚗️</text>
+</g>
+<g transform="rotate(-0.6 255.0 330.0)">
+<g filter="url(#sketch)"><path d="M186.4 283.2 L320.4 284.0 L323.5 375.5 L186.9 376.0 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M185.0 282.5 L321.8 283.0 L320.7 373.6 L186.6 374.0 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="196" y="308" font-size="13" font-weight="700" opacity=".7">DAY 14</text>
+<text x="196" y="334" font-size="14" font-weight="700">LightMeinKraft</text>
+<text x="196" y="360" font-size="15">1/10  ⚗️</text>
+</g>
+<g transform="rotate(-0.9 405.0 330.0)">
+<g filter="url(#sketch)"><path d="M337.5 286.1 L471.8 282.1 L469.9 375.6 L334.0 374.9 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M336.3 283.2 L473.3 281.9 L470.4 373.8 L333.9 375.5 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="346" y="308" font-size="13" font-weight="700" opacity=".7">DAY 15</text>
+<text x="346" y="334" font-size="17" font-weight="700">ErgoPods</text>
+<text x="346" y="360" font-size="15">6/10  ✏️</text>
+</g>
+<g transform="rotate(-1.3 555.0 330.0)">
+<g filter="url(#sketch)"><path d="M484.4 282.0 L622.6 283.8 L622.6 374.7 L487.4 376.0 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M486.8 282.7 L621.9 282.6 L619.8 373.9 L486.9 372.6 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="496" y="308" font-size="13" font-weight="700" opacity=".7">DAY 16</text>
+<text x="496" y="334" font-size="17" font-weight="700">SnippetAI</text>
+<text x="496" y="360" font-size="15">9/10  ✏️</text>
+</g>
+<g transform="rotate(-1.1 705.0 330.0)">
+<g filter="url(#sketch)"><path d="M635.3 284.9 L772.1 284.5 L773.1 373.5 L637.3 375.8 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M634.2 285.9 L773.0 282.4 L771.8 374.6 L637.8 373.5 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="646" y="308" font-size="13" font-weight="700" opacity=".7">DAY 17</text>
+<text x="646" y="334" font-size="17" font-weight="700">Sanctuary</text>
+<text x="646" y="360" font-size="15">5/10  ⚗️</text>
+</g>
+<g transform="rotate(0.3 855.0 330.0)">
+<g filter="url(#sketch)"><path d="M787.7 285.3 L924.0 283.8 L922.7 372.7 L787.0 375.4 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M786.6 285.0 L920.7 285.8 L924.1 376.1 L786.2 375.3 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="796" y="308" font-size="13" font-weight="700" opacity=".7">DAY 18</text>
+<text x="796" y="334" font-size="17" font-weight="700">KineScan</text>
+<text x="796" y="360" font-size="15">4/10  ✏️</text>
+</g>
+<g transform="rotate(-0.9 105.0 434.0)">
+<g filter="url(#sketch)"><path d="M37.8 389.6 L171.3 386.2 L171.7 478.2 L37.2 477.9 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M33.9 389.4 L170.1 389.3 L170.6 477.3 L37.3 476.4 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="46" y="412" font-size="13" font-weight="700" opacity=".7">DAY 19</text>
+<text x="46" y="438" font-size="17" font-weight="700">FieldTwin</text>
+<text x="46" y="464" font-size="15">10/10  ✏️</text>
+</g>
+<g transform="rotate(-1.8 255.0 434.0)">
+<g filter="url(#sketch)"><path d="M186.1 389.0 L323.5 388.8 L324.0 478.0 L188.0 476.2 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M184.8 388.1 L321.1 389.0 L322.6 478.1 L187.5 478.3 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="196" y="412" font-size="13" font-weight="700" opacity=".7">DAY 20</text>
+<text x="196" y="438" font-size="17" font-weight="700">ColdTwin</text>
+<text x="196" y="464" font-size="15">8/10  ⚗️</text>
+</g>
+<g transform="rotate(-0.9 405.0 434.0)">
+<g filter="url(#sketch)"><path d="M335.5 389.5 L473.8 386.7 L473.5 480.1 L336.1 478.3 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M334.7 388.2 L472.0 388.5 L469.9 480.1 L336.1 477.6 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="346" y="412" font-size="13" font-weight="700" opacity=".7">DAY 21</text>
+<text x="346" y="438" font-size="17" font-weight="700">Panji Search</text>
+<text x="346" y="464" font-size="15">1/10  🧫</text>
+</g>
+<g transform="rotate(1.5 555.0 434.0)">
+<g filter="url(#sketch)"><path d="M486.3 388.0 L622.8 386.1 L622.2 477.6 L488.0 479.9 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M485.0 387.9 L620.4 387.7 L623.4 479.8 L485.9 477.2 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="496" y="412" font-size="13" font-weight="700" opacity=".7">DAY 22</text>
+<text x="496" y="438" font-size="17" font-weight="700">Voice Studio</text>
+<text x="496" y="464" font-size="15">1/10  🧫</text>
+</g>
+<g transform="rotate(-1.5 705.0 434.0)">
+<g filter="url(#sketch)"><path d="M636.5 389.9 L770.4 389.2 L769.9 476.7 L634.8 478.8 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M635.2 387.4 L772.5 386.3 L773.0 476.3 L636.0 476.9 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="646" y="412" font-size="13" font-weight="700" opacity=".7">DAY 23</text>
+<text x="646" y="438" font-size="17" font-weight="700">Video Studio</text>
+<text x="646" y="464" font-size="15">1/10  🧫</text>
+</g>
+<g transform="rotate(-1.5 855.0 434.0)">
+<g filter="url(#sketch)"><path d="M786.1 387.7 L921.5 387.6 L922.1 476.5 L784.7 478.6 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M786.6 388.1 L923.5 388.5 L923.6 476.8 L787.1 479.4 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="796" y="412" font-size="13" font-weight="700" opacity=".7">DAY 24</text>
+<text x="796" y="438" font-size="17" font-weight="700">RankLab</text>
+<text x="796" y="464" font-size="15">3/10  ⚗️</text>
+</g>
+<g transform="rotate(2.0 105.0 538.0)">
+<g filter="url(#sketch)"><path d="M35.2 491.2 L173.9 490.8 L174.2 583.7 L34.4 580.9 Z" fill="#e76f51" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M37.0 490.9 L170.2 493.5 L171.7 583.3 L34.4 581.6 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="46" y="516" font-size="13" font-weight="700" opacity=".7">DAY 25</text>
+<text x="46" y="542" font-size="17" font-weight="700">Ensemble</text>
+<text x="46" y="568" font-size="15">4/10  🧫</text>
+</g>
+<g transform="rotate(0.9 255.0 538.0)">
+<g filter="url(#sketch)"><path d="M183.9 490.7 L322.8 493.8 L324.1 580.3 L186.0 583.1 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M186.0 492.8 L320.6 490.1 L320.3 580.0 L186.2 582.1 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="196" y="516" font-size="13" font-weight="700" opacity=".7">DAY 26</text>
+<text x="196" y="542" font-size="17" font-weight="700">Prod Preview</text>
+<text x="196" y="568" font-size="15">7/10  🧫</text>
+</g>
+<g transform="rotate(0.3 405.0 538.0)">
+<g filter="url(#sketch)"><path d="M334.4 490.6 L470.7 493.5 L474.2 583.9 L334.2 580.1 Z" fill="#2a9d8f" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M338.0 491.8 L473.2 491.2 L471.9 582.1 L335.7 582.4 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="346" y="516" font-size="13" font-weight="700" opacity=".7">DAY 27</text>
+<text x="346" y="542" font-size="17" font-weight="700">Kavach</text>
+<text x="346" y="568" font-size="15">8/10  🚀</text>
+</g>
+<g transform="rotate(-2.4 555.0 538.0)">
+<g filter="url(#sketch)"><path d="M486.9 493.5 L620.6 491.8 L623.1 581.6 L484.7 580.5 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M486.1 489.9 L623.7 493.3 L622.9 583.6 L486.6 581.6 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="496" y="516" font-size="13" font-weight="700" opacity=".7">DAY 28</text>
+<text x="496" y="542" font-size="17" font-weight="700">Saathi</text>
+<text x="496" y="568" font-size="15">6/10  🧫</text>
+</g>
+<g transform="rotate(0.5 705.0 538.0)">
+<g filter="url(#sketch)"><path d="M636.0 494.1 L773.3 490.9 L773.8 583.1 L637.2 583.4 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M635.6 493.7 L773.7 492.9 L773.2 583.2 L635.6 583.0 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="646" y="516" font-size="13" font-weight="700" opacity=".7">DAY 29</text>
+<text x="646" y="542" font-size="17" font-weight="700">Drishya</text>
+<text x="646" y="568" font-size="15">6/10  🧫</text>
+</g>
+<g transform="rotate(-2.1 855.0 538.0)">
+<g filter="url(#sketch)"><path d="M785.3 491.9 L919.8 491.4 L922.6 582.5 L784.8 584.0 Z" fill="#ffffff" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round" opacity="1"/>
+<path d="M786.7 491.3 L922.7 492.3 L922.1 581.5 L788.2 582.6 Z" fill="none" stroke="#2b2d42" stroke-width="1.0" stroke-linejoin="round" opacity="0.55"/></g>
+<rect x="786" y="492" width="136" height="90" fill="url(#hatch)"/>
+<text x="796" y="516" font-size="13" font-weight="700" opacity=".7">DAY 30</text>
+<text x="796" y="542" font-size="17" font-weight="700">???</text>
+<text x="796" y="566" font-size="15" class="blink">brewing…</text>
+</g>
+<rect x="30" y="595" width="18" height="16" fill="#2a9d8f" stroke="#2b2d42" stroke-width="1.5"/>
+<text x="56" y="608" font-size="14">8–10 strong</text>
+<rect x="210" y="595" width="18" height="16" fill="#e9c46a" stroke="#2b2d42" stroke-width="1.5"/>
+<text x="236" y="608" font-size="14">5–7 promising</text>
+<rect x="390" y="595" width="18" height="16" fill="#e76f51" stroke="#2b2d42" stroke-width="1.5"/>
+<text x="416" y="608" font-size="14">1–4 hobby</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="30 Ideas in 30 Days: a lab notebook">
+<title>30 Ideas in 30 Days: a lab notebook</title>
+<defs>
+  <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"/>
+  </filter>
+  <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="1" seed="3" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="1.8"/>
+  </filter>
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20 0H0V20" fill="none" stroke="#d9e4ef" stroke-width="1"/>
+  </pattern>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+    <line x1="0" y1="0" x2="0" y2="6" stroke="#2b2d42" stroke-opacity=".18" stroke-width="2"/>
+  </pattern>
+</defs>
+<style>
+  text { font-family: 'Segoe Print','Bradley Hand','Chalkboard SE','Comic Sans MS','Marker Felt',cursive; fill: #2b2d42; }
+  .pencil { fill: #6c6f7d; }
+  .bubble { animation: rise 6s ease-in infinite; opacity: 0; }
+  @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .8; } 100% { transform: translateY(-120px); opacity: 0; } }
+  .blink { animation: blink 1.2s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .float { animation: float 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  @keyframes float { 50% { transform: translateY(-4px) rotate(-1deg); } }
+</style>
+<rect width="1000" height="300" fill="#fbf7ec"/>
+<rect width="1000" height="300" fill="url(#grid)"/>
+
+<line x1="70" y1="0" x2="70" y2="300" stroke="#e5989b" stroke-width="2"/>
+<circle cx="32" cy="60" r="11" fill="#efe9da" stroke="#6c6f7d" stroke-width="1.5"/>
+<circle cx="32" cy="150" r="11" fill="#efe9da" stroke="#6c6f7d" stroke-width="1.5"/>
+<circle cx="32" cy="240" r="11" fill="#efe9da" stroke="#6c6f7d" stroke-width="1.5"/>
+<g filter="url(#wobble)">
+<text x="100" y="105" font-size="58" font-weight="700">30 Ideas · 30 Days</text>
+<text x="104" y="150" font-size="26" class="pencil">a lab notebook of apps, prototypes &amp; happy accidents</text>
+<path d="M100.0 120.0 Q370.2 117.7 640.0 118.0" fill="none" stroke="#e76f51" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g filter="url(#sketch)"><path d="M107.9 185.7 L273.7 183.9 L274.5 265.6 L112.2 264.8 Z" fill="#ffffff" stroke="#2b2d42" stroke-width="2.2" stroke-linejoin="round" opacity="1"/>
+<path d="M112.2 187.2 L273.9 183.1 L273.5 266.5 L110.4 266.8 Z" fill="none" stroke="#2b2d42" stroke-width="1.1" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="126" y="232" font-size="36" font-weight="700">29</text>
+<text x="126" y="254" font-size="14" class="pencil">experiments logged</text>
+<g filter="url(#sketch)"><path d="M302.1 185.7 L465.2 183.1 L462.9 266.3 L300.8 266.2 Z" fill="#ffffff" stroke="#2b2d42" stroke-width="2.2" stroke-linejoin="round" opacity="1"/>
+<path d="M300.3 185.8 L465.6 186.7 L463.3 265.0 L299.2 266.4 Z" fill="none" stroke="#2b2d42" stroke-width="1.1" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="316" y="232" font-size="36" font-weight="700">9</text>
+<text x="316" y="254" font-size="14" class="pencil">reached MVP or beyond</text>
+<g filter="url(#sketch)"><path d="M491.7 183.9 L653.2 183.9 L654.2 266.2 L489.6 266.1 Z" fill="#ffffff" stroke="#2b2d42" stroke-width="2.2" stroke-linejoin="round" opacity="1"/>
+<path d="M489.1 185.1 L653.6 185.6 L655.1 266.6 L492.0 265.1 Z" fill="none" stroke="#2b2d42" stroke-width="1.1" stroke-linejoin="round" opacity="0.55"/></g>
+<text x="506" y="232" font-size="36" font-weight="700">5.2</text>
+<text x="506" y="254" font-size="14" class="pencil">avg. business score</text>
+<g filter="url(#sketch)">
+<path d="M808 70 L808 140 L750 250 Q745 268 765 268 L895 268 Q915 268 910 250 L852 140 L852 70 Z" fill="#ffffff" stroke="#2b2d42" stroke-width="3"/>
+<path d="M767 215 L893 215 L910 250 Q915 266 895 266 L765 266 Q745 266 750 250 Z" fill="#2a9d8f" opacity=".75"/>
+<path d="M767 215 L893 215 L910 250 Q915 266 895 266 L765 266 Q745 266 750 250 Z" fill="url(#hatch)"/>
+<rect x="800" y="58" width="60" height="14" rx="3" fill="#efe9da" stroke="#2b2d42" stroke-width="2.5"/>
+</g>
+<circle class="bubble" cx="795" cy="245" r="8.7" fill="none" stroke="#2b2d42" stroke-width="1.6" style="animation-delay:0.00s"/>
+<circle class="bubble" cx="866" cy="245" r="6.4" fill="none" stroke="#2b2d42" stroke-width="1.6" style="animation-delay:0.85s"/>
+<circle class="bubble" cx="829" cy="245" r="8.7" fill="none" stroke="#2b2d42" stroke-width="1.6" style="animation-delay:1.70s"/>
+<circle class="bubble" cx="810" cy="245" r="5.3" fill="none" stroke="#2b2d42" stroke-width="1.6" style="animation-delay:2.55s"/>
+<circle class="bubble" cx="846" cy="245" r="7.4" fill="none" stroke="#2b2d42" stroke-width="1.6" style="animation-delay:3.40s"/>
+<circle class="bubble" cx="845" cy="245" r="8.1" fill="none" stroke="#2b2d42" stroke-width="1.6" style="animation-delay:4.25s"/>
+<circle class="bubble" cx="831" cy="245" r="6.1" fill="none" stroke="#2b2d42" stroke-width="1.6" style="animation-delay:5.10s"/>
+<text x="725" y="40" font-size="15" class="pencil" transform="rotate(-6 830 40)">ideas → products (bubbling…)</text>
+</svg>
