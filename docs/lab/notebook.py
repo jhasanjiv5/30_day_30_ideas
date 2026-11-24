@@ -187,10 +187,11 @@ SPECIMENS = [
          pitch="Turns a research paper into a narrated, cited video podcast with diagrams and charts, plus grounded Q&A, in English and 11 Indian languages.",
          verdict="Strong demand and real differentiation in citations; video costs are high and big players are close.",
          next="Measure cost per video and offer a university or publisher tier."),
-    dict(day=30, name="To be decided", short="???", path=None,
-         tags=[], maturity=None, research=None, business=None,
-         pitch="Tomorrow's experiment. The bench is cleared.",
-         verdict="—", next="—"),
+    dict(day=30, name="Sakha", short="Sakha", path="sakha",
+         tags=["ai", "security", "learn"], maturity=4, research=4, business=6,
+         pitch="A hook that learns how you like to work (tone, UI taste, code style, workflow) from your own messages and edits, confirms with you, and writes small topic skills for Claude Code, claude.ai, Cursor, Copilot and Codex.",
+         verdict="Personalisation is the next battleground for AI tools; local, evidence-based and cross-tool is a real edge, but built-in memory features will compete hard.",
+         next="Run it for two weeks of real Claude Code sessions and measure how many proposals you keep."),
 ]
 
 # ---------------------------------------------------------------------------
@@ -387,12 +388,13 @@ def bench() -> str:
     # key on the right
     kx = 750
     s.append(f'<text x="{kx}" y="86" font-size="17" font-weight="700">Specimen key</text>')
-    for i, p in enumerate(SPECIMENS[:-1]):
+    keyed = [p for p in SPECIMENS if p["business"] is not None]
+    for i, p in enumerate(keyed):
         y = 108 + i * 16
         col = MARKER[tier(p["business"])]
         s.append(f'<circle cx="{kx + 6}" cy="{y - 4}" r="5" fill="{col}" stroke="{INK}" stroke-width="1"/>')
         s.append(f'<text x="{kx + 18}" y="{y}" font-size="12.5">{p["day"]:>2} · {esc(p["short"])}</text>')
-    s.append(f'<text x="{kx}" y="{108 + 29 * 16 + 6}" font-size="12" class="pencil">bubble size = research value</text>')
+    s.append(f'<text x="{kx}" y="{108 + len(keyed) * 16 + 6}" font-size="12" class="pencil">bubble size = research value</text>')
     s.append("</svg>\n")
     return "\n".join(s)
 
@@ -492,7 +494,10 @@ def readme() -> str:
         f"| {i} | {p['day']} | {link(p)} | {MATURITY[p['maturity']][0]} {MATURITY[p['maturity']][1]} | {meter(p['research'], 5, '●', '○')} | {bar10(p['business'])} |"
         for i, p in enumerate(by_biz, 1)
     )
-    nxt = next(p for p in SPECIMENS if p["business"] is None)
+    nxt = next((p for p in SPECIMENS if p["business"] is None), None)
+    brewing_row = f"| — | {nxt['day']} | _{nxt['name']}_ | 🫙 brewing… | — | — |\n" if nxt else ""
+    brewing_section = (f"### 🫙 Still brewing\n\n<details>\n<summary><b>Day {nxt['day']} · {nxt['name']}</b> &nbsp; 🫙 brewing…</summary>\n\n"
+                       f"> {nxt['pitch']}\n</details>\n\n") if nxt else ""
 
     def shelf(items):
         return "\n".join(f'<a id="day-{p["day"]}"></a>\n{card(p)}' for p in items)
@@ -586,8 +591,7 @@ pie showData title Experiments by theme (a project can have several)
 | Rank | Day | Specimen | 🧪 Maturity | 🔬 Research | 💰 Business |
 | ---: | ---: | :--- | :--- | :---: | :--- |
 {rows}
-| — | {nxt['day']} | _{nxt['name']}_ | 🫙 brewing… | — | — |
-
+{brewing_row}
 ---
 
 ## 🔍 Specimen cards
@@ -603,15 +607,7 @@ pie showData title Experiments by theme (a project can have several)
 ### 📦 Bottom drawer: great for learning and portfolios (1–4)
 
 {shelf(low)}
-### 🫙 Still brewing
-
-<details>
-<summary><b>Day {nxt['day']} · {nxt['name']}</b> &nbsp; 🫙 brewing…</summary>
-
-> {nxt['pitch']}
-</details>
-
----
+{brewing_section}---
 
 ## 📝 Lab notes
 

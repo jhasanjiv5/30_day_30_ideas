@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="783" height="302" viewBox="0 0 783 302" role="img" aria-label="Prove it works">
+<title>Prove it works</title>
+<rect width="100%" height="100%" rx="12" fill="#0d1117" stroke="#30363d"/>
+<rect width="100%" height="38" rx="12" fill="#161b22"/><rect y="26" width="100%" height="12" fill="#161b22"/>
+<circle cx="22" cy="19" r="6" fill="#ff5f57"/><circle cx="42" cy="19" r="6" fill="#febc2e"/><circle cx="62" cy="19" r="6" fill="#28c840"/>
+<text x="392" y="24" fill="#8b949e" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" text-anchor="middle">Prove it works</text>
+<g font-family="'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13.5" xml:space="preserve" style="white-space:pre">
+<text x="22" y="70" fill="#7ee787">$ sakha selftest</text>
+<text x="22" y="89" fill="#e6edf3">Sakha self-test: 35 fixtures replayed through the real hooks (rules extractor, no model)</text>
+<text x="22" y="108" fill="#e6edf3"></text>
+<text x="22" y="127" fill="#e6edf3">  Habit precision          100%   (target ≥ 90%)  25 of 25 proposals correct</text>
+<text x="22" y="146" fill="#e6edf3">  Habit recall             100%   (target ≥ 75%)  25 of 25 planted habits found</text>
+<text x="22" y="165" fill="#e6edf3">  Poisoning blocked        7 / 7   (target all)</text>
+<text x="22" y="184" fill="#e6edf3">  Secrets on disk             0   (target 0)</text>
+<text x="22" y="203" fill="#e6edf3">  Largest skill           29 words (target ≤ 120)</text>
+<text x="22" y="222" fill="#e6edf3">  Check-in note        ~ 90 tokens (target ≤ 150)</text>
+<text x="22" y="241" fill="#e6edf3">  Hook latency p50/p95  0.10 / 0.29 ms (target p95 &lt; 20 ms)</text>
+<text x="22" y="260" fill="#e6edf3"></text>
+<text x="22" y="279" fill="#3fb950">RESULT: PASS</text>
+</g>
+</svg>

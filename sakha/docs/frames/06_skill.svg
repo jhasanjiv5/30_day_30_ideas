@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="378" viewBox="0 0 985 378" role="img" aria-label="A generated skill">
+<title>A generated skill</title>
+<rect width="100%" height="100%" rx="12" fill="#0d1117" stroke="#30363d"/>
+<rect width="100%" height="38" rx="12" fill="#161b22"/><rect y="26" width="100%" height="12" fill="#161b22"/>
+<circle cx="22" cy="19" r="6" fill="#ff5f57"/><circle cx="42" cy="19" r="6" fill="#febc2e"/><circle cx="62" cy="19" r="6" fill="#28c840"/>
+<text x="492" y="24" fill="#8b949e" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" text-anchor="middle">A generated skill</text>
+<g font-family="'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13.5" xml:space="preserve" style="white-space:pre">
+<text x="22" y="70" fill="#7ee787">$ cat ~/.claude/skills/sakha-writing-tone/SKILL.md</text>
+<text x="22" y="89" fill="#8b949e">---</text>
+<text x="22" y="108" fill="#e6edf3">name: sakha-writing-tone</text>
+<text x="22" y="127" fill="#e6edf3">description: Writing &amp; speaking tone the user has confirmed (learned by Sakha). Use when drafting prose, message</text>
+<text x="22" y="146" fill="#e6edf3">    s, docs, talks or slides.</text>
+<text x="22" y="165" fill="#8b949e">---</text>
+<text x="22" y="184" fill="#e6edf3"></text>
+<text x="22" y="203" fill="#8b949e"># Writing &amp; speaking tone</text>
+<text x="22" y="222" fill="#e6edf3"></text>
+<text x="22" y="241" fill="#e6edf3">Follow these preferences unless the user asks otherwise in the moment:</text>
+<text x="22" y="260" fill="#e6edf3"></text>
+<text x="22" y="279" fill="#e6edf3">- Use British spelling in everything you write.</text>
+<text x="22" y="298" fill="#e6edf3">- Keep answers short: lead with the result, then the details.</text>
+<text x="22" y="317" fill="#e6edf3">- Don't use emoji.</text>
+<text x="22" y="336" fill="#e6edf3"></text>
+<text x="22" y="355" fill="#e6edf3">&lt;!-- managed by sakha: review with `sakha review`, change with `sakha edit` --&gt;</text>
+</g>
+</svg>

@@ -200,6 +200,11 @@
 <path d="M604.2 291.3 L601.7 300.2 L596.5 308.1 L587.6 311.3 L578.5 311.2 L569.8 307.9 L564.1 300.4 L561.0 291.3 L563.3 281.8 L569.0 273.7 L578.1 269.6 L588.0 269.4 L597.3 273.4 L602.4 281.9 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
 <text x="583.0" y="296.3" font-size="15" font-weight="700" text-anchor="middle">29</text>
 </g>
+<g class="float" style="animation-delay:3.90s">
+<title>Day 30 · Sakha — maturity 4/5, research 4/5, business 6/10</title>
+<path d="M512.3 291.9 L507.9 300.9 L503.1 309.4 L494.0 313.5 L484.5 311.9 L474.9 309.7 L468.5 301.8 L466.9 291.9 L468.9 282.1 L475.0 274.2 L484.5 271.6 L494.0 270.6 L502.7 274.8 L509.6 282.0 Z" fill="#e9c46a" stroke="#2b2d42" stroke-width="2" stroke-linejoin="round"/>
+<text x="489.1" y="296.9" font-size="15" font-weight="700" text-anchor="middle">30</text>
+</g>
 <text x="750" y="86" font-size="17" font-weight="700">Specimen key</text>
 <circle cx="756" cy="104" r="5" fill="#e76f51" stroke="#2b2d42" stroke-width="1"/>
 <text x="768" y="108" font-size="12.5"> 1 · Idea Calendar</text>
@@ -259,5 +264,7 @@
 <text x="768" y="540" font-size="12.5">28 · Saathi</text>
 <circle cx="756" cy="552" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
 <text x="768" y="556" font-size="12.5">29 · Drishya</text>
-<text x="750" y="578" font-size="12" class="pencil">bubble size = research value</text>
+<circle cx="756" cy="568" r="5" fill="#e9c46a" stroke="#2b2d42" stroke-width="1"/>
+<text x="768" y="572" font-size="12.5">30 · Sakha</text>
+<text x="750" y="594" font-size="12" class="pencil">bubble size = research value</text>
 </svg>

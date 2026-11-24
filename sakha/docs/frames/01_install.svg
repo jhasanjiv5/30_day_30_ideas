@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="169" viewBox="0 0 985 169" role="img" aria-label="Install the hooks">
+<title>Install the hooks</title>
+<rect width="100%" height="100%" rx="12" fill="#0d1117" stroke="#30363d"/>
+<rect width="100%" height="38" rx="12" fill="#161b22"/><rect y="26" width="100%" height="12" fill="#161b22"/>
+<circle cx="22" cy="19" r="6" fill="#ff5f57"/><circle cx="42" cy="19" r="6" fill="#febc2e"/><circle cx="62" cy="19" r="6" fill="#28c840"/>
+<text x="492" y="24" fill="#8b949e" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" text-anchor="middle">Install the hooks</text>
+<g font-family="'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13.5" xml:space="preserve" style="white-space:pre">
+<text x="22" y="70" fill="#7ee787">$ sakha install --tool claude-code</text>
+<text x="22" y="89" fill="#e6edf3">Sakha is listening in claude-code (hooks added to ~/.claude/settings.json; backup in ~/.sakha/backups).</text>
+<text x="22" y="108" fill="#e6edf3">It learns from your own messages and edits only, and will check in at the start of a session once it has noticed</text>
+<text x="22" y="127" fill="#e6edf3">     something.</text>
+<text x="22" y="146" fill="#e6edf3">Next: sakha doctor</text>
+</g>
+</svg>

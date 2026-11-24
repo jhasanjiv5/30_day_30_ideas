@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="892" height="245" viewBox="0 0 892 245" role="img" aria-label="After two sessions">
+<title>After two sessions</title>
+<rect width="100%" height="100%" rx="12" fill="#0d1117" stroke="#30363d"/>
+<rect width="100%" height="38" rx="12" fill="#161b22"/><rect y="26" width="100%" height="12" fill="#161b22"/>
+<circle cx="22" cy="19" r="6" fill="#ff5f57"/><circle cx="42" cy="19" r="6" fill="#febc2e"/><circle cx="62" cy="19" r="6" fill="#28c840"/>
+<text x="446" y="24" fill="#8b949e" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" text-anchor="middle">After two sessions</text>
+<g font-family="'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13.5" xml:space="preserve" style="white-space:pre">
+<text x="22" y="70" fill="#7ee787">$ sakha analyse --no-model &amp;&amp; sakha list --all</text>
+<text x="22" y="89" fill="#e6edf3">Analysed 2 session(s) with rules only: 10 sighting(s), 6 new habit(s) ready for review, 0 re-offered.</text>
+<text x="22" y="108" fill="#e6edf3">Waiting for your review — run `sakha review` (6)</text>
+<text x="22" y="127" fill="#e6edf3">  h3   ui-design     Prefer calm, Apple-like neutrals with one blue accent colour.</text>
+<text x="22" y="146" fill="#e6edf3">  h6   workflow      Never push to main without asking me first.</text>
+<text x="22" y="165" fill="#e6edf3">  h1   writing-tone  Use British spelling in everything you write.</text>
+<text x="22" y="184" fill="#e6edf3">  h2   writing-tone  Keep responses short and concise.</text>
+<text x="22" y="203" fill="#e6edf3">  h4   writing-tone  Don't use emoji.</text>
+<text x="22" y="222" fill="#e6edf3">  h5   writing-tone  Avoid exclamation marks.</text>
+</g>
+</svg>

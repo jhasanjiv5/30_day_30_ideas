@@ -20,7 +20,7 @@ Closest to launch (business ≥ 7 **and** MVP or better): [Day 27 · Kavach](#da
 <details>
 <summary><b>🔬 I'm a researcher or engineer:</b> show me the interesting technical ideas</summary>
 
-Highest research value: [Day 27 · Kavach](#day-27), [Day 21 · Panji Search](#day-21), [Day 25 · Ensemble](#day-25), [Day 28 · Saathi](#day-28), [Day 29 · Drishya](#day-29), [Day 5 · AmbientRAG](#day-5).<br>
+Highest research value: [Day 27 · Kavach](#day-27), [Day 21 · Panji Search](#day-21), [Day 25 · Ensemble](#day-25), [Day 28 · Saathi](#day-28), [Day 29 · Drishya](#day-29), [Day 30 · Sakha](#day-30).<br>
 Themes: on-device AI with no cloud, citation-grounded generation, privacy-by-design sensing, and digital twins.
 </details>
 
@@ -33,7 +33,7 @@ Try [Day 18 · KineScan](#day-18), [Day 25 · Ensemble](#day-25), [Day 28 · Saa
 <details>
 <summary><b>🛠️ I want to build on one of these</b></summary>
 
-Most complete codebases (tests, diagrams, screenshots): [Day 27 · Kavach](#day-27), [Day 26 · Prod Preview](#day-26), [Day 28 · Saathi](#day-28), [Day 29 · Drishya](#day-29), [Day 25 · Ensemble](#day-25), [Day 1 · Idea Calendar](#day-1).<br>
+Most complete codebases (tests, diagrams, screenshots): [Day 27 · Kavach](#day-27), [Day 26 · Prod Preview](#day-26), [Day 28 · Saathi](#day-28), [Day 29 · Drishya](#day-29), [Day 30 · Sakha](#day-30), [Day 25 · Ensemble](#day-25).<br>
 Each card below ends with a **Next experiment**: a good first contribution.
 </details>
 
@@ -80,11 +80,11 @@ Every specimen is scored on three dials:
 ```mermaid
 pie showData title Experiments by theme (a project can have several)
     "🍎 Apple-native" : 21
-    "🧠 AI systems" : 12
+    "🧠 AI systems" : 13
     "🌐 Web" : 7
     "🎬 Media & audio" : 7
-    "🛡️ Security & privacy" : 4
-    "📚 Learning" : 3
+    "🛡️ Security & privacy" : 5
+    "📚 Learning" : 4
     "❤️ Health & wellbeing" : 3
     "🏭 Industrial" : 3
     "💼 Small business" : 2
@@ -111,23 +111,23 @@ pie showData title Experiments by theme (a project can have several)
 | 11 | 11 | [SovereignSocial](./SovereignSocial/README.md) | ✏️ Sketch | ●●○○○ | ▰▰▰▰▰▰▰▱▱▱ 7/10 |
 | 12 | 28 | [Saathi](./Saathi/README.md) | 🧫 MVP | ●●●●○ | ▰▰▰▰▰▰▱▱▱▱ 6/10 |
 | 13 | 29 | [Drishya](./drishya/README.md) | 🧫 MVP | ●●●●○ | ▰▰▰▰▰▰▱▱▱▱ 6/10 |
-| 14 | 9 | [Daybreak](./Daybreak/README.md) | ⚗️ Prototype | ●●○○○ | ▰▰▰▰▰▰▱▱▱▱ 6/10 |
-| 15 | 15 | [ErgoPods](./ErgoPods/README.md) | ✏️ Sketch | ●●●○○ | ▰▰▰▰▰▰▱▱▱▱ 6/10 |
-| 16 | 17 | [Sanctuary](./Sanctuary/README.md) | ⚗️ Prototype | ●●●○○ | ▰▰▰▰▰▱▱▱▱▱ 5/10 |
-| 17 | 10 | [AquaWatch](./AquaWatch/README.md) | ✏️ Sketch | ●●●○○ | ▰▰▰▰▰▱▱▱▱▱ 5/10 |
-| 18 | 25 | [Ensemble](./Ensemble/README.md) | 🧫 MVP | ●●●●○ | ▰▰▰▰▱▱▱▱▱▱ 4/10 |
-| 19 | 6 | [MacOSMediaCenter](./MacOSMediaCenter/README.md) | ⚗️ Prototype | ●○○○○ | ▰▰▰▰▱▱▱▱▱▱ 4/10 |
-| 20 | 18 | [KineScanVisionOS](./KineScanVisionOS/README.md) | ✏️ Sketch | ●●●○○ | ▰▰▰▰▱▱▱▱▱▱ 4/10 |
-| 21 | 24 | [RankLab Autopsy](./ranklab-autopsy/README.md) | ⚗️ Prototype | ●●●●○ | ▰▰▰▱▱▱▱▱▱▱ 3/10 |
-| 22 | 4 | [ArtLens](./ArtLens/ArtLens/README.md) | ✏️ Sketch | ●●●○○ | ▰▰▰▱▱▱▱▱▱▱ 3/10 |
-| 23 | 1 | [30 Days · 30 Apps](./Idea_calendar/README.md) | 🧫 MVP | ●○○○○ | ▰▰▱▱▱▱▱▱▱▱ 2/10 |
-| 24 | 8 | [LuminaLightCamera](./LuminaLightCamera/README.md) | ✏️ Sketch | ●○○○○ | ▰▰▱▱▱▱▱▱▱▱ 2/10 |
-| 25 | 21 | [Mithila Panji Search](./mithila-panji-search/README.md) | 🧫 MVP | ●●●●○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
-| 26 | 22 | [PersonalVoiceStudio](./PersonalVoiceStudio/README.md) | 🧫 MVP | ●●●○○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
-| 27 | 23 | [PersonalVideoStudio](./PersonalVideoStudio/README.md) | 🧫 MVP | ●●○○○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
-| 28 | 14 | [LightMeinKraft](./LightMeinKraft/README.md) | ⚗️ Prototype | ●●○○○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
-| 29 | 13 | [FastShopper '84](./FastShopperGame/README.md) | ⚗️ Prototype | ●○○○○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
-| — | 30 | _To be decided_ | 🫙 brewing… | — | — |
+| 14 | 30 | [Sakha](./sakha/README.md) | 🧫 MVP | ●●●●○ | ▰▰▰▰▰▰▱▱▱▱ 6/10 |
+| 15 | 9 | [Daybreak](./Daybreak/README.md) | ⚗️ Prototype | ●●○○○ | ▰▰▰▰▰▰▱▱▱▱ 6/10 |
+| 16 | 15 | [ErgoPods](./ErgoPods/README.md) | ✏️ Sketch | ●●●○○ | ▰▰▰▰▰▰▱▱▱▱ 6/10 |
+| 17 | 17 | [Sanctuary](./Sanctuary/README.md) | ⚗️ Prototype | ●●●○○ | ▰▰▰▰▰▱▱▱▱▱ 5/10 |
+| 18 | 10 | [AquaWatch](./AquaWatch/README.md) | ✏️ Sketch | ●●●○○ | ▰▰▰▰▰▱▱▱▱▱ 5/10 |
+| 19 | 25 | [Ensemble](./Ensemble/README.md) | 🧫 MVP | ●●●●○ | ▰▰▰▰▱▱▱▱▱▱ 4/10 |
+| 20 | 6 | [MacOSMediaCenter](./MacOSMediaCenter/README.md) | ⚗️ Prototype | ●○○○○ | ▰▰▰▰▱▱▱▱▱▱ 4/10 |
+| 21 | 18 | [KineScanVisionOS](./KineScanVisionOS/README.md) | ✏️ Sketch | ●●●○○ | ▰▰▰▰▱▱▱▱▱▱ 4/10 |
+| 22 | 24 | [RankLab Autopsy](./ranklab-autopsy/README.md) | ⚗️ Prototype | ●●●●○ | ▰▰▰▱▱▱▱▱▱▱ 3/10 |
+| 23 | 4 | [ArtLens](./ArtLens/ArtLens/README.md) | ✏️ Sketch | ●●●○○ | ▰▰▰▱▱▱▱▱▱▱ 3/10 |
+| 24 | 1 | [30 Days · 30 Apps](./Idea_calendar/README.md) | 🧫 MVP | ●○○○○ | ▰▰▱▱▱▱▱▱▱▱ 2/10 |
+| 25 | 8 | [LuminaLightCamera](./LuminaLightCamera/README.md) | ✏️ Sketch | ●○○○○ | ▰▰▱▱▱▱▱▱▱▱ 2/10 |
+| 26 | 21 | [Mithila Panji Search](./mithila-panji-search/README.md) | 🧫 MVP | ●●●●○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
+| 27 | 22 | [PersonalVoiceStudio](./PersonalVoiceStudio/README.md) | 🧫 MVP | ●●●○○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
+| 28 | 23 | [PersonalVideoStudio](./PersonalVideoStudio/README.md) | 🧫 MVP | ●●○○○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
+| 29 | 14 | [LightMeinKraft](./LightMeinKraft/README.md) | ⚗️ Prototype | ●●○○○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
+| 30 | 13 | [FastShopper '84](./FastShopperGame/README.md) | ⚗️ Prototype | ●○○○○ | ▰▱▱▱▱▱▱▱▱▱ 1/10 |
 
 ---
 
@@ -344,6 +344,22 @@ pie showData title Experiments by theme (a project can have several)
 **Lab verdict:** Strong demand and real differentiation in citations; video costs are high and big players are close.<br>
 **Next experiment:** Measure cost per video and offer a university or publisher tier.<br>
 **Tags:** `🌐 Web` `🧠 AI systems` `📚 Learning` &nbsp;·&nbsp; 📂 [Drishya](./drishya/README.md)
+
+</details>
+
+<a id="day-30"></a>
+<details>
+<summary><b>Day 30 · Sakha</b> &nbsp; ▰▰▰▰▰▰▱▱▱▱ 6/10 &nbsp; 🧫 MVP</summary>
+
+> A hook that learns how you like to work (tone, UI taste, code style, workflow) from your own messages and edits, confirms with you, and writes small topic skills for Claude Code, claude.ai, Cursor, Copilot and Codex.
+
+| 🧪 Maturity | 🔬 Research value | 💰 Business value |
+| :--- | :--- | :--- |
+| 🧫 **MVP** (4/5)<br><sub>tests + diagrams/screenshots; ready for real users to try</sub> | 🔬🔬🔬🔬▫️ 4/5 | ▰▰▰▰▰▰▱▱▱▱ 6/10 |
+
+**Lab verdict:** Personalisation is the next battleground for AI tools; local, evidence-based and cross-tool is a real edge, but built-in memory features will compete hard.<br>
+**Next experiment:** Run it for two weeks of real Claude Code sessions and measure how many proposals you keep.<br>
+**Tags:** `🧠 AI systems` `🛡️ Security & privacy` `📚 Learning` &nbsp;·&nbsp; 📂 [Sakha](./sakha/README.md)
 
 </details>
 
@@ -605,19 +621,11 @@ pie showData title Experiments by theme (a project can have several)
 
 </details>
 
-### 🫙 Still brewing
-
-<details>
-<summary><b>Day 30 · To be decided</b> &nbsp; 🫙 brewing…</summary>
-
-> Tomorrow's experiment. The bench is cleared.
-</details>
-
 ---
 
 ## 📝 Lab notes
 
-- **Scores are judgement calls**, made on 29 projects in late November 2026 from each project's code and README. Business value weighs the buyer, willingness to pay, competition and distribution; it says nothing about how fun or well made a project is.
+- **Scores are judgement calls**, made on 30 projects in late November 2026 from each project's code and README. Business value weighs the buyer, willingness to pay, competition and distribution; it says nothing about how fun or well made a project is.
 - **Maturity is measured from the code**: tests, documentation, screenshots or frames, and whether it has run outside a simulator. Only Kavach has been used for real so far.
 - Every project lives in its own folder here; none has a published standalone repository yet.
 
